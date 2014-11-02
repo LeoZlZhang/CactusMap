@@ -1,5 +1,7 @@
 package Cactus.Design.PaneModule.AXIS.POS;
 
+import java.awt.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: ezilizh
@@ -23,5 +25,10 @@ public class MousePosition extends Position
     public Position getCopy()
     {
         return new MousePosition(super.getX(), super.getY()) ;
+    }
+
+    public MousePosition(Point pos)
+    {
+        super(pos);    //To change body of overridden methods use File | Settings | File Templates.
     }
 }

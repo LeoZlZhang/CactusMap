@@ -1,5 +1,7 @@
 package Cactus.Design.PaneModule.AXIS.POS;
 
+import java.awt.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: ezilizh
@@ -22,6 +24,12 @@ public abstract class Position
     {
         this.x = x;
         this.y = y;
+    }
+
+    public Position(Point pos)
+    {
+        this.x = pos.getX();
+        this.y = pos.getY();
     }
 
     public double getX()
