@@ -1,6 +1,6 @@
 package Cactus.test.MouseEvent;
 
-import Cactus.Design.MouseEvent.MouseAdapter4Universe;
+import Cactus.Design.MouseEvent.MouseAdapter4JPane;
 import Cactus.Design.PaneModule.AXIS.POS.ShapePosition;
 import Cactus.Design.PaneModule.AXIS.Universe;
 import Cactus.Design.PaneModule.PANE.PROFILE.RectangleForm;
@@ -21,13 +21,14 @@ import java.util.ArrayList;
  */
 public class Pane4TestMouse extends JPanel
 {
-    private int widthOfPane = 500;
-    private int heightOfPane = 500;
+    public int widthOfPane = 500;
+    public int heightOfPane = 500;
     public final Universe universe = new Universe();
-    public final Profile rectWestNorthShapeProfile = new RectangleProfile(new ShapePosition(0, 0), new RectangleForm(5, 5));
-    public final Profile rectWestSouthShapeProfile = new RectangleProfile(new ShapePosition(0, universe.spaceHeight - 5), new RectangleForm(5, 5));
-    public final Profile rectEastNorthShapeProfile = new RectangleProfile(new ShapePosition(universe.spaceWidth - 5, 0), new RectangleForm(5, 5));
-    public final Profile rectEastSouthShapeProfile = new RectangleProfile(new ShapePosition(universe.spaceWidth - 5, universe.spaceHeight - 5), new RectangleForm(5, 5));
+    public final int ageSize = 50;
+    public final Profile rectWestNorthShapeProfile = new RectangleProfile(new ShapePosition(0, 0), new RectangleForm(ageSize, ageSize));
+    public final Profile rectWestSouthShapeProfile = new RectangleProfile(new ShapePosition(0, universe.spaceHeight - ageSize), new RectangleForm(ageSize, ageSize));
+    public final Profile rectEastNorthShapeProfile = new RectangleProfile(new ShapePosition(universe.spaceWidth - ageSize, 0), new RectangleForm(ageSize, ageSize));
+    public final Profile rectEastSouthShapeProfile = new RectangleProfile(new ShapePosition(universe.spaceWidth - ageSize, universe.spaceHeight - ageSize), new RectangleForm(ageSize, ageSize));
 
 
     public final ArrayList<Profile> profileList = new ArrayList<Profile>();
@@ -38,7 +39,7 @@ public class Pane4TestMouse extends JPanel
         this.setPreferredSize(this.getSize());
         universe.earthWidth = widthOfPane;
         universe.earthHeight = heightOfPane;
-        MouseAdapter4Universe mouseAdp = new MouseAdapter4Universe(this);
+        MouseAdapter4JPane mouseAdp = new MouseAdapter4JPane(this);
         this.addMouseListener(mouseAdp);
         this.addMouseMotionListener(mouseAdp);
         this.addMouseWheelListener(mouseAdp);
@@ -70,7 +71,7 @@ public class Pane4TestMouse extends JPanel
                     shapeProfile.getPosition().getY(),
                     shapeProfile.getForm().getWidth(),
                     shapeProfile.getForm().getHeight());
-            g2.setColor(new Color(i*2,255-i*2,i*2));
+            g2.setColor(new Color(i * 2, 255 - i * 2, i * 2));
             g2.draw(r);
             g2.fill(r);
         }
@@ -96,7 +97,6 @@ public class Pane4TestMouse extends JPanel
         g2.fill(shape2);
 
         shapeProfileInEarth = universe.trans2EarthView(rectEastNorthShapeProfile);
-        System.out.print("DEBUG Shape pos (" + shapeProfileInEarth.getPosition().getX() + "," + shapeProfileInEarth.getPosition().getY() + ")");
         Rectangle2D shape3 = new Rectangle2D.Double(
                 shapeProfileInEarth.getPosition().getX(),
                 shapeProfileInEarth.getPosition().getY(),
@@ -114,4 +114,5 @@ public class Pane4TestMouse extends JPanel
         g2.draw(shape4);
         g2.fill(shape4);
     }
+
 }

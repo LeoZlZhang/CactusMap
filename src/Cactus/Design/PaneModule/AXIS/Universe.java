@@ -114,29 +114,28 @@ public class Universe extends LogicSpace
     }
 
 
-    private void validatePosition()
+    public void validatePosition()  // resize frame and move universe bugs here, change code.
     {
         Boolean reCalFlag = false;
         Position corePos = positionSuit.getPosition(AxisSuit.Direction.COR);
-        if (corePos.getX() >= 0)
-        {
-            corePos.setX(0);
-            reCalFlag = true;
-        }
-        if (corePos.getY() >= 0)
-        {
-            corePos.setY(0);
-            reCalFlag = true;
-        }
         Position opCorePos = positionSuit.getPosition(AxisSuit.Direction.EAST_SOUTH);
-        if (opCorePos.getX() < earthWidth)
+        System.out.println("DEBUG Math.max(0, (earthWidth - super.spaceWidth)) = " + Math.max(0, (earthWidth - spaceWidth * amplifier.get())));
+        if (corePos.getX() >= Math.max(0, (earthWidth - spaceWidth * amplifier.get())))
         {
-            corePos.setX(corePos.getX() + (earthWidth - opCorePos.getX()));
+            corePos.setX(Math.max(0, (earthWidth - spaceWidth * amplifier.get())));
+            reCalFlag = true;
+        } else if (opCorePos.getX() < Math.min(earthWidth, spaceWidth * amplifier.get()))
+        {
+            corePos.setX(corePos.getX() + (Math.min(earthWidth, spaceWidth * amplifier.get()) - opCorePos.getX()));
             reCalFlag = true;
         }
-        if (opCorePos.getY() < earthHeight)
+        if (corePos.getY() >= Math.max(0, (earthHeight - spaceHeight * amplifier.get())))
         {
-            corePos.setY(corePos.getY() + (earthWidth - opCorePos.getY()));
+            corePos.setY(Math.max(0, (earthHeight - spaceHeight * amplifier.get())));
+            reCalFlag = true;
+        } else if (opCorePos.getY() < Math.min(earthHeight, spaceHeight * amplifier.get()))
+        {
+            corePos.setY(corePos.getY() + (Math.min(earthHeight, spaceHeight * amplifier.get()) - opCorePos.getY()));
             reCalFlag = true;
         }
         if (reCalFlag)
@@ -148,4 +147,5 @@ public class Universe extends LogicSpace
         if ((this.spaceWidth * amplifier.get() < this.earthWidth) || (this.spaceHeight * amplifier.get() < this.earthHeight))
             zoomIn();
     }
+
 }

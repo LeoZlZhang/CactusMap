@@ -1,6 +1,5 @@
 package Cactus.test.PANE;
 
-import Cactus.Design.MouseEvent.MouseAdapter4Universe;
 import Cactus.Design.PaneModule.AXIS.POS.ShapePosition;
 import Cactus.Design.PaneModule.AXIS.Universe;
 import Cactus.Design.PaneModule.PANE.PROFILE.RectangleForm;
@@ -9,7 +8,6 @@ import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
 import java.awt.geom.Rectangle2D;
 
 /**
