@@ -11,6 +11,7 @@ public class Offset extends Position
 {
     public Offset()
     {
+        super();
     }
 
     public Offset(double x, double y)

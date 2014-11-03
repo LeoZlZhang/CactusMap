@@ -119,7 +119,6 @@ public class Universe extends LogicSpace
         Boolean reCalFlag = false;
         Position corePos = positionSuit.getPosition(AxisSuit.Direction.COR);
         Position opCorePos = positionSuit.getPosition(AxisSuit.Direction.EAST_SOUTH);
-        System.out.println("DEBUG Math.max(0, (earthWidth - super.spaceWidth)) = " + Math.max(0, (earthWidth - spaceWidth * amplifier.get())));
         if (corePos.getX() >= Math.max(0, (earthWidth - spaceWidth * amplifier.get())))
         {
             corePos.setX(Math.max(0, (earthWidth - spaceWidth * amplifier.get())));
