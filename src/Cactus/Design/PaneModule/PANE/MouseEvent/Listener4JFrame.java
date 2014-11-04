@@ -1,5 +1,8 @@
 package Cactus.Design.PaneModule.PANE.MouseEvent;
 
+import Cactus.Design.PaneModule.AXIS.Universe;
+import Cactus.Design.PaneModule.PANE.FORM.OffsetForm;
+import Cactus.Design.PaneModule.PANE.Pane;
 import Cactus.test.MouseEvent.Pane4TestMouse;
 
 import java.awt.*;
@@ -14,13 +17,13 @@ import java.awt.event.ComponentListener;
  */
 public class Listener4JFrame implements ComponentListener
 {
-    private Pane4TestMouse pane;
+    private Pane pane;
     private int oldWidth = 0;
     private int oldHeight = 0;
 
     private boolean showFlag = false;
 
-    public Listener4JFrame(Pane4TestMouse pane)
+    public Listener4JFrame(Pane pane)
     {
         this.pane = pane;
     }
@@ -32,12 +35,12 @@ public class Listener4JFrame implements ComponentListener
         {
             int widthChange = (int) e.getComponent().getSize().getWidth() - oldWidth;
             int heightChange = (int) e.getComponent().getSize().getHeight() - oldHeight;
-            pane.widthOfPane = pane.widthOfPane + widthChange;
-            pane.heightOfPane = pane.heightOfPane + heightChange;
-            pane.universe.earthWidth = pane.widthOfPane;
-            pane.universe.earthHeight = pane.heightOfPane;
-            pane.setSize(new Dimension(pane.widthOfPane, pane.heightOfPane));
-            pane.setPreferredSize(new Dimension(pane.widthOfPane, pane.heightOfPane));
+            pane.universe.earthForm.offsetForm(new OffsetForm(widthChange, heightChange));
+            Dimension dim = new Dimension(
+                    (int) pane.universe.earthForm.getWidth(),
+                    (int) pane.universe.earthForm.getHeight());
+            pane.setSize(dim);
+            pane.setPreferredSize(dim);
             pane.universe.validatePosition();
             pane.repaint();
         }

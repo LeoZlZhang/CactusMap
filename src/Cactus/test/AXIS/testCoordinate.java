@@ -3,12 +3,17 @@ package Cactus.test.AXIS;
 import Cactus.Design.PaneModule.AXIS.AxisSuit;
 import Cactus.Design.PaneModule.AXIS.POSITION.CorePosition;
 import Cactus.Design.PaneModule.AXIS.POSITION.MousePosition;
+import Cactus.Design.PaneModule.AXIS.POSITION.Offset;
 import Cactus.Design.PaneModule.AXIS.POSITION.ShapePosition;
 import Cactus.Design.PaneModule.AXIS.TYPE.Space;
 import Cactus.Design.PaneModule.AXIS.Universe;
 import Cactus.Design.PaneModule.AXIS.LogicSpace;
 import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
+import Cactus.Design.PaneModule.PANE.FORM.EarthForm;
+import Cactus.Design.PaneModule.PANE.FORM.SpaceForm;
 import org.testng.annotations.Test;
+
+import java.awt.*;
 
 import static org.testng.Assert.assertEquals;
 
@@ -23,9 +28,10 @@ public class testCoordinate
     @Test
     public void testConvertAxisFromUniverseToEarth()
     {
-        Space universe = new Universe(new CorePosition(10, 8));
+        LogicSpace universe = new Universe(new SpaceForm(2000,2000), new EarthForm(500,500));
+        universe.moveSpace(new Offset(-10,-8));
         Position posInUniverse = new ShapePosition(50, 60);
-        Position posInRealWorld = new ShapePosition(60, 68);
+        Position posInRealWorld = new ShapePosition(40, 52);
         assertEquals(posInRealWorld.getX(), universe.trans2EarthView(posInUniverse).getX());
         assertEquals(posInRealWorld.getY(), universe.trans2EarthView(posInUniverse).getY());
     }
@@ -33,7 +39,7 @@ public class testCoordinate
     @Test
     public void testZoomOutIn()
     {
-        Space universe = new Universe();
+        LogicSpace universe = new Universe(new SpaceForm(2000,2000), new EarthForm(500,500));
         universe.zoomIn();
         Position universePos = new CorePosition(50, 100);
         Position earthPos = universe.trans2EarthView(universePos);
@@ -44,7 +50,8 @@ public class testCoordinate
     @Test
     public void testZoomOutIn1()
     {
-        LogicSpace universe = new Universe(new CorePosition(-100, -100));
+        LogicSpace universe = new Universe(new SpaceForm(2000,2000), new EarthForm(500,500));
+        universe.moveSpace(new Offset(-100, -100));
         universe.zoomIn();
         Position shapeUniversePos = new ShapePosition(50, 100);
         Position earthPos = universe.trans2EarthView(shapeUniversePos);
@@ -55,7 +62,8 @@ public class testCoordinate
     @Test
     public void testZoomOutInWithMousePos()
     {
-        Universe universe = new Universe(new CorePosition(-50, -50));
+        LogicSpace universe = new Universe(new SpaceForm(2000,2000), new EarthForm(500,500));
+        universe.moveSpace(new Offset(-50, -50));
         Position mousePos = new MousePosition(50, 50);
         universe.zoomIn(mousePos);
         assertEquals(universe.getPositionSuit().getPosition(AxisSuit.Direction.COR).getX(), 50 - (50 + 50) * 1.05);
@@ -64,7 +72,8 @@ public class testCoordinate
     @Test
     public void testZoomOutInWithMousePos1()
     {
-        Universe universe = new Universe(new CorePosition(-50, -50));
+        LogicSpace universe = new Universe(new SpaceForm(2000,2000), new EarthForm(500,500));
+        universe.moveSpace(new Offset(-50, -50));
         Position mousePos = new MousePosition(50, 50);
         Position eventUniversePos = new ShapePosition(50, 50);
         Position eventEarthPos = universe.trans2EarthView(eventUniversePos);

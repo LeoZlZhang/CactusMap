@@ -3,6 +3,8 @@ package Cactus.Design.PaneModule.PANE.FORM;
 import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
 import org.apache.log4j.Logger;
 
+import java.awt.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: ezilizh
@@ -23,6 +25,13 @@ public abstract class ShapeForm implements Form
     {
         this.width = width;
         this.height = height;
+        validateForm();
+    }
+
+    public ShapeForm(Dimension dimension)
+    {
+        this.width = dimension.width;
+        this.height = dimension.height;
         validateForm();
     }
 
@@ -60,5 +69,11 @@ public abstract class ShapeForm implements Form
             this.height = 1;
             errLogger.error("Height(" + this.width + ") invalid, set to 1!");
         }
+    }
+
+    public void offsetForm(Form form)
+    {
+        this.width = width + form.getWidth();
+        this.height = height + form.getHeight();
     }
 }

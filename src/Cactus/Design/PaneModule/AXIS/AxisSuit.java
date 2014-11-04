@@ -2,8 +2,8 @@ package Cactus.Design.PaneModule.AXIS;
 
 import Cactus.Design.PaneModule.AXIS.POSITION.CorePosition;
 import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
+import Cactus.Design.PaneModule.PANE.FORM.SpaceForm;
 import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
-import Cactus.Design.PaneModule.PANE.FORM.UniverseForm;
 
 /**
  * Created with IntelliJ IDEA.
@@ -29,7 +29,7 @@ public class AxisSuit
     private Position posEN = new CorePosition();
     private Position posES = new CorePosition();
     private Position posCenter = new CorePosition();
-    private Form universeForm = new UniverseForm(100, 100);
+    private Form universeForm = new SpaceForm(100, 100);
 
     public AxisSuit(Form f)
     {

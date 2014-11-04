@@ -1,33 +1,28 @@
 package Cactus.test.PANE;
 
 import Cactus.Design.PaneModule.AXIS.POSITION.ShapePosition;
-import Cactus.Design.PaneModule.AXIS.Universe;
 import Cactus.Design.PaneModule.PANE.FORM.RectangleForm;
 import Cactus.Design.PaneModule.PANE.PROFILE.RectangleProfile;
 import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
+import Cactus.Design.PaneModule.PANE.Pane;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
-public class Pane4Test extends JPanel
+public class Pane4Test extends Pane
 {
-    public final Universe universe = new Universe();
     public final Profile rect1ShapeProfile1 = new RectangleProfile(new ShapePosition(50, 50), new RectangleForm(40, 30));
 
     public final Profile rectWestNorthShapeProfile = new RectangleProfile(new ShapePosition(0, 0), new RectangleForm(5, 5));
-    public final Profile rectWestSouthShapeProfile = new RectangleProfile(new ShapePosition(0, universe.spaceHeight -5), new RectangleForm(5, 5));
-    public final Profile rectEastNorthShapeProfile = new RectangleProfile(new ShapePosition(universe.spaceWidth -5, 0), new RectangleForm(5, 5));
-    public final Profile rectEastSouthShapeProfile = new RectangleProfile(new ShapePosition(universe.spaceWidth -5, universe.spaceHeight -5), new RectangleForm(5, 5));
+    public final Profile rectWestSouthShapeProfile = new RectangleProfile(new ShapePosition(0, universe.getUniverseHeight() - 5), new RectangleForm(5, 5));
+    public final Profile rectEastNorthShapeProfile = new RectangleProfile(new ShapePosition(universe.getUniverseWidth() - 5, 0), new RectangleForm(5, 5));
+    public final Profile rectEastSouthShapeProfile = new RectangleProfile(new ShapePosition(universe.getUniverseWidth() - 5, universe.getUniverseHeight() - 5), new RectangleForm(5, 5));
 
     public Pane4Test()
     {
-        int heightOfPane = 500;
-        int widthOfPane = 500;
-        this.setSize(new Dimension(widthOfPane, heightOfPane));
+        super(new Dimension(2000, 2000), new Dimension(500, 500));
+        this.setSize(new Dimension((int) universe.earthForm.getWidth(), (int) universe.earthForm.getHeight()));
         this.setPreferredSize(this.getSize());
-        universe.earthWidth = widthOfPane;
-        universe.earthHeight = heightOfPane;
     }
 
     @Override
@@ -70,7 +65,7 @@ public class Pane4Test extends JPanel
         g2.fill(shape2);
 
         shapeProfileInEarth = universe.trans2EarthView(rectEastNorthShapeProfile);
-        System.out.print("DEBUG Shape pos (" + shapeProfileInEarth.getPosition().getX() + ","+ shapeProfileInEarth.getPosition().getY() + ")") ;
+        System.out.print("DEBUG Shape pos (" + shapeProfileInEarth.getPosition().getX() + "," + shapeProfileInEarth.getPosition().getY() + ")");
         Rectangle2D shape3 = new Rectangle2D.Double(
                 shapeProfileInEarth.getPosition().getX(),
                 shapeProfileInEarth.getPosition().getY(),

@@ -16,5 +16,7 @@ public interface Form
 
     void setHeight(double value);
 
+    void  offsetForm(Form form);
+
     Form getCopy();
 }

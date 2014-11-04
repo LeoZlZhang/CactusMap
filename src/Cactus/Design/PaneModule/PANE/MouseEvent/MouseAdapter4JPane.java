@@ -109,8 +109,8 @@ public class MouseAdapter4JPane extends MouseAdapter
         mousePressed = false;
         inertiaSuit = new InertiaSuit();
         inertiaCalInterval = 15;
-        damping = 100;
-        stopThreshold = 0.05;
+        damping = 120;
+        stopThreshold = 0.02;
     }
 
     @Override
