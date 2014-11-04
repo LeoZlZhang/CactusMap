@@ -1,8 +1,7 @@
-package Cactus.Design.MouseEvent;
+package Cactus.Design.PaneModule.PANE.MouseEvent;
 
 import Cactus.test.MouseEvent.Pane4TestMouse;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;

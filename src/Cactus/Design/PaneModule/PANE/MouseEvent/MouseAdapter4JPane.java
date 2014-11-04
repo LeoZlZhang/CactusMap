@@ -1,4 +1,4 @@
-package Cactus.Design.MouseEvent;
+package Cactus.Design.PaneModule.PANE.MouseEvent;
 
 import Cactus.Design.PaneModule.AXIS.POS.MousePosition;
 import Cactus.Design.PaneModule.AXIS.POS.Offset;

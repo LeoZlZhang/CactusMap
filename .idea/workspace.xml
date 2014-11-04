@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/MouseEvent/MouseAdapter4JPane.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/MouseEvent/MouseAdapter4JPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POS/Offset.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POS/Offset.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/Universe.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/Universe.java" />
+      <change type="MOVED" beforePath="C:\Users\ezilizh\Leo\code\mygit\CactusMap\src\Cactus\Design\MouseEvent\Listener4JFrame.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java" />
+      <change type="MOVED" beforePath="C:\Users\ezilizh\Leo\code\mygit\CactusMap\src\Cactus\Design\MouseEvent\MouseAdapter4JPane.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/test/MouseEvent/Pane4TestMouse.java" afterPath="$PROJECT_DIR$/src/Cactus/test/MouseEvent/Pane4TestMouse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/test/MouseEvent/testMoveAndZoomInOutAndFrameResize.java" afterPath="$PROJECT_DIR$/src/Cactus/test/MouseEvent/testMoveAndZoomInOutAndFrameResize.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CactusMap.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1414945010768" ignored="false" />
+    <file path="/Dummy.txt" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415019816331" ignored="false" />
     <file path="/MouseAdapter4Universe.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1414929818582" ignored="false" />
     <file path="/Position.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1414920512191" ignored="false" />
     <file path="/Pane4Test.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1414921250076" ignored="false" />
@@ -79,9 +80,9 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="MouseAdapter4JPane.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/MouseEvent/MouseAdapter4JPane.java">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="41" selection-start="930" selection-end="930" vertical-scroll-proportion="0.59358287">
+            <state line="24" column="0" selection-start="677" selection-end="677" vertical-scroll-proportion="1.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,10 +138,10 @@
       <file leaf-file-name="Pane4TestMouse.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/Pane4TestMouse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="13" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+            <state line="21" column="13" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1560#1569#0" expanded="true" />
+                <element signature="e#1576#1585#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,7 +150,7 @@
       <file leaf-file-name="testMoveAndZoomInOutAndFrameResize.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/testMoveAndZoomInOutAndFrameResize.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="22" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+            <state line="18" column="22" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -205,6 +206,7 @@
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POS/Offset.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/Universe.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/MouseEvent/MouseAdapter4JPane.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java" />
       </list>
     </option>
   </component>
@@ -422,169 +424,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROFILE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PaneModule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PANE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PROFILE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TYPE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PaneModule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AXIS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PaneModule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AXIS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Type" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PaneModule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AXIS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="POS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="MouseEvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CactusMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CactusMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cactus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PaneModule" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -887,7 +753,11 @@
       <created>1414945016242</created>
       <updated>1414945016242</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Inertia effect">
+      <created>1415019839389</created>
+      <updated>1415019839389</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -908,7 +778,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28219396" sideWeight="0.67145133" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28219396" sideWeight="0.67145133" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32854864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -954,7 +824,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="update project files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inertia effect" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -971,6 +841,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="mouse drag event" />
     <MESSAGE value="update project files" />
+    <MESSAGE value="Inertia effect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1008,7 +879,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/MouseEvent/Listener4JFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="58" selection-start="1161" selection-end="1161" vertical-scroll-proportion="0.0">
           <folding>
@@ -1019,17 +890,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/Pane4TestMouse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+        <state line="21" column="13" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1560#1569#0" expanded="true" />
+            <element signature="e#1576#1585#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/testMoveAndZoomInOutAndFrameResize.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="22" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+        <state line="18" column="22" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1092,9 +963,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/MouseEvent/MouseAdapter4JPane.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="41" selection-start="930" selection-end="930" vertical-scroll-proportion="0.59358287">
+        <state line="24" column="0" selection-start="677" selection-end="677" vertical-scroll-proportion="1.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

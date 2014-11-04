@@ -1,12 +1,10 @@
 package Cactus.test.MouseEvent;
 
-import Cactus.Design.MouseEvent.Listener4JFrame;
+import Cactus.Design.PaneModule.PANE.MouseEvent.Listener4JFrame;
 import org.testng.annotations.Test;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
 
 /**
  * Created with IntelliJ IDEA.

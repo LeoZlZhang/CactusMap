@@ -1,6 +1,6 @@
 package Cactus.test.MouseEvent;
 
-import Cactus.Design.MouseEvent.MouseAdapter4JPane;
+import Cactus.Design.PaneModule.PANE.MouseEvent.MouseAdapter4JPane;
 import Cactus.Design.PaneModule.AXIS.POS.ShapePosition;
 import Cactus.Design.PaneModule.AXIS.Universe;
 import Cactus.Design.PaneModule.PANE.PROFILE.RectangleForm;
