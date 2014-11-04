@@ -1,4 +1,4 @@
-package Cactus.Design.PaneModule.AXIS.POS;
+package Cactus.Design.PaneModule.AXIS.POSITION.Type;
 
 import java.awt.*;
 

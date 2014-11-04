@@ -1,6 +1,6 @@
-package Cactus.Design.PaneModule.PANE.PROFILE;
+package Cactus.Design.PaneModule.PANE.FORM;
 
-import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Form;
+import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
 
 /**
  * Created with IntelliJ IDEA.

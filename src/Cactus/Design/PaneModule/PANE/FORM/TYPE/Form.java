@@ -1,4 +1,4 @@
-package Cactus.Design.PaneModule.PANE.PROFILE.TYPE;
+package Cactus.Design.PaneModule.PANE.FORM.TYPE;
 
 /**
  * Created with IntelliJ IDEA.

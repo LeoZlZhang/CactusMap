@@ -1,13 +1,13 @@
 package Cactus.test.AXIS;
 
 import Cactus.Design.PaneModule.AXIS.AxisSuit;
-import Cactus.Design.PaneModule.AXIS.POS.CorePosition;
-import Cactus.Design.PaneModule.AXIS.POS.MousePosition;
-import Cactus.Design.PaneModule.AXIS.POS.ShapePosition;
-import Cactus.Design.PaneModule.AXIS.POSITION.Type.Space;
+import Cactus.Design.PaneModule.AXIS.POSITION.CorePosition;
+import Cactus.Design.PaneModule.AXIS.POSITION.MousePosition;
+import Cactus.Design.PaneModule.AXIS.POSITION.ShapePosition;
+import Cactus.Design.PaneModule.AXIS.TYPE.Space;
 import Cactus.Design.PaneModule.AXIS.Universe;
 import Cactus.Design.PaneModule.AXIS.LogicSpace;
-import Cactus.Design.PaneModule.AXIS.POS.Position;
+import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

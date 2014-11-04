@@ -1,8 +1,8 @@
 package Cactus.test.PANE;
 
 import Cactus.Design.PaneModule.AXIS.AxisSuit;
-import Cactus.Design.PaneModule.AXIS.POS.MousePosition;
-import Cactus.Design.PaneModule.AXIS.POS.Offset;
+import Cactus.Design.PaneModule.AXIS.POSITION.MousePosition;
+import Cactus.Design.PaneModule.AXIS.POSITION.Offset;
 import org.testng.annotations.Test;
 
 import javax.swing.*;

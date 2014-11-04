@@ -1,6 +1,6 @@
 package Cactus.Design.DataModule;
 
-import Cactus.Design.PaneModule.AXIS.POS.Position;
+import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
 
 import java.awt.*;
 

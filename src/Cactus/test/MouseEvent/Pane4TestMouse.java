@@ -1,9 +1,9 @@
 package Cactus.test.MouseEvent;
 
 import Cactus.Design.PaneModule.PANE.MouseEvent.MouseAdapter4JPane;
-import Cactus.Design.PaneModule.AXIS.POS.ShapePosition;
+import Cactus.Design.PaneModule.AXIS.POSITION.ShapePosition;
 import Cactus.Design.PaneModule.AXIS.Universe;
-import Cactus.Design.PaneModule.PANE.PROFILE.RectangleForm;
+import Cactus.Design.PaneModule.PANE.FORM.RectangleForm;
 import Cactus.Design.PaneModule.PANE.PROFILE.RectangleProfile;
 import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
 

@@ -1,7 +1,7 @@
 package Cactus.Design.PaneModule.PANE.PROFILE;
 
-import Cactus.Design.PaneModule.AXIS.POS.Position;
-import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Form;
+import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
+import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
 import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
 
 /**

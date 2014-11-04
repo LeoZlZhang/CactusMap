@@ -1,4 +1,6 @@
-package Cactus.Design.PaneModule.AXIS.POS;
+package Cactus.Design.PaneModule.AXIS.POSITION;
+
+import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
 
 /**
  * Created with IntelliJ IDEA.

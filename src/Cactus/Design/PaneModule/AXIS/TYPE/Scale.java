@@ -1,4 +1,4 @@
-package Cactus.Design.PaneModule.AXIS.POSITION.Type;
+package Cactus.Design.PaneModule.AXIS.TYPE;
 
 /**
  * Created with IntelliJ IDEA.

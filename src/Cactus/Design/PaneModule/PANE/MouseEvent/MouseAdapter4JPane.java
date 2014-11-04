@@ -1,8 +1,8 @@
 package Cactus.Design.PaneModule.PANE.MouseEvent;
 
-import Cactus.Design.PaneModule.AXIS.POS.MousePosition;
-import Cactus.Design.PaneModule.AXIS.POS.Offset;
-import Cactus.Design.PaneModule.AXIS.POS.Position;
+import Cactus.Design.PaneModule.AXIS.POSITION.MousePosition;
+import Cactus.Design.PaneModule.AXIS.POSITION.Offset;
+import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
 import Cactus.test.MouseEvent.Pane4TestMouse;
 
 import javax.swing.*;

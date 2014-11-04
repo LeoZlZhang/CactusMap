@@ -1,9 +1,12 @@
 package Cactus.Design.PaneModule.AXIS;
 
-import Cactus.Design.PaneModule.AXIS.POS.CorePosition;
-import Cactus.Design.PaneModule.AXIS.POS.Position;
+import Cactus.Design.PaneModule.AXIS.POSITION.CorePosition;
+import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
+import Cactus.Design.PaneModule.PANE.FORM.RectangleForm;
+import Cactus.Design.PaneModule.PANE.FORM.ShapeForm;
+import Cactus.Design.PaneModule.PANE.FORM.UniverseForm;
 import Cactus.Design.PaneModule.PANE.PROFILE.*;
-import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Form;
+import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
 import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
 
 import java.math.BigDecimal;

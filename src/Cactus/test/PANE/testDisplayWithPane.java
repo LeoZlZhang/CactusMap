@@ -1,7 +1,7 @@
 package Cactus.test.PANE;
 
 import Cactus.Design.PaneModule.AXIS.AxisSuit;
-import Cactus.Design.PaneModule.AXIS.POS.Offset;
+import Cactus.Design.PaneModule.AXIS.POSITION.Offset;
 import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
 import org.testng.annotations.Test;
 
