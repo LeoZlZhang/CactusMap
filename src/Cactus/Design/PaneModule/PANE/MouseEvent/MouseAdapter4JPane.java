@@ -18,16 +18,16 @@ import java.math.BigDecimal;
 public class MouseAdapter4JPane extends MouseAdapter
 {
     private Pane4TestMouse pane;
-    private boolean mousePressed = false;
+    private boolean mousePressed;
     private Position startPos;
     private Position endPos;
 
     //Inertia effect code
-    private boolean dragging = false;
-    private InertiaSuit inertiaSuit = new InertiaSuit();
-    private int inertiaCalInterval = 30;
-    private int damping = 100;
-    private double stopThreshold = 0.05;
+    private boolean dragging;
+    private InertiaSuit inertiaSuit;
+    private int inertiaCalInterval;
+    private int damping;
+    private double stopThreshold;
     private Timer inertiaTimer = new Timer(inertiaCalInterval, new ActionListener()
     {
         @Override
@@ -57,9 +57,6 @@ public class MouseAdapter4JPane extends MouseAdapter
                 {
                     inertiaSuit.V_X = inertiaSuit.V_X * signal;
                 }
-                System.out.println("DEBUG speed X=" + inertiaSuit.V_X);
-                System.out.println("DEBUG enableX=" + inertiaSuit.enableX);
-
             }
             if (inertiaSuit.enableY)
             {
@@ -81,15 +78,13 @@ public class MouseAdapter4JPane extends MouseAdapter
                     inertiaSuit.V_Y = inertiaSuit.V_Y * signal;
                 }
             }
-            if (!inertiaSuit.enableX && !inertiaSuit.enableY)
+            if (!inertiaSuit.enableX && !inertiaSuit.enableY && !dragging)
             {
-                System.out.println("Timer stoped");
                 inertiaTimer.stop();
             } else
             {
                 pane.universe.moveSpace(offset);
                 pane.repaint();
-                System.out.println("Repain by timer X" + inertiaSuit.enableX + " Y" + inertiaSuit.enableY);
             }
         }
 
@@ -110,7 +105,12 @@ public class MouseAdapter4JPane extends MouseAdapter
     public MouseAdapter4JPane(Pane4TestMouse pane)
     {
         this.pane = pane;
-
+        dragging = false;
+        mousePressed = false;
+        inertiaSuit = new InertiaSuit();
+        inertiaCalInterval = 15;
+        damping = 100;
+        stopThreshold = 0.05;
     }
 
     @Override
@@ -132,9 +132,8 @@ public class MouseAdapter4JPane extends MouseAdapter
 
         if (dragging)
         {
-            inertiaTimer.start();
-            dragging = false;
             inertiaSuit.enable();
+            dragging = false;
         }
     }
 
@@ -179,6 +178,10 @@ public class MouseAdapter4JPane extends MouseAdapter
             inertiaSuit.axisY1 = e.getPoint().getY();
             inertiaSuit.getVAvergae();
 
+            if(!inertiaTimer.isRunning())
+            {
+                inertiaTimer.start();
+            }
         }
         inertiaSuit.T0 = e.getWhen();
         inertiaSuit.axisX0 = e.getPoint().getX();

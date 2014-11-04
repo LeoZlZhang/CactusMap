@@ -10,6 +10,7 @@ import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
+import java.awt.geom.RoundRectangle2D;
 import java.util.ArrayList;
 
 /**
@@ -65,11 +66,11 @@ public class Pane4TestMouse extends JPanel
         for (int i = 0; i < profileList.size(); i++)
         {
             Profile shapeProfile = universe.trans2EarthView(profileList.get(i));
-            Rectangle2D r = new Rectangle2D.Double(
+            RoundRectangle2D r = new RoundRectangle2D.Double(
                     shapeProfile.getPosition().getX(),
                     shapeProfile.getPosition().getY(),
                     shapeProfile.getForm().getWidth(),
-                    shapeProfile.getForm().getHeight());
+                    shapeProfile.getForm().getHeight(),15,15);
             g2.setColor(new Color(i * 2, 255 - i * 2, i * 2));
             g2.draw(r);
             g2.fill(r);
