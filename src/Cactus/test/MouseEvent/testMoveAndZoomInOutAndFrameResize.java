@@ -11,7 +11,6 @@ import java.awt.*;
  * User: ezilizh
  * Date: 11/2/14
  * Time: 5:43 PM
- * To change this template use File | Settings | File Templates.
  */
 public class testMoveAndZoomInOutAndFrameResize
 {

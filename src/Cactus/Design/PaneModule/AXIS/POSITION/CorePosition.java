@@ -7,7 +7,6 @@ import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
  * User: ezilizh
  * Date: 10/30/14
  * Time: 3:03 PM
- * To change this template use File | Settings | File Templates.
  */
 public class CorePosition extends Position
 {

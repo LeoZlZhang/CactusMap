@@ -8,7 +8,6 @@ import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
  * User: ezilizh
  * Date: 10/31/14
  * Time: 3:02 PM
- * To change this template use File | Settings | File Templates.
  */
 public interface Space extends Scale, Shaper
 {

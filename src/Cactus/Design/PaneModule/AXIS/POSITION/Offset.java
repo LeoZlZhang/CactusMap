@@ -7,7 +7,6 @@ import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
  * User: ezilizh
  * Date: 10/30/14
  * Time: 5:53 PM
- * To change this template use File | Settings | File Templates.
  */
 public class Offset extends Position
 {

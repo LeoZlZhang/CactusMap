@@ -14,7 +14,6 @@ import java.math.BigDecimal;
  * User: ezilizh
  * Date: 10/23/14
  * Time: 4:49 PM
- * To change this template use File | Settings | File Templates.
  */
 public class MouseAdapter4JPane extends MouseAdapter
 {
@@ -26,8 +25,7 @@ public class MouseAdapter4JPane extends MouseAdapter
     //Inertia effect code
     private boolean dragging = false;
     private InertiaSuit inertiaSuit = new InertiaSuit();
-    private final int inertiaCalInterval = 30;
-    private double inertiaA;
+    private int inertiaCalInterval = 30;
     private int damping = 100;
     private double stopThreshold = 0.05;
     private Timer inertiaTimer = new Timer(inertiaCalInterval, new ActionListener()
@@ -38,6 +36,7 @@ public class MouseAdapter4JPane extends MouseAdapter
             Double dis;
             Offset offset = new Offset();
             int signal;
+            double inertiaA;
             if (inertiaSuit.enableX)
             {
                 if (inertiaSuit.V_X > 0)
@@ -166,7 +165,7 @@ public class MouseAdapter4JPane extends MouseAdapter
         {
             dragging = true;
             endPos = new MousePosition(e.getPoint());
-            if (pane != null && startPos != null && endPos != null)
+            if (pane != null && startPos != null)
             {
                 double xOffset = endPos.getX() - startPos.getX();
                 double yOffset = endPos.getY() - startPos.getY();
@@ -186,6 +185,36 @@ public class MouseAdapter4JPane extends MouseAdapter
         inertiaSuit.axisY0 = e.getPoint().getY();
 
 
+    }
+
+    public int getInertiaCalInterval()
+    {
+        return inertiaCalInterval;
+    }
+
+    public void setInertiaCalInterval(int inertiaCalInterval)
+    {
+        this.inertiaCalInterval = inertiaCalInterval;
+    }
+
+    public int getDamping()
+    {
+        return damping;
+    }
+
+    public void setDamping(int damping)
+    {
+        this.damping = damping;
+    }
+
+    public double getStopThreshold()
+    {
+        return stopThreshold;
+    }
+
+    public void setStopThreshold(double stopThreshold)
+    {
+        this.stopThreshold = stopThreshold;
     }
 
     private class InertiaSuit

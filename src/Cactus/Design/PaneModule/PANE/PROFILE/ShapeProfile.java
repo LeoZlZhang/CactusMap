@@ -11,7 +11,6 @@ import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
  * User: ezilizh
  * Date: 10/27/14
  * Time: 8:23 PM
- * To change this template use File | Settings | File Templates.
  */
 public abstract class ShapeProfile implements Profile
 {

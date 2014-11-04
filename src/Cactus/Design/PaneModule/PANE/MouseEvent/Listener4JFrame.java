@@ -11,7 +11,6 @@ import java.awt.event.ComponentListener;
  * User: ezilizh
  * Date: 11/2/14
  * Time: 8:17 PM
- * To change this template use File | Settings | File Templates.
  */
 public class Listener4JFrame implements ComponentListener
 {

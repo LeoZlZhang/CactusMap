@@ -7,7 +7,6 @@ import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
  * User: ezilizh
  * Date: 10/31/14
  * Time: 4:53 PM
- * To change this template use File | Settings | File Templates.
  */
 public class UniverseForm extends ShapeForm
 {

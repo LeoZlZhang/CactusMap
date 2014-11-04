@@ -10,13 +10,6 @@ import java.awt.*;
 
 import static org.testng.Assert.assertEquals;
 
-/**
- * Created with IntelliJ IDEA.
- * User: ezilizh
- * Date: 10/29/14
- * Time: 5:09 PM
- * To change this template use File | Settings | File Templates.
- */
 public class testUniverseEdge
 {
     @Test

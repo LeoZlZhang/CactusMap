@@ -10,7 +10,6 @@ import java.awt.*;
  * User: ezilizh
  * Date: 10/23/14
  * Time: 4:24 PM
- * To change this template use File | Settings | File Templates.
  */
 public abstract class Field
 {

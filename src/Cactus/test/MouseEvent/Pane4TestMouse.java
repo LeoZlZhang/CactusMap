@@ -17,7 +17,6 @@ import java.util.ArrayList;
  * User: ezilizh
  * Date: 10/27/14
  * Time: 8:11 PM
- * To change this template use File | Settings | File Templates.
  */
 public class Pane4TestMouse extends JPanel
 {

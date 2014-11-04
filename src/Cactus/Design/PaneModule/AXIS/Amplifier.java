@@ -7,7 +7,6 @@ import java.math.BigDecimal;
  * User: ezilizh
  * Date: 10/26/14
  * Time: 1:51 PM
- * To change this template use File | Settings | File Templates.
  */
 public class Amplifier
 {
@@ -23,7 +22,7 @@ public class Amplifier
         this.amplify = new BigDecimal(amp);
     }
 
-    public  Amplifier(BigDecimal amp)
+    public Amplifier(BigDecimal amp)
     {
         this.amplify = amp;
     }

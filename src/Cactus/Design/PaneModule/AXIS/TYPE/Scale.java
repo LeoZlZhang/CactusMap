@@ -5,7 +5,6 @@ package Cactus.Design.PaneModule.AXIS.TYPE;
  * User: ezilizh
  * Date: 10/31/14
  * Time: 3:03 PM
- * To change this template use File | Settings | File Templates.
  */
 public interface Scale
 {

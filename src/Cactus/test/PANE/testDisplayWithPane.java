@@ -10,13 +10,6 @@ import java.awt.*;
 
 import static org.testng.Assert.assertEquals;
 
-/**
- * Created with IntelliJ IDEA.
- * User: ezilizh
- * Date: 10/27/14
- * Time: 8:31 PM
- * To change this template use File | Settings | File Templates.
- */
 public class testDisplayWithPane
 {
     //    public static void main(String[] args) throws InterruptedException

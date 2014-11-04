@@ -10,7 +10,6 @@ import Cactus.Design.PaneModule.PANE.FORM.UniverseForm;
  * User: ezilizh
  * Date: 10/30/14
  * Time: 3:02 PM
- * To change this template use File | Settings | File Templates.
  */
 public class AxisSuit
 {

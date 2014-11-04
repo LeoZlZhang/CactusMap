@@ -9,18 +9,17 @@ import java.awt.*;
  * User: ezilizh
  * Date: 10/30/14
  * Time: 2:58 PM
- * To change this template use File | Settings | File Templates.
  */
 public class MousePosition extends Position
 {
-    public MousePosition()
-    {
-        super();
-    }
-
     public MousePosition(double x, double y)
     {
         super(x, y);
+    }
+
+    public MousePosition(Point pos)
+    {
+        super(pos);    //To change body of overridden methods use File | Settings | File Templates.
     }
 
     @Override
@@ -29,8 +28,4 @@ public class MousePosition extends Position
         return new MousePosition(super.getX(), super.getY()) ;
     }
 
-    public MousePosition(Point pos)
-    {
-        super(pos);    //To change body of overridden methods use File | Settings | File Templates.
-    }
 }

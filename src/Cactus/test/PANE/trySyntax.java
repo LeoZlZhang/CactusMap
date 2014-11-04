@@ -2,14 +2,12 @@ package Cactus.test.PANE;
 
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
  * User: ezilizh
  * Date: 10/28/14
  * Time: 7:51 PM
- * To change this template use File | Settings | File Templates.
  */
 public class trySyntax
 {
@@ -39,30 +37,30 @@ public class trySyntax
         }
     }
 
-    private void trapFun(final ArrayList<Integer> list)
-    {
-        list.add(5);
-    }
+//    private void trapFun(final ArrayList<Integer> list)
+//    {
+//        list.add(5);
+//    }
 
-    @Test
-    public void testTrapInCopyInstance()
-    {
-        ArrayList<Integer> list1 = new ArrayList<Integer>();
-        list1.add(1);
-        list1.add(2);
-        list1.add(3);
-        System.out.println(list1.size());
-        ArrayList<Integer> list2 = list1;
-        ArrayList<Integer> list3 = new ArrayList<java.lang.Integer>(list1);
-        System.out.println(list2.size());
-        list1.add(4);
-        System.out.println(list1.size());
-        System.out.println(list2.size());
-        System.out.println(list3.size());
-        System.out.println("----");
-        trapFun(list1);
-        System.out.println(list1.size());
-        System.out.println(list2.size());
-        System.out.println(list3.size());
-    }
+//    @Test
+//    public void testTrapInCopyInstance()
+//    {
+//        ArrayList<Integer> list1 = new ArrayList<Integer>();
+//        list1.add(1);
+//        list1.add(2);
+//        list1.add(3);
+//        System.out.println(list1.size());
+//        ArrayList<Integer> list2 = list1;
+//        ArrayList<Integer> list3 = new ArrayList<java.lang.Integer>(list1);
+//        System.out.println(list2.size());
+//        list1.add(4);
+//        System.out.println(list1.size());
+//        System.out.println(list2.size());
+//        System.out.println(list3.size());
+//        System.out.println("----");
+//        trapFun(list1);
+//        System.out.println(list1.size());
+//        System.out.println(list2.size());
+//        System.out.println(list3.size());
+//    }
 }

@@ -8,7 +8,6 @@ import org.apache.log4j.Logger;
  * User: ezilizh
  * Date: 10/28/14
  * Time: 5:18 PM
- * To change this template use File | Settings | File Templates.
  */
 public abstract class ShapeForm implements Form
 {

@@ -10,17 +10,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
-/**
- * Created with IntelliJ IDEA.
- * User: ezilizh
- * Date: 10/27/14
- * Time: 8:11 PM
- * To change this template use File | Settings | File Templates.
- */
 public class Pane4Test extends JPanel
 {
-    private int widthOfPane = 500;
-    private int heightOfPane = 500;
     public final Universe universe = new Universe();
     public final Profile rect1ShapeProfile1 = new RectangleProfile(new ShapePosition(50, 50), new RectangleForm(40, 30));
 
@@ -31,6 +22,8 @@ public class Pane4Test extends JPanel
 
     public Pane4Test()
     {
+        int heightOfPane = 500;
+        int widthOfPane = 500;
         this.setSize(new Dimension(widthOfPane, heightOfPane));
         this.setPreferredSize(this.getSize());
         universe.earthWidth = widthOfPane;

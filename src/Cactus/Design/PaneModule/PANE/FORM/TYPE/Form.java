@@ -5,7 +5,6 @@ package Cactus.Design.PaneModule.PANE.FORM.TYPE;
  * User: ezilizh
  * Date: 10/31/14
  * Time: 3:30 PM
- * To change this template use File | Settings | File Templates.
  */
 public interface Form
 {

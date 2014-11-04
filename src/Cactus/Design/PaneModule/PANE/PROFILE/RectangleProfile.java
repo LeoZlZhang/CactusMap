@@ -9,7 +9,6 @@ import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
  * User: ezilizh
  * Date: 10/31/14
  * Time: 4:49 PM
- * To change this template use File | Settings | File Templates.
  */
 public class RectangleProfile extends ShapeProfile
 {

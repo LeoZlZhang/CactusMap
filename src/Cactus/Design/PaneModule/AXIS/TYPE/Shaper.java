@@ -7,7 +7,6 @@ import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
  * User: ezilizh
  * Date: 10/31/14
  * Time: 3:23 PM
- * To change this template use File | Settings | File Templates.
  */
 public interface Shaper
 {

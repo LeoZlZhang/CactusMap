@@ -16,7 +16,6 @@ import java.math.BigDecimal;
  * User: ezilizh
  * Date: 10/23/14
  * Time: 6:22 PM
- * To change this template use File | Settings | File Templates.
  */
 public class Universe extends LogicSpace
 {
@@ -112,8 +111,7 @@ public class Universe extends LogicSpace
         Form shapeFormInUniverse = new RectangleForm();
         shapeFormInUniverse.setWidth(shapePorInUniverse.getForm().getWidth() * this.amplifier.get());
         shapeFormInUniverse.setHeight(shapePorInUniverse.getForm().getHeight() * this.amplifier.get());
-        Profile shapeProfileInUniverse = new RectangleProfile(shapePosInUniverse, shapeFormInUniverse);
-        return shapeProfileInUniverse;
+        return new RectangleProfile(shapePosInUniverse, shapeFormInUniverse);
     }
 
 
