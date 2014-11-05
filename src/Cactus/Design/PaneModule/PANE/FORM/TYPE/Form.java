@@ -19,4 +19,5 @@ public interface Form
     void  offsetForm(Form form);
 
     Form getCopy();
+
 }

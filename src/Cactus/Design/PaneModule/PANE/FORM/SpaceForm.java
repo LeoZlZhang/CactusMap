@@ -17,9 +17,9 @@ public class SpaceForm extends ShapeForm
         super(width, height);
     }
 
-    public SpaceForm(Dimension dimension)
+    public SpaceForm(Form form)
     {
-        super(dimension);
+        super(form);
     }
 
     @Override

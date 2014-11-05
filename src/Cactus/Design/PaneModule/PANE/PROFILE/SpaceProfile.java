@@ -1,8 +1,7 @@
-package Cactus.Design.PaneModule.AXIS;
+package Cactus.Design.PaneModule.PANE.PROFILE;
 
 import Cactus.Design.PaneModule.AXIS.POSITION.CorePosition;
 import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
-import Cactus.Design.PaneModule.PANE.FORM.SpaceForm;
 import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
 
 /**
@@ -11,7 +10,7 @@ import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
  * Date: 10/30/14
  * Time: 3:02 PM
  */
-public class AxisSuit
+public class SpaceProfile extends ShapeProfile
 {
     public static enum Direction
     {
@@ -29,58 +28,53 @@ public class AxisSuit
     private Position posEN = new CorePosition();
     private Position posES = new CorePosition();
     private Position posCenter = new CorePosition();
-    private Form universeForm = new SpaceForm(100, 100);
 
-    public AxisSuit(Form f)
+    public SpaceProfile(Position corPos, Form f)
     {
-        setPositionSuit(new CorePosition(0, 0), f);
+        super(corPos, f);
+        setSpaceProfile(corPos, f);
     }
 
-    public AxisSuit(Position corPos, Form f)
+    public void setSpaceProfile(Position corPos, Form f)
     {
-        setPositionSuit(corPos, f);
-    }
-
-    public void setPositionSuit(Position corPos, Form f)
-    {
-        this.universeForm.setWidth(f.getWidth());
-        this.universeForm.setHeight(f.getHeight());
+        this.shapeForm.setWidth(f.getWidth());
+        this.shapeForm.setHeight(f.getHeight());
         this.posWN.setX(corPos.getX());
         this.posWN.setY(corPos.getY());
-        this.posEN.setX(corPos.getX() + universeForm.getWidth());
+        this.posEN.setX(corPos.getX() + shapeForm.getWidth());
         this.posEN.setY(corPos.getY());
         this.posWS.setX(corPos.getX());
-        this.posWS.setY(corPos.getY() + universeForm.getHeight());
-        this.posES.setX(corPos.getX() + universeForm.getWidth());
-        this.posES.setY(corPos.getY() + universeForm.getHeight());
-        this.posCenter.setX(corPos.getX() + universeForm.getWidth() / 2);
-        this.posCenter.setY(corPos.getY() + universeForm.getHeight() / 2);
+        this.posWS.setY(corPos.getY() + shapeForm.getHeight());
+        this.posES.setX(corPos.getX() + shapeForm.getWidth());
+        this.posES.setY(corPos.getY() + shapeForm.getHeight());
+        this.posCenter.setX(corPos.getX() + shapeForm.getWidth() / 2);
+        this.posCenter.setY(corPos.getY() + shapeForm.getHeight() / 2);
     }
 
     public void setCorPosition(Position corPos)
     {
         this.posWN.setX(corPos.getX());
         this.posWN.setY(corPos.getY());
-        this.posEN.setX(corPos.getX() + universeForm.getWidth());
+        this.posEN.setX(corPos.getX() + shapeForm.getWidth());
         this.posEN.setY(corPos.getY());
         this.posWS.setX(corPos.getX());
-        this.posWS.setY(corPos.getY() + universeForm.getHeight());
-        this.posES.setX(corPos.getX() + universeForm.getWidth());
-        this.posES.setY(corPos.getY() + universeForm.getHeight());
-        this.posCenter.setX(corPos.getX() + universeForm.getWidth() / 2);
-        this.posCenter.setY(corPos.getY() + universeForm.getHeight() / 2);
+        this.posWS.setY(corPos.getY() + shapeForm.getHeight());
+        this.posES.setX(corPos.getX() + shapeForm.getWidth());
+        this.posES.setY(corPos.getY() + shapeForm.getHeight());
+        this.posCenter.setX(corPos.getX() + shapeForm.getWidth() / 2);
+        this.posCenter.setY(corPos.getY() + shapeForm.getHeight() / 2);
     }
 
-    public void setUniverseForm(Form f)
+    public void setSpaceForm(Form f)
     {
-        this.universeForm.setWidth(f.getWidth());
-        this.universeForm.setHeight(f.getHeight());
-        this.posEN.setX(posWN.getX() + universeForm.getWidth());
-        this.posWS.setY(posWN.getY() + universeForm.getHeight());
-        this.posES.setX(posWN.getX() + universeForm.getWidth());
-        this.posES.setY(posWN.getY() + universeForm.getHeight());
-        this.posCenter.setX(posWN.getX() + universeForm.getWidth() / 2);
-        this.posCenter.setY(posWN.getY() + universeForm.getHeight() / 2);
+        this.shapeForm.setWidth(f.getWidth());
+        this.shapeForm.setHeight(f.getHeight());
+        this.posEN.setX(posWN.getX() + shapeForm.getWidth());
+        this.posWS.setY(posWN.getY() + shapeForm.getHeight());
+        this.posES.setX(posWN.getX() + shapeForm.getWidth());
+        this.posES.setY(posWN.getY() + shapeForm.getHeight());
+        this.posCenter.setX(posWN.getX() + shapeForm.getWidth() / 2);
+        this.posCenter.setY(posWN.getY() + shapeForm.getHeight() / 2);
     }
 
     public Position getPosition(Direction direction)
@@ -116,23 +110,8 @@ public class AxisSuit
         return pos;
     }
 
-    public Form getUniverseForm()
+    public SpaceProfile getCopy()
     {
-        return universeForm.getCopy();
-    }
-
-    public double getWidth()
-    {
-        return universeForm.getWidth();
-    }
-
-    public double getHeight()
-    {
-        return universeForm.getHeight();
-    }
-
-    public AxisSuit getCopy()
-    {
-        return new AxisSuit(this.posWN, this.universeForm);
+        return new SpaceProfile(this.posWN, this.shapeForm);
     }
 }

@@ -11,9 +11,7 @@ import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
  */
 public interface Profile
 {
-    Position getPosition();
-
-    Form getForm();
-
     Profile getCopy();
+    Position getPosition();
+    Form getForm();
 }

@@ -17,11 +17,6 @@ public class RectangleProfile extends ShapeProfile
         super(position, shapeForm);
     }
 
-    public RectangleProfile()
-    {
-        super();
-    }
-
     public Profile getCopy()
     {
         return new RectangleProfile(this.position, this.shapeForm);

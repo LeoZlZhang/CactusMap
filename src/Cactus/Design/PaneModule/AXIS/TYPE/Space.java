@@ -1,6 +1,7 @@
 package Cactus.Design.PaneModule.AXIS.TYPE;
 
 import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
+import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
 import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
 
 /**
@@ -9,18 +10,18 @@ import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
  * Date: 10/31/14
  * Time: 3:02 PM
  */
-public interface Space extends Scale, Shaper
+public interface Space extends Scale
 {
 
-    void zoomIn();
+    void zoomIn(Form form);
 
-    void zoomIn(Position pos);
+    void zoomIn(Position pos, Form form);
 
-    void zoomOut();
+    void zoomOut(Form form);
 
-    void zoomOut(Position pos);
+    void zoomOut(Position pos, Form form);
 
-    void moveSpace(Position pos);
+    void moveSpace(Position pos, Form form);
 
     Position trans2EarthView(Position shapeUniversePosition);
 

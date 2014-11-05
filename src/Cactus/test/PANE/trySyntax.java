@@ -2,6 +2,8 @@ package Cactus.test.PANE;
 
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,6 +27,15 @@ public class trySyntax
     class Cell
     {
         public int i = 0;
+
+        Cell(int i)
+        {
+            this.i = i;
+        }
+        Cell()
+        {
+
+        }
     }
 
     class Container
@@ -63,4 +74,23 @@ public class trySyntax
 //        System.out.println(list2.size());
 //        System.out.println(list3.size());
 //    }
+
+
+    @Test
+    public void testArrayList()
+    {
+        ArrayList<Cell> list = new ArrayList<Cell>();
+        list.add(new Cell(1));
+        list.add(new Cell(2));
+        list.add(new Cell(3));
+        for(int i=0;i<list.size();i++)
+        {
+            System.out.println(list.get(i).i);
+        }
+        list.get(2).i=10;
+        for(int i=0;i<list.size();i++)
+        {
+            System.out.println(list.get(i).i);
+        }
+    }
 }

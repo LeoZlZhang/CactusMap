@@ -35,13 +35,13 @@ public class Listener4JFrame implements ComponentListener
         {
             int widthChange = (int) e.getComponent().getSize().getWidth() - oldWidth;
             int heightChange = (int) e.getComponent().getSize().getHeight() - oldHeight;
-            pane.universe.earthForm.offsetForm(new OffsetForm(widthChange, heightChange));
+            pane.paneForm.offsetForm(new OffsetForm(widthChange, heightChange));
             Dimension dim = new Dimension(
-                    (int) pane.universe.earthForm.getWidth(),
-                    (int) pane.universe.earthForm.getHeight());
+                    (int) pane.paneForm.getWidth(),
+                    (int) pane.paneForm.getHeight());
             pane.setSize(dim);
             pane.setPreferredSize(dim);
-            pane.universe.validatePosition();
+//            pane.universe.validatePosition();
             pane.repaint();
         }
         oldWidth = e.getComponent().getWidth();

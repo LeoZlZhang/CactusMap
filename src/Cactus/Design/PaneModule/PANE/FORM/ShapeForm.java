@@ -15,7 +15,6 @@ public abstract class ShapeForm implements Form
 {
     protected double width = 1;
     protected double height = 1;
-    protected static Logger errLogger = Logger.getLogger("forERROR");
 
     public ShapeForm()
     {
@@ -32,6 +31,13 @@ public abstract class ShapeForm implements Form
     {
         this.width = dimension.width;
         this.height = dimension.height;
+        validateForm();
+    }
+
+    public ShapeForm(Form form)
+    {
+        this.width = form.getWidth();
+        this.height = form.getHeight();
         validateForm();
     }
 
@@ -59,15 +65,15 @@ public abstract class ShapeForm implements Form
 
     private void validateForm()
     {
-        if (this.width <= 0)
+        if (this.width < 0)
         {
-            this.width = 1;
-            errLogger.error("Width(" + this.width + ") invalid, set to 1!");
+            this.width = 0;
+            System.out.println("Width(" + this.width + ") invalid, set to 1!");
         }
-        if (this.height <= 0)
+        if (this.height < 0)
         {
-            this.height = 1;
-            errLogger.error("Height(" + this.width + ") invalid, set to 1!");
+            this.height = 0;
+            System.out.println("Height(" + this.height + ") invalid, set to 1!");
         }
     }
 

@@ -3,6 +3,7 @@ package Cactus.Design.PaneModule.PANE.MouseEvent;
 import Cactus.Design.PaneModule.AXIS.POSITION.MousePosition;
 import Cactus.Design.PaneModule.AXIS.POSITION.Offset;
 import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
+import Cactus.Design.PaneModule.PANE.Pane;
 import Cactus.test.MouseEvent.Pane4TestMouse;
 
 import javax.swing.*;
@@ -17,7 +18,7 @@ import java.math.BigDecimal;
  */
 public class MouseAdapter4JPane extends MouseAdapter
 {
-    private Pane4TestMouse pane;
+    private Pane pane;
     private boolean mousePressed;
     private Position startPos;
     private Position endPos;
@@ -30,9 +31,13 @@ public class MouseAdapter4JPane extends MouseAdapter
     private double stopThreshold;
     private Timer inertiaTimer = new Timer(inertiaCalInterval, new ActionListener()
     {
+//        long t1;
+//        long t2;
         @Override
         public void actionPerformed(ActionEvent e)
         {
+//            t1 = System.nanoTime();
+//            System.out.println("DEBUG interval time in nano=" + (t1-t2)/1000000);
             Double dis;
             Offset offset = new Offset();
             int signal;
@@ -83,9 +88,11 @@ public class MouseAdapter4JPane extends MouseAdapter
                 inertiaTimer.stop();
             } else
             {
-                pane.universe.moveSpace(offset);
+                pane.universe.moveSpace(offset, pane.paneForm);
                 pane.repaint();
             }
+//            t2 = System.nanoTime();
+//            System.out.println("DEBUG nano time for paint="+(t2-t1));
         }
 
         private double calDistanceWithAccelerate(double t, double a, double v)
@@ -102,13 +109,13 @@ public class MouseAdapter4JPane extends MouseAdapter
     });
 
 
-    public MouseAdapter4JPane(Pane4TestMouse pane)
+    public MouseAdapter4JPane(Pane pane)
     {
         this.pane = pane;
         dragging = false;
         mousePressed = false;
         inertiaSuit = new InertiaSuit();
-        inertiaCalInterval = 15;
+        inertiaCalInterval = 10;
         damping = 120;
         stopThreshold = 0.02;
     }
@@ -148,11 +155,11 @@ public class MouseAdapter4JPane extends MouseAdapter
         inertiaSuit.disable();
         if (e.getWheelRotation() > 0)
         {
-            pane.universe.zoomOut(new MousePosition(e.getPoint()));
+            pane.universe.zoomOut(new MousePosition(e.getPoint()),pane.paneForm);
             pane.repaint();
         } else if (e.getWheelRotation() < 0)
         {
-            pane.universe.zoomIn(new MousePosition(e.getPoint()));
+            pane.universe.zoomIn(new MousePosition(e.getPoint()), pane.paneForm);
             pane.repaint();
         }
     }
@@ -168,7 +175,7 @@ public class MouseAdapter4JPane extends MouseAdapter
             {
                 double xOffset = endPos.getX() - startPos.getX();
                 double yOffset = endPos.getY() - startPos.getY();
-                pane.universe.moveSpace(new Offset(xOffset, yOffset));
+                pane.universe.moveSpace(new Offset(xOffset, yOffset), pane.paneForm);
                 pane.repaint();
                 startPos.setX(endPos.getX());
                 startPos.setY(endPos.getY());

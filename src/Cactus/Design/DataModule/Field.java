@@ -21,9 +21,9 @@ public abstract class Field
 
     public abstract Position getAxis();
 
-    public abstract Node getNode();
+    public abstract Event getNode();
 
-    public abstract void setNode(Node node);
+    public abstract void setNode(Event node);
 
     public abstract void setCoordinate(LogicSpace cor);
 

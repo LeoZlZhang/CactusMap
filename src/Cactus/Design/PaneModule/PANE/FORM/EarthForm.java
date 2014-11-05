@@ -18,9 +18,9 @@ public class EarthForm extends ShapeForm
         super(width, height);
     }
 
-    public EarthForm(Dimension dimension)
+    public EarthForm(Form form)
     {
-        super(dimension);
+        super(form);
     }
 
     @Override

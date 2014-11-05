@@ -5,6 +5,7 @@ import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
 import Cactus.Design.PaneModule.AXIS.TYPE.Space;
 import Cactus.Design.PaneModule.PANE.FORM.SpaceForm;
 import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
+import Cactus.Design.PaneModule.PANE.PROFILE.SpaceProfile;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,53 +15,49 @@ import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
  */
 public abstract class LogicSpace implements Space
 {
+    /**
+     * amplifier control the space room out/in
+     * should only be able to change by zoomIn() zoomOut();
+     */
     protected final Amplifier amplifier;
-    protected final AxisSuit positionSuit;
+
+    /**
+     * space profile keep space core position and space width/height(after amplify)
+     * space profile should be change by reset core position and reset space form in it.
+     *
+     */
+    protected final SpaceProfile spaceProfile;
+
+    /**
+     * space form keep the origin width/height of space.
+     */
     protected final Form spaceForm;
 
     protected LogicSpace(Form spaceForm)
     {
-        this.spaceForm = new SpaceForm(spaceForm.getWidth(),spaceForm.getHeight());
+        this.spaceForm = new SpaceForm(spaceForm.getWidth(), spaceForm.getHeight());
         this.amplifier = new Amplifier();
-        this.positionSuit = new AxisSuit(new CorePosition(0, 0), new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get()));
+        this.spaceProfile = new SpaceProfile(new CorePosition(0, 0), new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get()));
     }
 
-//    protected LogicSpace(Position corPos)
+//    public void moveSpace(Position offset)
 //    {
-//        this.amplifier = new Amplifier();
-//        this.positionSuit = new AxisSuit(corPos, new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get()));
+//        Position pos = spaceProfile.getPosition(SpaceProfile.Direction.COR);
+//        pos.setX(pos.getX() + offset.getX());
+//        pos.setY(pos.getY() + offset.getY());
+//        spaceProfile.setCorPosition(pos);
 //    }
 
-    public void zoomIn()
-    {
-        amplifier.zoomIn();
-        positionSuit.setUniverseForm(new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get()));
-    }
-
-    public void zoomOut()
-    {
-        amplifier.zoomOut();
-        positionSuit.setUniverseForm(new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get()));
-    }
-
-    public void moveSpace(Position offset)
-    {
-        Position pos = positionSuit.getPosition(AxisSuit.Direction.COR);
-        pos.setX(pos.getX() + offset.getX());
-        pos.setY(pos.getY() + offset.getY());
-        positionSuit.setCorPosition(pos);
-    }
-
+    //Expose for test
     public Double getAmplifierValue()
     {
         return amplifier.get();
     }
 
-    public abstract Position trans2EarthView(Position posInUniverse);
-
-    public AxisSuit getPositionSuit()
+    //Expose for test
+    public SpaceProfile getSpaceProfile()
     {
-        return positionSuit.getCopy();
+        return spaceProfile.getCopy();
     }
 
 }

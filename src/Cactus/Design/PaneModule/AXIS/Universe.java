@@ -20,18 +20,11 @@ import java.math.BigDecimal;
  */
 public class Universe extends LogicSpace
 {
-    public final Form earthForm;
 
-    public Universe(Form universeForm, Form earthForm)
+    public Universe(Form universeForm)
     {
         super(universeForm);
-        this.earthForm = new EarthForm(earthForm.getWidth(), earthForm.getHeight());
     }
-
-//    public Universe(Position pos)
-//    {
-//        super(pos);
-//    }
 
     private static double leaveXDecimal(double src, int X)
     {
@@ -39,59 +32,62 @@ public class Universe extends LogicSpace
         return f.setScale(X, BigDecimal.ROUND_HALF_UP).doubleValue();
     }
 
-
-    public void zoomIn(Position mousePos)
+    @Override
+    public void zoomIn(Position mousePos, Form earthForm)
     {
-        Position pos = positionSuit.getPosition(AxisSuit.Direction.COR);
-        Double distance2CorX = (mousePos.getX() - pos.getX()) / amplifier.get();
-        Double distance2CorY = (mousePos.getY() - pos.getY()) / amplifier.get();
+        Position corePos = spaceProfile.getPosition(SpaceProfile.Direction.COR);
+        Double distance2CorX = (mousePos.getX() - corePos.getX()) / amplifier.get();
+        Double distance2CorY = (mousePos.getY() - corePos.getY()) / amplifier.get();
         amplifier.zoomIn();
-        pos = new CorePosition(mousePos.getX() - distance2CorX * amplifier.get(), mousePos.getY() - distance2CorY * amplifier.get());
-        Form shapeForm = new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get());
-        positionSuit.setPositionSuit(pos, shapeForm);
-        validatePosition();
+        corePos = new CorePosition(mousePos.getX() - distance2CorX * amplifier.get(), mousePos.getY() - distance2CorY * amplifier.get());
+        Form universeForm = new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get());
+        spaceProfile.setSpaceProfile(corePos, universeForm);
+        validatePosition(earthForm);
     }
 
     @Override
-    public void zoomIn()
+    public void zoomIn(Form earthForm)
     {
-        super.zoomIn();    //To change body of overridden methods use File | Settings | File Templates.
-        validatePosition();
+        amplifier.zoomIn();
+        spaceProfile.setSpaceForm(new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get()));
+        validatePosition(earthForm);
     }
 
-    public void zoomOut(Position mousePos)
+    @Override
+    public void zoomOut(Position mousePos, Form earthForm)
     {
-        Position pos = positionSuit.getPosition(AxisSuit.Direction.COR);
-        Double distance2CorX = (mousePos.getX() - pos.getX()) / amplifier.get();
-        Double distance2CorY = (mousePos.getY() - pos.getY()) / amplifier.get();
+        Position corePos = spaceProfile.getPosition(SpaceProfile.Direction.COR);
+        Double distance2CorX = (mousePos.getX() - corePos.getX()) / amplifier.get();
+        Double distance2CorY = (mousePos.getY() - corePos.getY()) / amplifier.get();
         amplifier.zoomOut();
-        validateUniverseSize();
-        pos = new CorePosition(mousePos.getX() - distance2CorX * amplifier.get(), mousePos.getY() - distance2CorY * amplifier.get());
-        ShapeForm shapeForm = new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get());
-        positionSuit.setPositionSuit(pos, shapeForm);
-        validatePosition();
+        validateUniverseSize(earthForm);
+        corePos = new CorePosition(mousePos.getX() - distance2CorX * amplifier.get(), mousePos.getY() - distance2CorY * amplifier.get());
+        Form universeForm = new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get());
+        spaceProfile.setSpaceProfile(corePos, universeForm);
+        validatePosition(earthForm);
     }
 
     @Override
-    public void zoomOut()
+    public void zoomOut(Form earthForm)
     {
-        super.zoomOut();    //To change body of overridden methods use File | Settings | File Templates.
-        validateUniverseSize();
-        validatePosition();
+        amplifier.zoomOut();
+        validateUniverseSize(earthForm);
+        Form universeForm = new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get());
+        spaceProfile.setSpaceForm(universeForm);
+        validatePosition(earthForm);
     }
-
 
     @Override
-    public void moveSpace(Position offset)
+    public void moveSpace(Position offset, Form earthForm)
     {
-        Position pos = positionSuit.getPosition(AxisSuit.Direction.COR);
-        pos.setX(pos.getX() + offset.getX());
-        pos.setY(pos.getY() + offset.getY());
-        positionSuit.setCorPosition(pos);
-        validatePosition();
+        Position corePos = spaceProfile.getPosition(SpaceProfile.Direction.COR);
+        corePos.setX(corePos.getX() + offset.getX());
+        corePos.setY(corePos.getY() + offset.getY());
+        spaceProfile.setCorPosition(corePos);
+        validatePosition(earthForm);
     }
 
-
+    @Override
     public Position trans2EarthView(Position universePos)
     {
         return trans2EarthView(universePos, SCALE5);
@@ -100,12 +96,13 @@ public class Universe extends LogicSpace
     public Position trans2EarthView(Position shapePositionInUniverse, int scale)
     {
         Position earthPos = new CorePosition();
-        Position universeCorePos = positionSuit.getPosition(AxisSuit.Direction.COR);
+        Position universeCorePos = spaceProfile.getPosition(SpaceProfile.Direction.COR);
         earthPos.setX(leaveXDecimal(universeCorePos.getX() + shapePositionInUniverse.getX() * this.amplifier.get(), scale));
         earthPos.setY(leaveXDecimal(universeCorePos.getY() + shapePositionInUniverse.getY() * this.amplifier.get(), scale));
         return earthPos;
     }
 
+    @Override
     public Profile trans2EarthView(Profile shapePorInUniverse)
     {
         Position shapePosInUniverse = trans2EarthView(shapePorInUniverse.getPosition());
@@ -116,75 +113,38 @@ public class Universe extends LogicSpace
     }
 
 
-    public void validatePosition()  // resize frame and move universe bugs here, change code.
+    public void validatePosition(Form earthForm)
     {
         Boolean reCalFlag = false;
-        Position corePos = positionSuit.getPosition(AxisSuit.Direction.COR);
-        Position opCorePos = positionSuit.getPosition(AxisSuit.Direction.EAST_SOUTH);
+        Position corePos = spaceProfile.getPosition(SpaceProfile.Direction.COR);
+        Position opCorePos = spaceProfile.getPosition(SpaceProfile.Direction.EAST_SOUTH);
 
-        if (corePos.getX() >= Math.max(0, (earthForm.getWidth() - universeAmplifyWidth())))
+        if (corePos.getX() >= Math.max(0, (earthForm.getWidth() - spaceProfile.getForm().getWidth())))
         {
-            corePos.setX(Math.max(0, (earthForm.getWidth() - universeAmplifyWidth())));
+            corePos.setX(Math.max(0, (earthForm.getWidth() - spaceProfile.getForm().getWidth())));
             reCalFlag = true;
-        } else if (opCorePos.getX() < Math.min(earthForm.getWidth(), universeAmplifyWidth()))
+        } else if (opCorePos.getX() < Math.min(earthForm.getWidth(), spaceProfile.getForm().getWidth()))
         {
-            corePos.setX(corePos.getX() + (Math.min(earthForm.getWidth(), universeAmplifyWidth()) - opCorePos.getX()));
+            corePos.setX(corePos.getX() + (Math.min(earthForm.getWidth(), spaceProfile.getForm().getWidth()) - opCorePos.getX()));
             reCalFlag = true;
         }
 
-        if (corePos.getY() >= Math.max(0, (earthForm.getHeight() - universeAmplifyHeight())))
+        if (corePos.getY() >= Math.max(0, (earthForm.getHeight() - spaceProfile.getForm().getHeight())))
         {
-            corePos.setY(Math.max(0, (earthForm.getHeight() - universeAmplifyHeight())));
+            corePos.setY(Math.max(0, (earthForm.getHeight() - spaceProfile.getForm().getHeight())));
             reCalFlag = true;
-        } else if (opCorePos.getY() < Math.min(earthForm.getHeight(), universeAmplifyHeight()))
+        } else if (opCorePos.getY() < Math.min(earthForm.getHeight(), spaceProfile.getForm().getHeight()))
         {
-            corePos.setY(corePos.getY() + (Math.min(earthForm.getHeight(), universeAmplifyHeight()) - opCorePos.getY()));
+            corePos.setY(corePos.getY() + (Math.min(earthForm.getHeight(), spaceProfile.getForm().getHeight()) - opCorePos.getY()));
             reCalFlag = true;
         }
         if (reCalFlag)
-            positionSuit.setCorPosition(corePos);
+            spaceProfile.setCorPosition(corePos);
     }
 
-    private void validateUniverseSize()
+    private void validateUniverseSize(Form earthForm)
     {
-        if ((universeAmplifyWidth() < earthForm.getWidth()) || (universeAmplifyHeight() < earthForm.getHeight()))
-            zoomIn();
-    }
-
-    private double universeAmplifyWidth()
-    {
-        return spaceForm.getWidth() * amplifier.get();
-    }
-
-    private double universeAmplifyHeight()
-    {
-        return spaceForm.getHeight() * amplifier.get();
-    }
-
-    public Form getEarthForm()
-    {
-        return earthForm.getCopy();
-    }
-
-    public double getUniverseWidth()
-    {
-        return spaceForm.getWidth();
-    }
-
-    public double getUniverseHeight()
-    {
-        return spaceForm.getHeight();
-    }
-
-    public Form getUniverseForm()
-    {
-        return spaceForm.getCopy();
-    }
-
-
-    public void setEarthForm(Form earthForm)
-    {
-        this.earthForm.setWidth(earthForm.getWidth());
-        this.earthForm.setHeight(earthForm.getHeight());
+        if ((spaceForm.getWidth() * amplifier.get() < earthForm.getWidth()) || (spaceForm.getHeight() * amplifier.get() < earthForm.getHeight()))
+            amplifier.zoomIn();
     }
 }
