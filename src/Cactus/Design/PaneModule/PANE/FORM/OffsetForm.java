@@ -13,18 +13,29 @@ import java.awt.*;
  */
 public class OffsetForm extends ShapeForm
 {
-    public OffsetForm()
-    {
-    }
 
     public OffsetForm(double width, double height)
     {
-        super(width, height);
+        this.width = width;
+        this.height = height;
     }
 
     public OffsetForm(Dimension dimension)
     {
-        super(dimension);
+        this.width = dimension.width;
+        this.height = dimension.height;
+    }
+
+    @Override
+    public void setWidth(double width)
+    {
+        this.width = width;
+    }
+
+    @Override
+    public void setHeight(double height)
+    {
+        this.height = height;
     }
 
     @Override

@@ -2,33 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\ezilizh\Leo\code\mygit\CactusMap\src\Cactus\Design\DataModule\Node.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/DataModule/Event.java" />
-      <change type="MOVED" beforePath="C:\Users\ezilizh\Leo\code\mygit\CactusMap\src\Cactus\Design\PaneModule\AXIS\AxisSuit.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/SpaceProfile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/EarthForm.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/EarthForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/DataModule/Field.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/DataModule/Field.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/TYPE/Form.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/TYPE/Form.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/LogicSpace.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/LogicSpace.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/Pane.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/Pane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/test/PANE/Pane4Test.java" afterPath="$PROJECT_DIR$/src/Cactus/test/PANE/Pane4Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/test/MouseEvent/Pane4TestMouse.java" afterPath="$PROJECT_DIR$/src/Cactus/test/MouseEvent/Pane4TestMouse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/TYPE/Profile.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/TYPE/Profile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/RectangleProfile.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/RectangleProfile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/OffsetForm.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/OffsetForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/ShapeForm.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/ShapeForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/ShapeProfile.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/ShapeProfile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/TYPE/Space.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/TYPE/Space.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/SpaceForm.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/SpaceForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/Universe.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/Universe.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/test/AXIS/testCoordinate.java" afterPath="$PROJECT_DIR$/src/Cactus/test/AXIS/testCoordinate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/test/PANE/testDisplayWithPane.java" afterPath="$PROJECT_DIR$/src/Cactus/test/PANE/testDisplayWithPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/test/PANE/testUniverseEdge.java" afterPath="$PROJECT_DIR$/src/Cactus/test/PANE/testUniverseEdge.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/test/PANE/trySyntax.java" afterPath="$PROJECT_DIR$/src/Cactus/test/PANE/trySyntax.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CactusMap.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415101972861" ignored="false" />
+    <file path="/Dummy.txt" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415189044329" ignored="false" />
     <file path="/MouseAdapter4Universe.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1414929818582" ignored="false" />
     <file path="/Position.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1414920512191" ignored="false" />
     <file path="/Pane4Test.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415185808877" ignored="false" />
@@ -37,7 +20,7 @@
     <file path="/Pane4TestMouse.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415185738413" ignored="false" />
     <file path="/Listener4JFrame.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415187197271" ignored="false" />
     <file path="/Universe.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415184775147" ignored="false" />
-    <file path="/MouseAdapter4JPane.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415187880599" ignored="false" />
+    <file path="/MouseAdapter4JPane.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415271996461" ignored="false" />
     <file path="/Offset.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415015578774" ignored="false" />
     <file path="/EarthForm.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415093566726" ignored="false" />
     <file path="/LogicSpace.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415184313860" ignored="false" />
@@ -45,12 +28,12 @@
     <file path="/ShapeForm.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415187438626" ignored="false" />
     <file path="/Pane.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415188046690" ignored="false" />
     <file path="/Form.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415095698460" ignored="false" />
-    <file path="/OffsetForm.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415095850655" ignored="false" />
+    <file path="/OffsetForm.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415271230495" ignored="false" />
     <file path="/testCoordinate.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415186701730" ignored="false" />
     <file path="/Node.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415105771120" ignored="false" />
     <file path="/ShapeProfile.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415105206294" ignored="false" />
     <file path="/Profile.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415104885935" ignored="false" />
-    <file path="/trySyntax.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415105528791" ignored="false" />
+    <file path="/trySyntax.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415270746296" ignored="false" />
     <file path="/AxisSuit.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415172617733" ignored="false" />
     <file path="/Space.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415175450946" ignored="false" />
     <file path="/testDisplayWithPane.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415188653516" ignored="false" />
@@ -135,7 +118,7 @@
       <file leaf-file-name="MouseAdapter4JPane.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="27" selection-start="3163" selection-end="3206" vertical-scroll-proportion="0.8128342">
+            <state line="190" column="61" selection-start="5389" selection-end="5389" vertical-scroll-proportion="0.44310346">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,46 +126,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Listener4JFrame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java">
+      <file leaf-file-name="Offset.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/Offset.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="45" selection-start="1346" selection-end="1346" vertical-scroll-proportion="0.0">
+            <state line="10" column="13" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Universe.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/Universe.java">
+      <file leaf-file-name="Position.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/Type/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogicSpace.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/LogicSpace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="14" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Space.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/TYPE/Space.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="28" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testCoordinate.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/test/AXIS/testCoordinate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="46" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0">
+            <state line="39" column="16" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -199,10 +155,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testMoveAndZoomInOutAndFrameResize.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/testMoveAndZoomInOutAndFrameResize.java">
+      <file leaf-file-name="SpaceForm.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/SpaceForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="62" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
+            <state line="21" column="11" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,19 +166,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testDisplayWithPane.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/testDisplayWithPane.java">
+      <file leaf-file-name="testMoveAndZoomInOutAndFrameResize.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/testMoveAndZoomInOutAndFrameResize.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="67" selection-start="2810" selection-end="2810" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="17" column="16" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testUniverseEdge.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/testUniverseEdge.java">
+      <file leaf-file-name="MousePosition.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/MousePosition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="52" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
+            <state line="19" column="11" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -246,21 +204,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/ShapeProfile.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/TYPE/Form.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/EarthForm.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/SpaceForm.java" />
         <option value="$PROJECT_DIR$/src/Cactus/test/MouseEvent/Pane4TestMouse.java" />
         <option value="$PROJECT_DIR$/src/Cactus/test/PANE/Pane4Test.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/LogicSpace.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/ShapeForm.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/Pane.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/Universe.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/TYPE/Space.java" />
         <option value="$PROJECT_DIR$/src/Cactus/test/PANE/testDisplayWithPane.java" />
         <option value="$PROJECT_DIR$/src/Cactus/test/PANE/testUniverseEdge.java" />
         <option value="$PROJECT_DIR$/src/Cactus/test/AXIS/testCoordinate.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/OffsetForm.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/test/PANE/trySyntax.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/ShapeForm.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java" />
       </list>
     </option>
@@ -758,64 +716,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="testUniverseEdge" type="TestNG" factoryName="TestNG" temporary="true">
-      <module name="CactusMap" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="Cactus.test.PANE" />
-      <option name="MAIN_CLASS_NAME" value="Cactus.test.PANE.testUniverseEdge" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="testCoordinate" type="TestNG" factoryName="TestNG" temporary="true">
-      <module name="CactusMap" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="Cactus.test.AXIS" />
-      <option name="MAIN_CLASS_NAME" value="Cactus.test.AXIS.testCoordinate" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="testDisplayWithPane" type="TestNG" factoryName="TestNG" temporary="true">
       <module name="CactusMap" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -845,14 +745,72 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="trySyntax.testArrayList" type="TestNG" factoryName="TestNG" temporary="true">
+    <configuration default="false" name="trySyntax" type="TestNG" factoryName="TestNG" temporary="true">
       <module name="CactusMap" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="Cactus.test.PANE" />
       <option name="MAIN_CLASS_NAME" value="Cactus.test.PANE.trySyntax" />
-      <option name="METHOD_NAME" value="testArrayList" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="trySyntax.try1" type="TestNG" factoryName="TestNG" temporary="true">
+      <module name="CactusMap" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="Cactus.test.PANE" />
+      <option name="MAIN_CLASS_NAME" value="Cactus.test.PANE.trySyntax" />
+      <option name="METHOD_NAME" value="try1" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="trySyntax.test1" type="TestNG" factoryName="TestNG" temporary="true">
+      <module name="CactusMap" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="Cactus.test.PANE" />
+      <option name="MAIN_CLASS_NAME" value="Cactus.test.PANE.trySyntax" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -964,18 +922,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="TestNG.testMoveAndZoomInOutAndFrameResize" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.testUniverseEdge" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.testCoordinate" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.testDisplayWithPane" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.trySyntax.testArrayList" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.testDisplayWithPane" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.trySyntax" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.trySyntax.try1" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.trySyntax.test1" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="TestNG.testMoveAndZoomInOutAndFrameResize" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.testDisplayWithPane" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.testUniverseEdge" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.testCoordinate" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.trySyntax.testArrayList" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.trySyntax.test1" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.trySyntax.try1" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.trySyntax" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.testDisplayWithPane" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1069,7 +1027,11 @@
       <created>1415101988009</created>
       <updated>1415101988009</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update structure, move earthForm outside universe, pane holds earthForm">
+      <created>1415189061320</created>
+      <updated>1415189061320</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1090,8 +1052,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28616852" sideWeight="0.67145133" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32854864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28616852" sideWeight="0.61403507" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3859649" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1136,7 +1098,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="change size related fields into Form in Universe, LogicSpace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update structure, move earthForm outside universe, pane holds earthForm" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1159,6 +1121,7 @@
     <MESSAGE value="Check warning" />
     <MESSAGE value="Improve mouse drag effect" />
     <MESSAGE value="change size related fields into Form in Universe, LogicSpace" />
+    <MESSAGE value="Update structure, move earthForm outside universe, pane holds earthForm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1168,23 +1131,81 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/SpaceProfile.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/testDisplayWithPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="40" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+        <state line="57" column="67" selection-start="2810" selection-end="2810" vertical-scroll-proportion="0.7063291">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/Pane4Test.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/testUniverseEdge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="32" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
+        <state line="27" column="52" selection-start="878" selection-end="878" vertical-scroll-proportion="0.94502616">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/test/AXIS/testCoordinate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="46" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.20775624">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/MousePosition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="11" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/testMoveAndZoomInOutAndFrameResize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="16" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/SpaceForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="11" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/OffsetForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+        <state line="37" column="29" selection-start="759" selection-end="759" vertical-scroll-proportion="0.8636364">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/trySyntax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="7" selection-start="2115" selection-end="2115" vertical-scroll-proportion="0.77068967">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1767#1773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/ShapeForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="23" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.8362069">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/EarthForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="287" selection-end="287" vertical-scroll-proportion="0.20517242">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1193,24 +1214,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/TYPE/Form.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
+        <state line="18" column="0" selection-start="283" selection-end="283" vertical-scroll-proportion="0.58965516">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/ShapeForm.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="27" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.0">
+        <state line="37" column="31" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.2137931">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/Pane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="25" selection-start="542" selection-end="550" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,67 +1235,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/Type/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="45" selection-start="1346" selection-end="1346" vertical-scroll-proportion="0.0">
+        <state line="39" column="16" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/TYPE/Space.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/Offset.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/Universe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/LogicSpace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="14" selection-start="1052" selection-end="1052" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/testDisplayWithPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="67" selection-start="2810" selection-end="2810" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/testUniverseEdge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="52" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/testMoveAndZoomInOutAndFrameResize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="62" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/test/AXIS/testCoordinate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="46" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0">
+        <state line="10" column="13" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="27" selection-start="3163" selection-end="3206" vertical-scroll-proportion="0.8128342">
+        <state line="190" column="61" selection-start="5389" selection-end="5389" vertical-scroll-proportion="0.44310346">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

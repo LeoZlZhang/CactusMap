@@ -67,13 +67,13 @@ public abstract class ShapeForm implements Form
     {
         if (this.width < 0)
         {
+            System.out.println("Width(" + this.width + ") invalid, set to 0!");
             this.width = 0;
-            System.out.println("Width(" + this.width + ") invalid, set to 1!");
         }
         if (this.height < 0)
         {
+            System.out.println("Height(" + this.height + ") invalid, set to 0!");
             this.height = 0;
-            System.out.println("Height(" + this.height + ") invalid, set to 1!");
         }
     }
 
@@ -81,5 +81,6 @@ public abstract class ShapeForm implements Form
     {
         this.width = width + form.getWidth();
         this.height = height + form.getHeight();
+        validateForm();
     }
 }

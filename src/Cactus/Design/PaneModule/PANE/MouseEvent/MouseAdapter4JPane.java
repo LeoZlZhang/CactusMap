@@ -4,7 +4,6 @@ import Cactus.Design.PaneModule.AXIS.POSITION.MousePosition;
 import Cactus.Design.PaneModule.AXIS.POSITION.Offset;
 import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
 import Cactus.Design.PaneModule.PANE.Pane;
-import Cactus.test.MouseEvent.Pane4TestMouse;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -18,130 +17,72 @@ import java.math.BigDecimal;
  */
 public class MouseAdapter4JPane extends MouseAdapter
 {
-    private Pane pane;
-    private boolean mousePressed;
-    private Position startPos;
-    private Position endPos;
-
-    //Inertia effect code
-    private boolean dragging;
-    private InertiaSuit inertiaSuit;
-    private int inertiaCalInterval;
-    private int damping;
-    private double stopThreshold;
-    private Timer inertiaTimer = new Timer(inertiaCalInterval, new ActionListener()
+    private enum MouseAction
     {
-//        long t1;
-//        long t2;
-        @Override
-        public void actionPerformed(ActionEvent e)
-        {
-//            t1 = System.nanoTime();
-//            System.out.println("DEBUG interval time in nano=" + (t1-t2)/1000000);
-            Double dis;
-            Offset offset = new Offset();
-            int signal;
-            double inertiaA;
-            if (inertiaSuit.enableX)
-            {
-                if (inertiaSuit.V_X > 0)
-                    signal = 1;
-                else
-                    signal = -1;
+        PRESS, DRAGGING, RELEASE, SELECT;
+    }
 
-                inertiaA = inertiaSuit.V_X * signal / damping * -1;
-
-                dis = calDistanceWithAccelerate(inertiaCalInterval, inertiaA, inertiaSuit.V_X * signal) * signal;
-                offset.setX(dis);
-                inertiaSuit.V_X = inertiaSuit.V_X * signal + inertiaA * inertiaCalInterval;
-                if (inertiaSuit.V_X <= stopThreshold)
-                {
-                    inertiaSuit.V_X = 0;
-                    inertiaSuit.enableX = false;
-                } else
-                {
-                    inertiaSuit.V_X = inertiaSuit.V_X * signal;
-                }
-            }
-            if (inertiaSuit.enableY)
-            {
-                if (inertiaSuit.V_Y > 0)
-                    signal = 1;
-                else
-                    signal = -1;
-
-                inertiaA = inertiaSuit.V_Y / damping * signal * -1;
-                dis = calDistanceWithAccelerate(inertiaCalInterval, inertiaA, inertiaSuit.V_Y * signal) * signal;
-                offset.setY(dis);
-                inertiaSuit.V_Y = inertiaSuit.V_Y * signal + inertiaA * inertiaCalInterval;
-                if (inertiaSuit.V_Y <= stopThreshold)
-                {
-                    inertiaSuit.V_Y = 0;
-                    inertiaSuit.enableY = false;
-                } else
-                {
-                    inertiaSuit.V_Y = inertiaSuit.V_Y * signal;
-                }
-            }
-            if (!inertiaSuit.enableX && !inertiaSuit.enableY && !dragging)
-            {
-                inertiaTimer.stop();
-            } else
-            {
-                pane.universe.moveSpace(offset, pane.paneForm);
-                pane.repaint();
-            }
-//            t2 = System.nanoTime();
-//            System.out.println("DEBUG nano time for paint="+(t2-t1));
-        }
-
-        private double calDistanceWithAccelerate(double t, double a, double v)
-        {
-            BigDecimal s = new BigDecimal(a * t * t / 2 + v * t);
-            if (s.doubleValue() < 0)
-            {
-                return 0;
-            } else
-            {
-                return s.setScale(2, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-            }
-        }
-    });
-
+    private Pane pane;
+    private DragSuit dragSuit;
+    private MouseAction mouseStatus;
+    //Inertia effect code
+    private InertiaSuit inertiaSuit;
+    private Timer inertiaTimer;
 
     public MouseAdapter4JPane(Pane pane)
     {
         this.pane = pane;
-        dragging = false;
-        mousePressed = false;
-        inertiaSuit = new InertiaSuit();
-        inertiaCalInterval = 10;
-        damping = 120;
-        stopThreshold = 0.02;
+        mouseStatus = MouseAction.RELEASE;
+        inertiaSuit = new InertiaSuit(15, 130, 0.005);
+        dragSuit = new DragSuit();
+        inertiaTimer = new Timer(inertiaSuit.inertiaCalInterval, new InertiaActionListener());
     }
 
+    /**
+     * Mouse dragging inertia effect can only by inertia stop, mouse press, and wheel move..
+     *
+     * @param e
+     */
     @Override
     public void mousePressed(MouseEvent e)
     {
-        inertiaSuit.disable();
-        startPos = new MousePosition(e.getPoint());
-        endPos = null;
-        mousePressed = true;
-
+        switch (mouseStatus)
+        {
+            case PRESS:
+                break;
+            case DRAGGING:
+                break;
+            case RELEASE:
+                inertiaSuit.disable();
+                mouseStatus = MouseAction.PRESS;
+                break;
+            case SELECT:
+                break;
+        }
+        /**
+         * update mouse status
+         */
     }
 
     @Override
     public void mouseReleased(MouseEvent e)
     {
-        mousePressed = false;
-        startPos = null;
-        endPos = null;
 
-        if (dragging)
+        switch (mouseStatus)
         {
-            inertiaSuit.enable();
-            dragging = false;
+            case PRESS:
+                mouseStatus = MouseAction.RELEASE;
+                break;
+            case DRAGGING:
+                inertiaSuit.enable();
+                mouseStatus = MouseAction.RELEASE;
+                break;
+            case RELEASE:
+                break;
+            case SELECT:
+                break;
         }
+
     }
 
     @Override
@@ -152,79 +93,70 @@ public class MouseAdapter4JPane extends MouseAdapter
     @Override
     public void mouseWheelMoved(MouseWheelEvent e)
     {
-        inertiaSuit.disable();
-        if (e.getWheelRotation() > 0)
+        switch (mouseStatus)
         {
-            pane.universe.zoomOut(new MousePosition(e.getPoint()),pane.paneForm);
-            pane.repaint();
-        } else if (e.getWheelRotation() < 0)
-        {
-            pane.universe.zoomIn(new MousePosition(e.getPoint()), pane.paneForm);
-            pane.repaint();
+            case PRESS:
+                break;
+            case DRAGGING:
+                break;
+            case RELEASE:
+                inertiaSuit.disable();
+                if (e.getWheelRotation() > 0)
+                {
+                    pane.universe.zoomOut(new MousePosition(e.getPoint()), pane.paneForm);
+                    pane.repaint();
+                } else if (e.getWheelRotation() < 0)
+                {
+                    pane.universe.zoomIn(new MousePosition(e.getPoint()), pane.paneForm);
+                    pane.repaint();
+                }
+                break;
+            case SELECT:
+                break;
         }
     }
 
     @Override
     public void mouseDragged(MouseEvent e)
     {
-        if (mousePressed)
+        switch (mouseStatus)
         {
-            dragging = true;
-            endPos = new MousePosition(e.getPoint());
-            if (pane != null && startPos != null)
-            {
-                double xOffset = endPos.getX() - startPos.getX();
-                double yOffset = endPos.getY() - startPos.getY();
-                pane.universe.moveSpace(new Offset(xOffset, yOffset), pane.paneForm);
-                pane.repaint();
-                startPos.setX(endPos.getX());
-                startPos.setY(endPos.getY());
-            }
-            inertiaSuit.T1 = e.getWhen();
-            inertiaSuit.axisX1 = e.getPoint().getX();
-            inertiaSuit.axisY1 = e.getPoint().getY();
-            inertiaSuit.getVAvergae();
-
-            if(!inertiaTimer.isRunning())
-            {
+            case PRESS:
+                /**
+                 * Set start position for dragging
+                 */
+                dragSuit.startPos = new MousePosition(e.getPoint());
+                inertiaSuit.T0 = inertiaSuit.T1;
+                inertiaSuit.axisX0 = inertiaSuit.axisX1;
+                inertiaSuit.axisY0 = inertiaSuit.axisY1;
+                mouseStatus = MouseAction.DRAGGING;
                 inertiaTimer.start();
-            }
+                break;
+            case DRAGGING:
+                dragSuit.endPos = new MousePosition(e.getPoint());
+                if (pane != null && dragSuit.startPos != null)
+                {
+                    pane.universe.moveSpace(dragSuit.getOffset(), pane.paneForm);
+                    pane.repaint();
+                    dragSuit.startPos.setX(e.getX());
+                    dragSuit.startPos.setY(e.getY());
+                }
+
+                inertiaSuit.T1 = e.getWhen();
+                inertiaSuit.axisX1 = e.getPoint().getX();
+                inertiaSuit.axisY1 = e.getPoint().getY();
+                inertiaSuit.getVAverage();
+                inertiaSuit.T0 = inertiaSuit.T1;
+                inertiaSuit.axisX0 = inertiaSuit.axisX1;
+                inertiaSuit.axisY0 = inertiaSuit.axisY1;
+                break;
+            case RELEASE:
+                break;
+            case SELECT:
+                break;
         }
-        inertiaSuit.T0 = e.getWhen();
-        inertiaSuit.axisX0 = e.getPoint().getX();
-        inertiaSuit.axisY0 = e.getPoint().getY();
 
 
-    }
-
-    public int getInertiaCalInterval()
-    {
-        return inertiaCalInterval;
-    }
-
-    public void setInertiaCalInterval(int inertiaCalInterval)
-    {
-        this.inertiaCalInterval = inertiaCalInterval;
-    }
-
-    public int getDamping()
-    {
-        return damping;
-    }
-
-    public void setDamping(int damping)
-    {
-        this.damping = damping;
-    }
-
-    public double getStopThreshold()
-    {
-        return stopThreshold;
-    }
-
-    public void setStopThreshold(double stopThreshold)
-    {
-        this.stopThreshold = stopThreshold;
     }
 
     private class InertiaSuit
@@ -239,23 +171,139 @@ public class MouseAdapter4JPane extends MouseAdapter
         public double axisY1 = 0;
         public boolean enableX = false;
         public boolean enableY = false;
+        public int inertiaCalInterval;
+        public int damping;
+        public double stopThreshold;
+        public int signalX;
+        public int signalY;
 
-        public void getVAvergae()
+        private InertiaSuit(int inertiaCalInterval, int damping, double stopThreshold)
         {
-            V_X = (axisX1 - axisX0) / (T1 - T0);
-            V_Y = (axisY1 - axisY0) / (T1 - T0);
+            this.inertiaCalInterval = inertiaCalInterval;
+            this.damping = damping;
+            this.stopThreshold = stopThreshold;
+        }
+
+        public void getVAverage()
+        {
+
+            V_X = (axisX1 - axisX0) / Math.max((T1 - T0), 1);
+            V_Y = (axisY1 - axisY0) / Math.max((T1 - T0), 1);
         }
 
         public void enable()
         {
             enableX = true;
             enableY = true;
+            if (inertiaSuit.V_X > 0)
+                signalX = 1;
+            else
+                signalX = -1;
+            if (inertiaSuit.V_Y > 0)
+                signalY = 1;
+            else
+                signalY = -1;
+
+
         }
 
         public void disable()
         {
             enableX = false;
             enableY = false;
+            inertiaTimer.stop();
+        }
+    }
+
+    private class DragSuit
+    {
+        Position startPos = new MousePosition(0, 0);
+        Position endPos = new MousePosition(0, 0);
+
+        public Position getOffset()
+        {
+            return new Offset((endPos.getX() - startPos.getX()), (endPos.getY() - startPos.getY()));
+        }
+    }
+
+    public class InertiaActionListener implements ActionListener
+    {
+        long t1;
+        long t2;
+
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            Double dis;
+            Offset offset = new Offset(0, 0);
+            double inertiaA_ABS;
+            t2 = System.currentTimeMillis();
+            if (inertiaSuit.enableX)
+            {
+                /**
+                 * Re-calculate A refer to V.
+                 */
+                inertiaA_ABS = inertiaSuit.V_X * inertiaSuit.signalX / inertiaSuit.damping * -1;
+
+                dis = calDistanceWithAccelerate_ABS(
+                        (t2 - t1),
+                        inertiaA_ABS,
+                        inertiaSuit.V_X * inertiaSuit.signalX) * inertiaSuit.signalX;
+                offset.setX(dis);
+                /**
+                 * Re-calculate V after interval
+                 */
+                inertiaSuit.V_X = inertiaSuit.V_X + inertiaA_ABS * inertiaSuit.signalX * inertiaSuit.inertiaCalInterval;
+                if (inertiaSuit.V_X * inertiaSuit.signalX <= inertiaSuit.stopThreshold)
+                {
+                    inertiaSuit.V_X = 0;
+                    inertiaSuit.enableX = false;
+                }
+            }
+
+            if (inertiaSuit.enableY)
+            {
+                inertiaA_ABS = inertiaSuit.V_Y * inertiaSuit.signalY / inertiaSuit.damping * -1;
+                dis = calDistanceWithAccelerate_ABS(
+                        (t2 - t1),
+                        inertiaA_ABS,
+                        inertiaSuit.V_Y * inertiaSuit.signalY) * inertiaSuit.signalY;
+                offset.setY(dis);
+                /**
+                 * Re-calculate V after interval
+                 */
+                inertiaSuit.V_Y = inertiaSuit.V_Y + inertiaA_ABS * inertiaSuit.signalY * inertiaSuit.inertiaCalInterval;
+                if (inertiaSuit.V_Y * inertiaSuit.signalY <= inertiaSuit.stopThreshold)
+                {
+                    inertiaSuit.V_Y = 0;
+                    inertiaSuit.enableY = false;
+                }
+            }
+
+            if (mouseStatus == MouseAction.RELEASE)
+            {
+                if (!inertiaSuit.enableX && !inertiaSuit.enableY)
+                {
+                    inertiaTimer.stop();
+                } else
+                {
+                    pane.universe.moveSpace(offset, pane.paneForm);
+                    pane.repaint();
+                }
+            }
+            t1 = System.currentTimeMillis();
+        }
+
+        private double calDistanceWithAccelerate_ABS(double t, double a, double v)
+        {
+            BigDecimal s = new BigDecimal(a * t * t / 2 + v * t);
+            if (s.doubleValue() < 0)
+            {
+                return 0;
+            } else
+            {
+                return s.setScale(2, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+            }
         }
     }
 }

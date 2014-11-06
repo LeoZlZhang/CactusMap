@@ -41,7 +41,6 @@ public class Listener4JFrame implements ComponentListener
                     (int) pane.paneForm.getHeight());
             pane.setSize(dim);
             pane.setPreferredSize(dim);
-//            pane.universe.validatePosition();
             pane.repaint();
         }
         oldWidth = e.getComponent().getWidth();
