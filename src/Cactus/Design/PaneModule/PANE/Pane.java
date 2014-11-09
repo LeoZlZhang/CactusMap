@@ -1,6 +1,7 @@
 package Cactus.Design.PaneModule.PANE;
 
 
+import Cactus.Design.DataModule.TYPE.CactusEvent;
 import Cactus.Design.PaneModule.AXIS.Universe;
 import Cactus.Design.PaneModule.PANE.FORM.EarthForm;
 import Cactus.Design.PaneModule.PANE.FORM.SpaceForm;
@@ -9,6 +10,7 @@ import Cactus.Design.PaneModule.PANE.MouseEvent.MouseAdapter4JPane;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,9 +23,24 @@ public abstract class Pane extends JPanel //implements MouseAdapter4JPane
     public final Universe universe;
     public final Form paneForm;
     protected final Form universeForm;
+    public final ArrayList<CactusEvent> eventList;
 
     protected Pane(Form universeForm, Form paneForm)
     {
+        eventList = new ArrayList<CactusEvent>();
+        this.paneForm = new EarthForm(paneForm);
+        this.universeForm = new SpaceForm(universeForm);
+        universe = new Universe(universeForm);
+        this.setSize(
+                new Dimension(
+                        (int) this.paneForm.getWidth(),
+                        (int) this.paneForm.getHeight()));
+        this.setPreferredSize(this.getSize());
+    }
+
+    protected Pane(Form universeForm, Form paneForm, ArrayList<CactusEvent> list)
+    {
+        eventList = (ArrayList<CactusEvent>) list.clone();
         this.paneForm = new EarthForm(paneForm);
         this.universeForm = new SpaceForm(universeForm);
         universe = new Universe(universeForm);

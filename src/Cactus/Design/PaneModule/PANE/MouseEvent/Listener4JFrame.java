@@ -35,7 +35,7 @@ public class Listener4JFrame implements ComponentListener
         {
             int widthChange = (int) e.getComponent().getSize().getWidth() - oldWidth;
             int heightChange = (int) e.getComponent().getSize().getHeight() - oldHeight;
-            pane.paneForm.offsetForm(new OffsetForm(widthChange, heightChange));
+            pane.paneForm.offsetForm(widthChange, heightChange);
             Dimension dim = new Dimension(
                     (int) pane.paneForm.getWidth(),
                     (int) pane.paneForm.getHeight());

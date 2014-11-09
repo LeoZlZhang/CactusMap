@@ -32,6 +32,12 @@ public abstract class Position
         this.y = pos.getY();
     }
 
+    public Position(Position pos)
+    {
+        this.x = pos.getX();
+        this.y = pos.getY();
+    }
+
     public double getX()
     {
         return x;

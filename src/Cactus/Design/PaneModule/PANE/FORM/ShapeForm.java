@@ -77,10 +77,10 @@ public abstract class ShapeForm implements Form
         }
     }
 
-    public void offsetForm(Form form)
+    public void offsetForm(double widthOffset, double heightOffset)
     {
-        this.width = width + form.getWidth();
-        this.height = height + form.getHeight();
+        this.width = width + widthOffset;
+        this.height = height + heightOffset;
         validateForm();
     }
 }

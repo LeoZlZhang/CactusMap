@@ -20,6 +20,11 @@ public class ShapePosition extends Position
         super(x, y);
     }
 
+    public ShapePosition(Position pos)
+    {
+        super(pos);    //To change body of overridden methods use File | Settings | File Templates.
+    }
+
     @Override
     public Position getCopy()
     {

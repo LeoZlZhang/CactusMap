@@ -29,6 +29,13 @@ public abstract class ShapeProfile implements Profile
         this.shapeForm = new RectangleForm(shapeForm.getWidth(), shapeForm.getHeight());
     }
 
+    public ShapeProfile(Profile profile)
+    {
+        this.position = new ShapePosition(profile.getPosition());
+        this.shapeForm = new RectangleForm(profile.getForm().getCopy());
+    }
+
+
     @Override
     public Position getPosition()
     {

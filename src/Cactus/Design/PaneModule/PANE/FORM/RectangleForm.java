@@ -20,6 +20,11 @@ public class RectangleForm extends ShapeForm
         super(width, height);
     }
 
+    public RectangleForm(Form form)
+    {
+        super(form);    //To change body of overridden methods use File | Settings | File Templates.
+    }
+
     @Override
     public Form getCopy()
     {

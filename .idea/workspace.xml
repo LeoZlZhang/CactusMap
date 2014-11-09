@@ -2,36 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/AffectActionListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cactus/Design/DataModule/AffectiveEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/CactusEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cactus/Design/DataModule/DependentEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cactus/Design/DataModule/ResultEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/SelectActionListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/Shape.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Cactus/test/DataModule/testEvent.java" />
+      <change type="DELETED" beforePath="C:\Users\ezilizh\Leo\code\mygit\CactusMap\src\Cactus\Design\DataModule\Event.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ezilizh\Leo\code\mygit\CactusMap\src\Cactus\Design\DataModule\Field.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/TYPE/Form.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/TYPE/Form.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/OffsetForm.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/OffsetForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/Pane.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/Pane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/Type/Position.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/Type/Position.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/RectangleForm.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/RectangleForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/RectangleProfile.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/RectangleProfile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/ShapeForm.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/ShapeForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/test/PANE/trySyntax.java" afterPath="$PROJECT_DIR$/src/Cactus/test/PANE/trySyntax.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/ShapePosition.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/ShapePosition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/ShapeProfile.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/ShapeProfile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CactusMap.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415189044329" ignored="false" />
+    <file path="/Dummy.txt" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415272095340" ignored="false" />
     <file path="/MouseAdapter4Universe.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1414929818582" ignored="false" />
-    <file path="/Position.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1414920512191" ignored="false" />
+    <file path="/Position.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415276681986" ignored="false" />
     <file path="/Pane4Test.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415185808877" ignored="false" />
-    <file path="/fragment.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415084590247" ignored="false" />
+    <file path="/fragment.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415502476993" ignored="false" />
     <file path="/testMove.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1414938793519" ignored="false" />
-    <file path="/Pane4TestMouse.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415185738413" ignored="false" />
+    <file path="/Pane4TestMouse.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415507179429" ignored="false" />
     <file path="/Listener4JFrame.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415187197271" ignored="false" />
     <file path="/Universe.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415184775147" ignored="false" />
-    <file path="/MouseAdapter4JPane.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415271996461" ignored="false" />
+    <file path="/MouseAdapter4JPane.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415548247648" ignored="false" />
     <file path="/Offset.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415015578774" ignored="false" />
     <file path="/EarthForm.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415093566726" ignored="false" />
     <file path="/LogicSpace.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415184313860" ignored="false" />
     <file path="/UniverseForm.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415091701394" ignored="false" />
-    <file path="/ShapeForm.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415187438626" ignored="false" />
-    <file path="/Pane.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415188046690" ignored="false" />
-    <file path="/Form.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415095698460" ignored="false" />
+    <file path="/ShapeForm.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415342538505" ignored="false" />
+    <file path="/Pane.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415507244308" ignored="false" />
+    <file path="/Form.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415342584970" ignored="false" />
     <file path="/OffsetForm.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415271230495" ignored="false" />
     <file path="/testCoordinate.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415186701730" ignored="false" />
     <file path="/Node.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415105771120" ignored="false" />
-    <file path="/ShapeProfile.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415105206294" ignored="false" />
+    <file path="/ShapeProfile.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415276605543" ignored="false" />
     <file path="/Profile.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415104885935" ignored="false" />
     <file path="/trySyntax.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415270746296" ignored="false" />
     <file path="/AxisSuit.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415172617733" ignored="false" />
@@ -39,6 +54,19 @@
     <file path="/testDisplayWithPane.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415188653516" ignored="false" />
     <file path="/testUniverseEdge.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415186632697" ignored="false" />
     <file path="/a.dummy" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415187379656" ignored="false" />
+    <file path="/Event.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415507346428" ignored="false" />
+    <file path="/testEvent.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415547485064" ignored="false" />
+    <file path="/RectangleProfile.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415342599353" ignored="false" />
+    <file path="/EventShaperController.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415450323033" ignored="false" />
+    <file path="/Shape.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415505855601" ignored="false" />
+    <file path="/EventSuit.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415453262527" ignored="false" />
+    <file path="/AffectiveEvent.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415453158500" ignored="false" />
+    <file path="/DependentEvent.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415455267621" ignored="false" />
+    <file path="/ResultEvent.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415453491213" ignored="false" />
+    <file path="/TimerEvent.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415453653293" ignored="false" />
+    <file path="/StatusManager.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415501872784" ignored="false" />
+    <file path="/SelectActionListener.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415545182035" ignored="false" />
+    <file path="/AffectActionListener.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415547666564" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +133,39 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/TYPE/Profile.java" line="13" class="Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile" package="Cactus.Design.PaneModule.PANE.PROFILE.TYPE">
+        <option name="WATCH_ENTRY" value="true" />
+        <option name="WATCH_EXIT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </method_breakpoints>
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/ShapeProfile.java" line="14" class="Cactus.Design.PaneModule.PANE.PROFILE.ShapeProfile" package="Cactus.Design.PaneModule.PANE.PROFILE">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -118,7 +178,24 @@
       <file leaf-file-name="MouseAdapter4JPane.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="61" selection-start="5389" selection-end="5389" vertical-scroll-proportion="0.44310346">
+            <state line="124" column="66" selection-start="4736" selection-end="4736" vertical-scroll-proportion="0.3968254">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#14368#14377#0" expanded="true" />
+                <element signature="e#14451#14460#0" expanded="true" />
+                <element signature="e#14534#14543#0" expanded="true" />
+                <element signature="e#14665#14674#0" expanded="true" />
+                <element signature="e#14751#14760#0" expanded="true" />
+                <element signature="e#14837#14846#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AffectActionListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/AffectActionListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="56" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,30 +203,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Offset.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/Offset.java">
+      <file leaf-file-name="Shape.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/Shape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Position.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/Type/Position.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="16" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pane4TestMouse.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/Pane4TestMouse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="55" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.0">
+            <state line="149" column="12" selection-start="5299" selection-end="5299" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1568#1577#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#transform4SelectEffect#0;class#ShapeManager#0;class#Shape#0" expanded="false" />
+                <element signature="method#transform4DependEffect#0;class#ShapeManager#0;class#Shape#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectActionListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/SelectActionListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="76" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,18 +230,7 @@
       <file leaf-file-name="SpaceForm.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/SpaceForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="11" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testMoveAndZoomInOutAndFrameResize.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/testMoveAndZoomInOutAndFrameResize.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+            <state line="14" column="11" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,6 +243,39 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="11" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pane.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/Pane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="39" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AffectiveEvent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/DataModule/AffectiveEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="5" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DependentEvent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Cactus/Design/DataModule/DependentEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="23" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -204,21 +298,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/EarthForm.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/SpaceForm.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/DependentEvent.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/EventSuit.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/ResultEvent.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/ResultEvent.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/TimerEvent.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/DependentEvent.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/StatusManager.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/Event.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/Shape.java" />
         <option value="$PROJECT_DIR$/src/Cactus/test/MouseEvent/Pane4TestMouse.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/test/PANE/Pane4Test.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/LogicSpace.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/Pane.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/Universe.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/TYPE/Space.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/test/PANE/testDisplayWithPane.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/test/PANE/testUniverseEdge.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/test/AXIS/testCoordinate.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/OffsetForm.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/test/PANE/trySyntax.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/ShapeForm.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/CactusEvent.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/SelectActionListener.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/test/DataModule/testEvent.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/AffectActionListener.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java" />
       </list>
     </option>
@@ -341,59 +435,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PANE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MouseEvent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AXIS" />
+              <option name="myItemId" value="DataModule" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,78 +466,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PANE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PaneModule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PANE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PROFILE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PaneModule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PANE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PROFILE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TYPE" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -556,78 +526,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PaneModule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PANE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FORM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PaneModule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AXIS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CactusMap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cactus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PaneModule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AXIS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TYPE" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -654,6 +552,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DataModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CactusMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CactusMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cactus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TYPE" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -685,103 +613,19 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Cactus.test.MouseEvent" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Cactus.Design.DataModule" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.testMoveAndZoomInOutAndFrameResize">
-    <configuration default="false" name="testMoveAndZoomInOutAndFrameResize" type="TestNG" factoryName="TestNG" temporary="true">
+  <component name="RunManager" selected="TestNG.testEvent.testRemoveArrayList1">
+    <configuration default="false" name="testEvent.testTransColor" type="TestNG" factoryName="TestNG" temporary="true">
       <module name="CactusMap" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="Cactus.test.MouseEvent" />
-      <option name="MAIN_CLASS_NAME" value="Cactus.test.MouseEvent.testMoveAndZoomInOutAndFrameResize" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="testDisplayWithPane" type="TestNG" factoryName="TestNG" temporary="true">
-      <module name="CactusMap" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="Cactus.test.PANE" />
-      <option name="MAIN_CLASS_NAME" value="Cactus.test.PANE.testDisplayWithPane" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="trySyntax" type="TestNG" factoryName="TestNG" temporary="true">
-      <module name="CactusMap" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="Cactus.test.PANE" />
-      <option name="MAIN_CLASS_NAME" value="Cactus.test.PANE.trySyntax" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="trySyntax.try1" type="TestNG" factoryName="TestNG" temporary="true">
-      <module name="CactusMap" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="Cactus.test.PANE" />
-      <option name="MAIN_CLASS_NAME" value="Cactus.test.PANE.trySyntax" />
-      <option name="METHOD_NAME" value="try1" />
+      <option name="PACKAGE_NAME" value="Cactus.test.DataModule" />
+      <option name="MAIN_CLASS_NAME" value="Cactus.test.DataModule.testEvent" />
+      <option name="METHOD_NAME" value="testTransColor" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -803,14 +647,107 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="trySyntax.test1" type="TestNG" factoryName="TestNG" temporary="true">
+    <configuration default="false" name="testEvent" type="TestNG" factoryName="TestNG" temporary="true">
       <module name="CactusMap" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="Cactus.test.PANE" />
-      <option name="MAIN_CLASS_NAME" value="Cactus.test.PANE.trySyntax" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="PACKAGE_NAME" value="Cactus.test.DataModule" />
+      <option name="MAIN_CLASS_NAME" value="Cactus.test.DataModule.testEvent" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="testEvent.test" type="TestNG" factoryName="TestNG" temporary="true">
+      <module name="CactusMap" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="Cactus.test.DataModule" />
+      <option name="MAIN_CLASS_NAME" value="Cactus.test.DataModule.testEvent" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="63429" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="testEvent.testRemoveArrayList" type="TestNG" factoryName="TestNG" temporary="true">
+      <module name="CactusMap" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="Cactus.test.DataModule" />
+      <option name="MAIN_CLASS_NAME" value="Cactus.test.DataModule.testEvent" />
+      <option name="METHOD_NAME" value="testRemoveArrayList" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="testEvent.testRemoveArrayList1" type="TestNG" factoryName="TestNG" temporary="true">
+      <module name="CactusMap" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="Cactus.test.DataModule" />
+      <option name="MAIN_CLASS_NAME" value="Cactus.test.DataModule.testEvent" />
+      <option name="METHOD_NAME" value="testRemoveArrayList1" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -921,19 +858,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.testMoveAndZoomInOutAndFrameResize" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.testDisplayWithPane" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.trySyntax" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.trySyntax.try1" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.trySyntax.test1" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.testEvent.testTransColor" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.testEvent" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.testEvent.test" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.testEvent.testRemoveArrayList" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.testEvent.testRemoveArrayList1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.testMoveAndZoomInOutAndFrameResize" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.trySyntax.test1" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.trySyntax.try1" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.trySyntax" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.testDisplayWithPane" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.testEvent.testRemoveArrayList1" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.testEvent.testRemoveArrayList" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.testEvent.test" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.testEvent" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.testEvent.testTransColor" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1031,7 +968,11 @@
       <created>1415189061320</created>
       <updated>1415189061320</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update structure, add mouse status in MouseAdapter4JPane, fix bug in OffsetForm">
+      <created>1415272102563</created>
+      <updated>1415272102563</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1052,7 +993,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28616852" sideWeight="0.61403507" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28616852" sideWeight="0.61403507" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3859649" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1098,7 +1039,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update structure, move earthForm outside universe, pane holds earthForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update structure, add mouse status in MouseAdapter4JPane, fix bug in OffsetForm" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1122,6 +1063,7 @@
     <MESSAGE value="Improve mouse drag effect" />
     <MESSAGE value="change size related fields into Form in Universe, LogicSpace" />
     <MESSAGE value="Update structure, move earthForm outside universe, pane holds earthForm" />
+    <MESSAGE value="Update structure, add mouse status in MouseAdapter4JPane, fix bug in OffsetForm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1131,24 +1073,51 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/testDisplayWithPane.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/RectangleProfile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="67" selection-start="2810" selection-end="2810" vertical-scroll-proportion="0.7063291">
+        <state line="40" column="19" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/testUniverseEdge.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/TYPE/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="52" selection-start="878" selection-end="878" vertical-scroll-proportion="0.94502616">
+        <state line="13" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/test/AXIS/testCoordinate.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/DataModule/ResultEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="46" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.20775624">
+        <state line="16" column="5" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/awt/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="13" selection-start="1727" selection-end="1727" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/DataModule/AffectiveEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="5" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/DataModule/DependentEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="23" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1159,101 +1128,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/testMoveAndZoomInOutAndFrameResize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/SpaceForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="11" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
+        <state line="14" column="11" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/OffsetForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="29" selection-start="759" selection-end="759" vertical-scroll-proportion="0.8636364">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/test/PANE/trySyntax.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="7" selection-start="2115" selection-end="2115" vertical-scroll-proportion="0.77068967">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1767#1773#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/ShapeForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="23" selection-start="1708" selection-end="1708" vertical-scroll-proportion="0.8362069">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/EarthForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="287" selection-end="287" vertical-scroll-proportion="0.20517242">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/FORM/TYPE/Form.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="283" selection-end="283" vertical-scroll-proportion="0.58965516">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/Listener4JFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="31" selection-start="1001" selection-end="1001" vertical-scroll-proportion="0.2137931">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cactus/test/MouseEvent/Pane4TestMouse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="55" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.0">
+        <state line="38" column="63" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.3785489">
           <folding>
             <element signature="e#1568#1577#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/Type/Position.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/CactusEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="16" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="43" column="75" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.6333333">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1001#1010#0" expanded="true" />
+            <element signature="e#1082#1091#0" expanded="true" />
+            <element signature="e#1160#1169#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/AXIS/POSITION/Offset.java">
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/Pane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="25" column="39" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="12" selection-start="5299" selection-end="5299" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#transform4SelectEffect#0;class#ShapeManager#0;class#Shape#0" expanded="false" />
+            <element signature="method#transform4DependEffect#0;class#ShapeManager#0;class#Shape#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/SelectActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="76" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/test/DataModule/testEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="61" selection-start="3565" selection-end="3565" vertical-scroll-proportion="1.0976331">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3051#3060#0" expanded="true" />
+            <element signature="e#3382#3391#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/AffectActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="56" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/MouseEvent/MouseAdapter4JPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="61" selection-start="5389" selection-end="5389" vertical-scroll-proportion="0.44310346">
+        <state line="124" column="66" selection-start="4736" selection-end="4736" vertical-scroll-proportion="0.3968254">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#14368#14377#0" expanded="true" />
+            <element signature="e#14451#14460#0" expanded="true" />
+            <element signature="e#14534#14543#0" expanded="true" />
+            <element signature="e#14665#14674#0" expanded="true" />
+            <element signature="e#14751#14760#0" expanded="true" />
+            <element signature="e#14837#14846#0" expanded="true" />
           </folding>
         </state>
       </provider>

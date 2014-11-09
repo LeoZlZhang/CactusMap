@@ -8,6 +8,7 @@ import Cactus.Design.PaneModule.PANE.Pane;
 import javax.swing.*;
 import java.awt.event.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,16 +23,20 @@ public class MouseAdapter4JPane extends MouseAdapter
         PRESS, DRAGGING, RELEASE, SELECT;
     }
 
-    private Pane pane;
+    public Pane pane;
     private DragSuit dragSuit;
     private MouseAction mouseStatus;
     //Inertia effect code
     private InertiaSuit inertiaSuit;
     private Timer inertiaTimer;
 
+    public EventManager eveManager;
+
+
     public MouseAdapter4JPane(Pane pane)
     {
         this.pane = pane;
+        eveManager = new EventManager(this);
         mouseStatus = MouseAction.RELEASE;
         inertiaSuit = new InertiaSuit(15, 130, 0.005);
         dragSuit = new DragSuit();
@@ -55,6 +60,17 @@ public class MouseAdapter4JPane extends MouseAdapter
             case RELEASE:
                 inertiaSuit.disable();
                 mouseStatus = MouseAction.PRESS;
+                for (int i = 0; i < pane.eventList.size(); i++)
+                {
+                    if (pane.eventList.get(i).hover(new MousePosition(e.getPoint()), pane.universe))
+                    {
+                        eveManager.hoverEventIndex = i;
+                        break;
+                    } else
+                    {
+                        eveManager.hoverEventIndex = -1;
+                    }
+                }
                 break;
             case SELECT:
                 break;
@@ -67,11 +83,77 @@ public class MouseAdapter4JPane extends MouseAdapter
     @Override
     public void mouseReleased(MouseEvent e)
     {
-
         switch (mouseStatus)
         {
             case PRESS:
                 mouseStatus = MouseAction.RELEASE;
+                if (eveManager.hoverEventIndex >= 0)
+                {
+                    if (eveManager.selectedEventIndex < 0)
+                    {
+                        //select
+                        eveManager.selectedEventIndex = eveManager.hoverEventIndex;
+                        eveManager.affectEventIndexList.addAll(pane.eventList.get(eveManager.hoverEventIndex).eventProfile.affectiveEventList);
+                        eveManager.dependEventIndexList.addAll(pane.eventList.get(eveManager.hoverEventIndex).eventProfile.dependentEventList);
+                        eveManager.resultEventIndexList.addAll(pane.eventList.get(eveManager.hoverEventIndex).eventProfile.resultEventList);
+                        //start select timer, transform to next true return.
+                        eveManager.selectEffectTimer.start();
+                        //start effect timer.
+                        eveManager.affectEffectTimer.start();
+                        //start depend timer, transform to next true return.
+                        //start result timer, transform to next true return.
+                    } else if (eveManager.hoverEventIndex == eveManager.selectedEventIndex)
+                    {
+                        //decelect
+                        //timer protection, lock
+                        if (!eveManager.selectEffectTimer.isRunning())
+                        {
+                            //start select timer, transform to next true return.
+                            eveManager.deSelectEventIndex = eveManager.selectedEventIndex;
+                            eveManager.selectedEventIndex = -1;
+                            eveManager.selectEffectTimer.start();
+                            //set stop flag of affect event timer, transform to next true return.
+                            eveManager.offAffectEventIndexList.addAll(eveManager.affectEventIndexList);
+                            eveManager.affectEventIndexList.clear();
+                            //start depend timer, transform to next true return.
+                            //start result timer, transform to next true return.
+                        }
+                    } else
+                    {
+                        //timer protection, lock
+                        if (!eveManager.selectEffectTimer.isRunning())
+                        {
+                            //deselect one and select another
+                            eveManager.deSelectEventIndex = eveManager.selectedEventIndex;
+                            eveManager.selectedEventIndex = eveManager.hoverEventIndex;
+                            eveManager.selectEffectTimer.start();
+                            //set redundant effect event index  list
+                            eveManager.offAffectEventIndexList.addAll(eveManager.affectEventIndexList);
+                            eveManager.affectEventIndexList.clear();
+                            eveManager.affectEventIndexList.addAll(pane.eventList.get(eveManager.hoverEventIndex).eventProfile.affectiveEventList);
+                            eveManager.removeRedundantOffAffectEventList();
+                            //start depend timer, transform to next true return.
+                            //start result timer, transform to next true return.
+                            eveManager.dependEventIndexList.addAll(pane.eventList.get(eveManager.hoverEventIndex).eventProfile.dependentEventList);
+                            eveManager.resultEventIndexList.addAll(pane.eventList.get(eveManager.hoverEventIndex).eventProfile.resultEventList);
+                            //start depend timer, transform to next true return.
+                            //start result timer, transform to next true return.
+                        }
+                    }
+                }
+                if (eveManager.hoverEventIndex >= 0)
+                {
+                    pane.eventList.get(eveManager.hoverEventIndex).statusManager.selected = true;
+                    for (int i = 0; i < eveManager.resultEventIndexList.size(); i++)
+                    {
+                        pane.eventList.get(eveManager.resultEventIndexList.get(i)).statusManager.resulted = true;
+                    }
+                    for (int i = 0; i < eveManager.dependEventIndexList.size(); i++)
+                    {
+                        pane.eventList.get(eveManager.dependEventIndexList.get(i)).statusManager.depended = true;
+                    }
+                    //timer
+                }
                 break;
             case DRAGGING:
                 inertiaSuit.enable();
@@ -155,8 +237,6 @@ public class MouseAdapter4JPane extends MouseAdapter
             case SELECT:
                 break;
         }
-
-
     }
 
     private class InertiaSuit
@@ -303,6 +383,57 @@ public class MouseAdapter4JPane extends MouseAdapter
             } else
             {
                 return s.setScale(2, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+            }
+        }
+    }
+
+
+    public class EventManager
+    {
+        private static final int interval = 100;
+        public int selectedEventIndex = -1;
+        public int hoverEventIndex = -1;
+        public ArrayList<Integer> dependEventIndexList = new ArrayList<Integer>();
+        public ArrayList<Integer> affectEventIndexList = new ArrayList<Integer>();
+        public ArrayList<Integer> resultEventIndexList = new ArrayList<Integer>();
+
+        public int deSelectEventIndex = -1;
+        public ArrayList<Integer> offDependEventIndexList = new ArrayList<Integer>();
+        public ArrayList<Integer> offAffectEventIndexList = new ArrayList<Integer>();
+        public ArrayList<Integer> offResultEventIndexList = new ArrayList<Integer>();
+
+        public Timer selectEffectTimer;
+        public Timer affectEffectTimer;
+        public Timer dependEffectTimer;
+        public Timer resultEffectTimer;
+
+        public EventManager(MouseAdapter4JPane adapter)
+        {
+            reset();
+            selectEffectTimer = new Timer(interval, new SelectActionListener(adapter));
+            affectEffectTimer = new Timer(interval, new AffectActionListener(adapter));
+        }
+
+        public void reset()
+        {
+            selectedEventIndex = -1;
+            hoverEventIndex = -1;
+            dependEventIndexList.clear();
+            affectEventIndexList.clear();
+            resultEventIndexList.clear();
+        }
+
+        public void removeRedundantOffAffectEventList()
+        {
+            for(int i=0;i<offAffectEventIndexList.size();)
+            {
+                for(int j=0;j<affectEventIndexList.size();j++)
+                {
+                    if(offAffectEventIndexList.get(i)==affectEventIndexList.get(j))
+                        offAffectEventIndexList.remove(i);
+                    else
+                        i++;
+                }
             }
         }
     }
