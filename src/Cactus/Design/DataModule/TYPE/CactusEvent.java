@@ -1,10 +1,5 @@
 package Cactus.Design.DataModule.TYPE;
 
-import Cactus.Design.DataModule.AffectiveEvent;
-import Cactus.Design.DataModule.DependentEvent;
-import Cactus.Design.DataModule.ResultEvent;
-import Cactus.Design.PaneModule.AXIS.LogicSpace;
-import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
 import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
 
 import java.util.ArrayList;
@@ -17,18 +12,14 @@ import java.util.ArrayList;
  */
 public abstract class CactusEvent extends Shape
 {
-    public StatusManager statusManager;
+//    public StatusManager statusManager;
     public EventProfile eventProfile;
 
     protected CactusEvent(Profile profile)
     {
         super(profile);
-        statusManager = new StatusManager();
-    }
-
-    public void setEventRelationNet(EventProfile profile)
-    {
-         eventProfile = profile;
+//        statusManager = new StatusManager();
+        eventProfile = new EventProfile();
     }
 
     public enum EventType
@@ -43,14 +34,13 @@ public abstract class CactusEvent extends Shape
         public ArrayList<Integer> resultEventList = new ArrayList<Integer>();
         public String flow = "";
         public EventType eventType = EventType.NORMAL;
-
     }
 
-    public class StatusManager
-    {
-        public boolean selected = false;
-        public boolean affected = false;
-        public boolean depended = false;
-        public boolean resulted = false;
-    }
+//    public class StatusManager
+//    {
+//        public boolean selected = false;
+//        public boolean affected = false;
+//        public boolean depended = false;
+//        public boolean resulted = false;
+//    }
 }

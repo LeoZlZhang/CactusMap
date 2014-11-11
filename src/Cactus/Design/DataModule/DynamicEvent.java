@@ -10,10 +10,10 @@ import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
  * Time: 9:31 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ResultEvent extends CactusEvent
+public class DynamicEvent extends CactusEvent
 {
 
-    public ResultEvent(Profile profile)
+    public DynamicEvent(Profile profile)
     {
         super(profile);
     }

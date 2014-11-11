@@ -23,11 +23,10 @@ public abstract class Pane extends JPanel //implements MouseAdapter4JPane
     public final Universe universe;
     public final Form paneForm;
     protected final Form universeForm;
-    public final ArrayList<CactusEvent> eventList;
+    public final ArrayList<CactusEvent> eventList = new ArrayList<CactusEvent>();
 
     protected Pane(Form universeForm, Form paneForm)
     {
-        eventList = new ArrayList<CactusEvent>();
         this.paneForm = new EarthForm(paneForm);
         this.universeForm = new SpaceForm(universeForm);
         universe = new Universe(universeForm);
@@ -40,7 +39,7 @@ public abstract class Pane extends JPanel //implements MouseAdapter4JPane
 
     protected Pane(Form universeForm, Form paneForm, ArrayList<CactusEvent> list)
     {
-        eventList = (ArrayList<CactusEvent>) list.clone();
+        eventList.addAll(list);
         this.paneForm = new EarthForm(paneForm);
         this.universeForm = new SpaceForm(universeForm);
         universe = new Universe(universeForm);

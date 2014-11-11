@@ -12,14 +12,13 @@ import java.awt.*;
  * User: ezilizh
  * Date: 11/8/14
  * Time: 8:43 PM
- * To change this template use File | Settings | File Templates.
  */
 public abstract class Shape
 {
     private final Profile profile;
     public ShapeManager shapeManager;
 
-    private enum Trans
+    public enum Trans
     {
         S0, S1, S2, S3, S4, S5,
         D0, D1, D2, D3, D4, D5,
@@ -52,17 +51,25 @@ public abstract class Shape
         private final static int R0 = 131;
         private final static int G0 = 175;
         private final static int B0 = 155;
-        private final static int R1 = 17;
-        private final static int G1 = 63;
-        private final static int B1 = 61;
+        private final static int R1 = 161;
+        private final static int G1 = 23;
+        private final static int B1 = 21;
+        private final static int R2 = 6;
+        private final static int G2 = 128;
+        private final static int B2 = 67;
         private final Color COL0 = new Color(R0, G0, B0);
         private final Color COL1 = new Color(R0 + (R1 - R0) / 5, G0 + (G1 - G0) / 5, B0 + (B1 - B0) / 5);
         private final Color COL2 = new Color(R0 + (R1 - R0) * 2 / 5, G0 + (G1 - G0) * 2 / 5, B0 + (B1 - B0) * 2 / 5);
         private final Color COL3 = new Color(R0 + (R1 - R0) * 3 / 5, G0 + (G1 - G0) * 3 / 5, B0 + (B1 - B0) * 3 / 5);
         private final Color COL4 = new Color(R0 + (R1 - R0) * 4 / 5, G0 + (G1 - G0) * 4 / 5, B0 + (B1 - B0) * 4 / 5);
         private final Color COL5 = new Color(R1, G1, B1);
+        private final Color COLA1 = new Color(R0 + (R2 - R0) / 5, G0 + (G2 - G0) / 5, B0 + (B2 - B0) / 5);
+        private final Color COLA2 = new Color(R0 + (R2 - R0) * 2 / 5, G0 + (G2 - G0) * 2 / 5, B0 + (B2 - B0) * 2 / 5);
+        private final Color COLA3 = new Color(R0 + (R2 - R0) * 3 / 5, G0 + (G2 - G0) * 3 / 5, B0 + (B2 - B0) * 3 / 5);
+        private final Color COLA4 = new Color(R0 + (R2 - R0) * 4 / 5, G0 + (G2 - G0) * 4 / 5, B0 + (B2 - B0) * 4 / 5);
+        private final Color COLA5 = new Color(R2, G2, B2);
         private Trans transState4Select = Trans.S0;
-        private Trans transState4Affect = Trans.A0;
+        public Trans transState4Affect = Trans.A0;
         private Trans transState4Depend = Trans.D0;
 
         private boolean direction = true;
@@ -72,7 +79,7 @@ public abstract class Shape
             color = COL0;
         }
 
-        public boolean transform4SelectEffect()
+        public void transform4SelectEffect()
         {
             switch (transState4Select)
             {
@@ -141,90 +148,110 @@ public abstract class Shape
                     direction = false;
                     break;
             }
-
-            return transState4Select == Trans.S5 || transState4Select == Trans.S0;
         }
 
-        public boolean transform4AffectEffect()
+        public int getTransState4Select()
+        {
+            if (transState4Select == Trans.S5)
+                return 1;
+            else if (transState4Select == Trans.S0)
+                return 0;
+            else
+                return -1;
+        }
+
+        public void transform4AffectEffect()
         {
             switch (transState4Affect)
             {
                 case A0:
                     transState4Affect = Trans.A1;
-                    color.brighter();
+                    color = COLA1;
                     direction = true;
                     break;
                 case A1:
                     if (direction)
                     {
                         transState4Affect = Trans.A2;
-                        color.brighter();
+                        color = COLA2;
                     } else
                     {
                         transState4Affect = Trans.A0;
-                        color.darker();
+                        color = COL0;
                     }
                     break;
                 case A2:
                     if (direction)
                     {
                         transState4Affect = Trans.A3;
-                        color.brighter();
+                        color = COLA3;
                     } else
                     {
                         transState4Affect = Trans.A1;
-                        color.darker();
+                        color = COLA1;
                     }
                     break;
                 case A3:
                     if (direction)
                     {
                         transState4Affect = Trans.A4;
-                        color.brighter();
+                        color = COLA4;
                     } else
                     {
                         transState4Affect = Trans.A2;
-                        color.darker();
+                        color = COLA2;
                     }
                     break;
                 case A4:
                     if (direction)
                     {
                         transState4Affect = Trans.A5;
-                        color.brighter();
+                        color = COLA5;
                     } else
                     {
                         transState4Affect = Trans.A3;
-                        color.darker();
+                        color = COLA3;
                     }
                     break;
                 case A5:
                     transState4Affect = Trans.A4;
-                    color.darker();
+                    color = COLA4;
                     direction = false;
                     break;
             }
 
-            return transState4Affect == Trans.A5 || transState4Affect == Trans.A0;
         }
 
-        public boolean transform4DependEffect()
+        public int getTransState4Affect()
+        {
+            if (transState4Affect == Trans.A5)
+                return 1;
+            else if (transState4Affect == Trans.A0)
+                return 0;
+            else
+                return -1;
+        }
+
+        public void transform4DependEffect()
         {
             switch (transState4Depend)
             {
                 case D0:
                     transState4Depend = Trans.D1;
-                    color = COL1;
+                    color = COLA1;
+                    ((RectangleProfile) profile).bigger();
                     direction = true;
                     break;
                 case D1:
                     if (direction)
                     {
                         transState4Depend = Trans.D2;
-                        color = COL2;
+                        ((RectangleProfile) profile).bigger();
+                        color = COLA2;
                     } else
                     {
                         transState4Depend = Trans.D0;
+                        ((RectangleProfile) profile).smaller();
                         color = COL0;
                     }
                     break;
@@ -232,43 +259,58 @@ public abstract class Shape
                     if (direction)
                     {
                         transState4Depend = Trans.D3;
-                        color = COL3;
+                        ((RectangleProfile) profile).bigger();
+                        color = COLA3;
                     } else
                     {
                         transState4Depend = Trans.D1;
-                        color = COL1;
+                        ((RectangleProfile) profile).smaller();
+                        color = COLA1;
                     }
                     break;
                 case D3:
                     if (direction)
                     {
                         transState4Depend = Trans.D4;
-                        color = COL4;
+                        ((RectangleProfile) profile).bigger();
+                        color = COLA4;
                     } else
                     {
                         transState4Depend = Trans.D2;
-                        color = COL2;
+                        ((RectangleProfile) profile).smaller();
+                        color = COLA2;
                     }
                     break;
                 case D4:
                     if (direction)
                     {
                         transState4Depend = Trans.D5;
-                        color = COL5;
+                        ((RectangleProfile) profile).bigger();
+                        color = COLA5;
                     } else
                     {
                         transState4Depend = Trans.D3;
-                        color = COL3;
+                        ((RectangleProfile) profile).smaller();
+                        color = COLA3;
                     }
                     break;
                 case D5:
                     transState4Depend = Trans.D4;
-                    color = COL4;
+                    color = COLA4;
+                    ((RectangleProfile) profile).smaller();
                     direction = false;
                     break;
             }
+        }
 
-            return transState4Depend == Trans.D5 || transState4Depend == Trans.D0;
+        public int getTransState4Depend()
+        {
+            if (transState4Depend == Trans.D5)
+                return 1;
+            else if (transState4Depend == Trans.D0)
+                return 0;
+            else
+                return -1;
         }
 
         public Color getColor()

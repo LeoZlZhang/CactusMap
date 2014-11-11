@@ -10,7 +10,7 @@ import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
  * Time: 9:26 PM
  * To change this template use File | Settings | File Templates.
  */
-public class DependentEvent extends CactusEvent
+public class FlowEvent extends CactusEvent
 {
     public enum DependentType
     {
@@ -20,12 +20,12 @@ public class DependentEvent extends CactusEvent
     public DependentType dependentType;
 
 
-    public DependentEvent(Profile profile)
+    public FlowEvent(Profile profile)
     {
         super(profile);
     }
 
-    public DependentEvent(Profile profile, DependentType dependentType)
+    public FlowEvent(Profile profile, DependentType dependentType)
     {
         super(profile);
         this.dependentType = dependentType;

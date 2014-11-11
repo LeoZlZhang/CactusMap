@@ -14,7 +14,6 @@ import static org.testng.Assert.assertEquals;
  * User: ezilizh
  * Date: 11/6/14
  * Time: 8:17 PM
- * To change this template use File | Settings | File Templates.
  */
 public class testEvent
 {
@@ -27,28 +26,28 @@ public class testEvent
         };
         double width = eve.getShapeProfile().getForm().getWidth();
         assertEquals(eve.shapeManager.getColor().getRed(), 131);
-        res = eve.shapeManager.transform4SelectEffect();
-        assertEquals(res, false);
-        res = eve.shapeManager.transform4SelectEffect();
-        assertEquals(res, false);
-        res = eve.shapeManager.transform4SelectEffect();
-        assertEquals(res, false);
-        res = eve.shapeManager.transform4SelectEffect();
-        assertEquals(res, false);
-        res = eve.shapeManager.transform4SelectEffect();
-        assertEquals(res, true);
+        eve.shapeManager.transform4SelectEffect();
+        assertEquals(eve.shapeManager.getTransState4Select(), false);
+        eve.shapeManager.transform4SelectEffect();
+        assertEquals(eve.shapeManager.getTransState4Select(), false);
+        eve.shapeManager.transform4SelectEffect();
+        assertEquals(eve.shapeManager.getTransState4Select(), false);
+        eve.shapeManager.transform4SelectEffect();
+        assertEquals(eve.shapeManager.getTransState4Select(), false);
+        eve.shapeManager.transform4SelectEffect();
+        assertEquals(eve.shapeManager.getTransState4Select(), true);
         assertEquals(eve.shapeManager.getColor().getRed(), 17);
         System.out.println(eve.shapeManager.getColor().getGreen());
-        res = eve.shapeManager.transform4SelectEffect();
-        assertEquals(res, false);
-        res = eve.shapeManager.transform4SelectEffect();
-        assertEquals(res, false);
-        res = eve.shapeManager.transform4SelectEffect();
-        assertEquals(res, false);
-        res = eve.shapeManager.transform4SelectEffect();
-        assertEquals(res, false);
-        res = eve.shapeManager.transform4SelectEffect();
-        assertEquals(res, true);
+        eve.shapeManager.transform4SelectEffect();
+        assertEquals(eve.shapeManager.getTransState4Select(), false);
+        eve.shapeManager.transform4SelectEffect();;
+        assertEquals(eve.shapeManager.getTransState4Select(), false);
+        eve.shapeManager.transform4SelectEffect();
+        assertEquals(eve.shapeManager.getTransState4Select(), false);
+        eve.shapeManager.transform4SelectEffect();
+        assertEquals(eve.shapeManager.getTransState4Select(), false);
+        eve.shapeManager.transform4SelectEffect();
+        assertEquals(eve.shapeManager.getTransState4Select(), true);
         assertEquals(eve.shapeManager.getColor().getRed(), 131);
         assertEquals(width, eve.getShapeProfile().getForm().getWidth());
     }
@@ -108,5 +107,16 @@ public class testEvent
             System.out.println(list.size() + " " + list.get(i));
             list.remove(i);
         }
+    }
+
+    @Test
+    public void testArrayList()
+    {
+        container con1 = new container();
+        ArrayList<container> containList = new ArrayList<container>();
+        containList.add(con1);
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(containList.indexOf(con1));
+        System.out.println(list.get(0));
     }
 }
