@@ -13,6 +13,8 @@ import Cactus.Design.PaneModule.PANE.FORM.EarthForm;
 import Cactus.Design.PaneModule.PANE.FORM.SpaceForm;
 import org.testng.annotations.Test;
 
+import java.awt.*;
+
 import static org.testng.Assert.assertEquals;
 
 /**
@@ -27,7 +29,7 @@ public class testCoordinate
     public void testConvertAxisFromUniverseToEarth()
     {
         LogicSpace universe = new Universe(new SpaceForm(2000, 2000));
-        universe.moveSpace(new Offset(-10, -8), new EarthForm(500, 500));
+        universe.moveSpace(new Offset(-10, -8), new Dimension(500, 500));
         Position posInUniverse = new ShapePosition(50, 60);
         Position posInRealWorld = new ShapePosition(40, 52);
         assertEquals(posInRealWorld.getX(), universe.trans2EarthView(posInUniverse).getX());
@@ -37,9 +39,8 @@ public class testCoordinate
     @Test
     public void testZoomOutIn()
     {
-        Form paneForm = new EarthForm(500, 500);
         LogicSpace universe = new Universe(new SpaceForm(2000, 2000));
-        universe.zoomIn(paneForm);
+        universe.zoomIn(new Dimension(500,500));
         Position universePos = new CorePosition(50, 100);
         Position earthPos = universe.trans2EarthView(universePos);
         assertEquals(earthPos.getX(), 50 * 1.05);
@@ -49,7 +50,7 @@ public class testCoordinate
     @Test
     public void testZoomOutIn1()
     {
-        Form paneForm = new EarthForm(500, 500);
+        Dimension paneForm = new Dimension(500, 500);
         LogicSpace universe = new Universe(new SpaceForm(2000, 2000));
         universe.moveSpace(new Offset(-100, -100), paneForm);
         universe.zoomIn(paneForm);
@@ -62,7 +63,7 @@ public class testCoordinate
     @Test
     public void testZoomOutInWithMousePos()
     {
-        Form paneForm = new EarthForm(500, 500);
+        Dimension paneForm = new Dimension(500, 500);
         LogicSpace universe = new Universe(new SpaceForm(2000, 2000));
         universe.moveSpace(new Offset(-50, -50), paneForm);
         Position mousePos = new MousePosition(50, 50);
@@ -73,7 +74,7 @@ public class testCoordinate
     @Test
     public void testZoomOutInWithMousePos1()
     {
-        Form paneForm = new EarthForm(500, 500);
+        Dimension paneForm = new Dimension(500, 500);
         LogicSpace universe = new Universe(new SpaceForm(2000, 2000));
         universe.moveSpace(new Offset(-50, -50), paneForm);
         Position mousePos = new MousePosition(50, 50);

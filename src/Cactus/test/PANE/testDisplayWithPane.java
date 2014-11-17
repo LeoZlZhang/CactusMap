@@ -30,7 +30,7 @@ public class testDisplayWithPane
         for (int i = 0; i < n; i++)
         {
             Thread.sleep(42);
-            pane.universe.zoomIn(pane.universe.trans2EarthView(oldRect1EarthShapeProfile.getPosition()), pane.paneForm);
+            pane.universe.zoomIn(pane.universe.trans2EarthView(oldRect1EarthShapeProfile.getPosition()), pane.getSize());
             pane.repaint();
         }
         Profile newRect1EarthShapeProfile = pane.universe.trans2EarthView(pane.rect1ShapeProfile1);
@@ -44,7 +44,7 @@ public class testDisplayWithPane
         for (int i = 0; i < n; i++)
         {
             Thread.sleep(42);
-            pane.universe.moveSpace(new Offset(5, 5),pane.paneForm);
+            pane.universe.moveSpace(new Offset(5, 5),pane.getSize());
             pane.repaint();
         }
         newRect1EarthShapeProfile = pane.universe.trans2EarthView(pane.rect1ShapeProfile1);
@@ -55,7 +55,7 @@ public class testDisplayWithPane
         assertEquals(newRect1EarthShapeProfile.getForm().getHeight(), oldRect1EarthShapeProfile.getForm().getHeight());
 
 
-        pane.universe.moveSpace(new Offset(500, 500), pane.paneForm);
+        pane.universe.moveSpace(new Offset(500, 500), pane.getSize());
         pane.repaint();
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.COR).getX(), 0.0);
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.COR).getY(), 0.0);
@@ -66,7 +66,7 @@ public class testDisplayWithPane
         for (int i = 0; i < n; i++)
         {
             Thread.sleep(42);
-            pane.universe.zoomOut(pane.universe.trans2EarthView(oldRect1EarthShapeProfile.getPosition()), pane.paneForm);
+            pane.universe.zoomOut(pane.universe.trans2EarthView(oldRect1EarthShapeProfile.getPosition()), pane.getSize());
             pane.repaint();
         }
         newRect1EarthShapeProfile = pane.universe.trans2EarthView(pane.rect1ShapeProfile1);

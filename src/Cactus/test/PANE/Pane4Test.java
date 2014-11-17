@@ -24,7 +24,7 @@ public class Pane4Test extends Pane
 
     public Pane4Test()
     {
-        super(new SpaceForm(2000,2000), new EarthForm(500, 500));
+        super(new SpaceForm(2000,2000));
     }
 
     @Override

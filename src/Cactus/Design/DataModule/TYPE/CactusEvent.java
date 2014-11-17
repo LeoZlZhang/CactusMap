@@ -12,13 +12,11 @@ import java.util.ArrayList;
  */
 public abstract class CactusEvent extends Shape
 {
-//    public StatusManager statusManager;
     public EventProfile eventProfile;
 
     protected CactusEvent(Profile profile)
     {
         super(profile);
-//        statusManager = new StatusManager();
         eventProfile = new EventProfile();
     }
 
@@ -29,18 +27,12 @@ public abstract class CactusEvent extends Shape
 
     public class EventProfile
     {
-        public ArrayList<Integer> affectiveEventList = new ArrayList<Integer>();
         public ArrayList<Integer> dependentEventList = new ArrayList<Integer>();
         public ArrayList<Integer> resultEventList = new ArrayList<Integer>();
         public String flow = "";
         public EventType eventType = EventType.NORMAL;
+        public ArrayList<Consequent> consequentList = new ArrayList<Consequent>();
     }
 
-//    public class StatusManager
-//    {
-//        public boolean selected = false;
-//        public boolean affected = false;
-//        public boolean depended = false;
-//        public boolean resulted = false;
-//    }
+
 }

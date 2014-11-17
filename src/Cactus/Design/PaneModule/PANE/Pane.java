@@ -3,13 +3,10 @@ package Cactus.Design.PaneModule.PANE;
 
 import Cactus.Design.DataModule.TYPE.CactusEvent;
 import Cactus.Design.PaneModule.AXIS.Universe;
-import Cactus.Design.PaneModule.PANE.FORM.EarthForm;
 import Cactus.Design.PaneModule.PANE.FORM.SpaceForm;
 import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
-import Cactus.Design.PaneModule.PANE.MouseEvent.MouseAdapter4JPane;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 
 /**
@@ -18,55 +15,23 @@ import java.util.ArrayList;
  * Date: 10/23/14
  * Time: 6:01 PM
  */
-public abstract class Pane extends JPanel //implements MouseAdapter4JPane
+public abstract class Pane extends JPanel
 {
     public final Universe universe;
-    public final Form paneForm;
     protected final Form universeForm;
     public final ArrayList<CactusEvent> eventList = new ArrayList<CactusEvent>();
 
-    protected Pane(Form universeForm, Form paneForm)
+    protected Pane(Form universeForm)
     {
-        this.paneForm = new EarthForm(paneForm);
         this.universeForm = new SpaceForm(universeForm);
         universe = new Universe(universeForm);
-        this.setSize(
-                new Dimension(
-                        (int) this.paneForm.getWidth(),
-                        (int) this.paneForm.getHeight()));
-        this.setPreferredSize(this.getSize());
     }
 
-    protected Pane(Form universeForm, Form paneForm, ArrayList<CactusEvent> list)
+    protected Pane(Form universeForm, ArrayList<CactusEvent> list)
     {
         eventList.addAll(list);
-        this.paneForm = new EarthForm(paneForm);
         this.universeForm = new SpaceForm(universeForm);
-        universe = new Universe(universeForm);
-        this.setSize(
-                new Dimension(
-                        (int) this.paneForm.getWidth(),
-                        (int) this.paneForm.getHeight()));
-        this.setPreferredSize(this.getSize());
+        this.universe = new Universe(universeForm);
+
     }
-
-    public void initialMouseAdapter(Pane pane)
-    {
-        MouseAdapter4JPane mouseAdp = new MouseAdapter4JPane(pane);
-        this.addMouseListener(mouseAdp);
-        this.addMouseMotionListener(mouseAdp);
-        this.addMouseWheelListener(mouseAdp);
-    }
-
-    @Override
-    public void paint(Graphics g)
-    {
-        super.paint(g);    //To change body of overridden methods use File | Settings | File Templates.
-    }
-
-    //Profile
-
-//    public abstract void addCactus(Object obj);
-//    public abstract void removeCactus(Object obj);
-
 }

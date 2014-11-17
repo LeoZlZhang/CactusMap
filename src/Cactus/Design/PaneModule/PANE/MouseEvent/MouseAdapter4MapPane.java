@@ -4,6 +4,7 @@ import Cactus.Design.PaneModule.AXIS.POSITION.MousePosition;
 import Cactus.Design.PaneModule.AXIS.POSITION.Offset;
 import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
 import Cactus.Design.PaneModule.PANE.Pane;
+import Cactus.Design.PaneModule.PANE.TopFrame;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -16,26 +17,28 @@ import java.util.ArrayList;
  * Date: 10/23/14
  * Time: 4:49 PM
  */
-public class MouseAdapter4JPane extends MouseAdapter
+public class MouseAdapter4MapPane extends MouseAdapter
 {
     private enum MouseAction
     {
-        PRESS, DRAGGING, RELEASE, SELECT;
+        PRESS, DRAGGING, RELEASE, SELECT
     }
 
-    public Pane pane;
+    public Pane mapPane;
+    public Pane contentPane;
+    public JFrame topFrame;
     private DragSuit dragSuit;
     private MouseAction mouseStatus;
-    //Inertia effect code
     private InertiaSuit inertiaSuit;
     private Timer inertiaTimer;
-
     public EventManager eveManager;
 
 
-    public MouseAdapter4JPane(Pane pane)
+    public MouseAdapter4MapPane(Pane mapPane, Pane contentPane, JFrame topFrame)
     {
-        this.pane = pane;
+        this.mapPane = mapPane;
+        this.contentPane = contentPane;
+        this.topFrame = topFrame;
         eveManager = new EventManager(this);
         mouseStatus = MouseAction.RELEASE;
         inertiaSuit = new InertiaSuit(15, 130, 0.005);
@@ -46,7 +49,6 @@ public class MouseAdapter4JPane extends MouseAdapter
     /**
      * Mouse dragging inertia effect can only by inertia stop, mouse press, and wheel move..
      *
-     * @param e
      */
     @Override
     public void mousePressed(MouseEvent e)
@@ -59,10 +61,9 @@ public class MouseAdapter4JPane extends MouseAdapter
                 break;
             case RELEASE:
                 inertiaSuit.disable();
-                mouseStatus = MouseAction.PRESS;
-                for (int i = 0; i < pane.eventList.size(); i++)
+                for (int i = 0; i < mapPane.eventList.size(); i++)
                 {
-                    if (pane.eventList.get(i).hover(new MousePosition(e.getPoint()), pane.universe))
+                    if (mapPane.eventList.get(i).hover(new MousePosition(e.getPoint()), mapPane.universe))
                     {
                         eveManager.hoverEventIndex = i;
                         break;
@@ -71,13 +72,14 @@ public class MouseAdapter4JPane extends MouseAdapter
                         eveManager.hoverEventIndex = -1;
                     }
                 }
+                /**
+                 * update mouse status
+                 */
+                mouseStatus = MouseAction.PRESS;
                 break;
             case SELECT:
                 break;
         }
-        /**
-         * update mouse status
-         */
     }
 
     @Override
@@ -86,81 +88,43 @@ public class MouseAdapter4JPane extends MouseAdapter
         switch (mouseStatus)
         {
             case PRESS:
-                mouseStatus = MouseAction.RELEASE;
                 if (eveManager.hoverEventIndex >= 0)
                 {
-                    System.out.println("DEBUG [mouseReleased] hoverEventIndex >=0");
                     if (eveManager.selectedEventIndex < 0)
                     {
-                            System.out.println("DEBUG [mouseReleased] select event="+eveManager.hoverEventIndex);
-                            //select
-                            eveManager.selectedEventIndex = eveManager.hoverEventIndex;
-                            //start select timer, transform to next true return.
-                            //start effect timer.
-                            eveManager.affectEventIndexList.addAll(pane.eventList.get(eveManager.selectedEventIndex).eventProfile.affectiveEventList);
-                            //start depend timer, transform to next true return.
-                            eveManager.dependEventIndexList.addAll(pane.eventList.get(eveManager.selectedEventIndex).eventProfile.dependentEventList);
-                            //start result timer, transform to next true return.
-                            eveManager.resultEventIndexList.addAll(pane.eventList.get(eveManager.selectedEventIndex).eventProfile.resultEventList);
-                            eveManager.selectEffectTimer.start();
+                        //select
+                        eveManager.selectedEventIndex = eveManager.hoverEventIndex;
+                        eveManager.dependEventIndexList.addAll(mapPane.eventList.get(eveManager.selectedEventIndex).eventProfile.dependentEventList);
+                        eveManager.resultEventIndexList.addAll(mapPane.eventList.get(eveManager.selectedEventIndex).eventProfile.resultEventList);
+                        eveManager.selectEffectTimer.start();
+                        ((TopFrame)topFrame).turnOnContentPane();
                     } else if (eveManager.hoverEventIndex == eveManager.selectedEventIndex)
                     {
-                        System.out.println("DEBUG [mouseReleased] de-select event="+eveManager.hoverEventIndex);
-                        //de-celect
-                            //start select timer, transform to next true return.
-                            eveManager.deSelectEventIndex = eveManager.selectedEventIndex;
-                            eveManager.selectedEventIndex = -1;
-                            //set all event index to off list, action listener will remove all from list and stop itself
-                            eveManager.offAffectEventIndexList.addAll(eveManager.affectEventIndexList);
-                            eveManager.affectEventIndexList.clear();
-                            //start depend timer, transform to next true return.
-                            eveManager.offDependEventIndexList.addAll(eveManager.dependEventIndexList);
-                            eveManager.dependEventIndexList.clear();
-                            //start result timer, transform to next true return.
-                            eveManager.offResultEventIndexList.addAll(eveManager.resultEventIndexList);
-                            eveManager.resultEventIndexList.clear();
-                            eveManager.selectEffectTimer.start();
+                        //de-select
+                        eveManager.deSelectEventIndex = eveManager.selectedEventIndex;
+                        eveManager.selectedEventIndex = -1;
+                        eveManager.offDependEventIndexList.addAll(eveManager.dependEventIndexList);
+                        eveManager.dependEventIndexList.clear();
+                        eveManager.offResultEventIndexList.addAll(eveManager.resultEventIndexList);
+                        eveManager.resultEventIndexList.clear();
+                        eveManager.selectEffectTimer.start();
+                        ((TopFrame)topFrame).turnOffContentPane();
                     } else
                     {
-                        System.out.println("DEBUG [mouseReleased] re-select new event="+eveManager.hoverEventIndex);
-                        System.out.println("DEBUG [mouseReleased] re-select old event="+eveManager.selectedEventIndex);
-                            //deselect one and select another
-                            eveManager.deSelectEventIndex = eveManager.selectedEventIndex;
-                            eveManager.selectedEventIndex = eveManager.hoverEventIndex;
-
-                            //set redundant effect event index  list
-                            eveManager.offAffectEventIndexList.addAll(eveManager.affectEventIndexList);
-                            eveManager.affectEventIndexList.clear();
-                            eveManager.affectEventIndexList.addAll(pane.eventList.get(eveManager.selectedEventIndex).eventProfile.affectiveEventList);
-                            //eveManager.removeRedundantOffAffectEventList();
-
-                            //start depend timer, transform to next true return.
-                            eveManager.offDependEventIndexList.addAll(eveManager.dependEventIndexList);
-                            eveManager.dependEventIndexList.clear();
-                            eveManager.dependEventIndexList.addAll(pane.eventList.get(eveManager.selectedEventIndex).eventProfile.dependentEventList);
-                            //eveManager.removeRedundantOffDependEventList();
-
-                            //start result timer, transform to next true return.
-                            eveManager.offResultEventIndexList.addAll(eveManager.resultEventIndexList);
-                            eveManager.resultEventIndexList.clear();
-                            eveManager.resultEventIndexList.addAll(pane.eventList.get(eveManager.selectedEventIndex).eventProfile.resultEventList);
-                            //eveManager.removeRedundantOffResultEventList();
-                            eveManager.selectEffectTimer.start();
+                        //deselect one and select another
+                        eveManager.deSelectEventIndex = eveManager.selectedEventIndex;
+                        eveManager.selectedEventIndex = eveManager.hoverEventIndex;
+                        eveManager.offDependEventIndexList.addAll(eveManager.dependEventIndexList);
+                        eveManager.dependEventIndexList.clear();
+                        eveManager.dependEventIndexList.addAll(mapPane.eventList.get(eveManager.selectedEventIndex).eventProfile.dependentEventList);
+                        eveManager.offResultEventIndexList.addAll(eveManager.resultEventIndexList);
+                        eveManager.resultEventIndexList.clear();
+                        eveManager.resultEventIndexList.addAll(mapPane.eventList.get(eveManager.selectedEventIndex).eventProfile.resultEventList);
+                        eveManager.selectEffectTimer.start();
+                        ((TopFrame)topFrame).turnOnContentPane();
                     }
                 }
-//                if (eveManager.hoverEventIndex >= 0)
-//                {
-//                    pane.eventList.get(eveManager.hoverEventIndex).statusManager.selected = true;
-//                    for (int i = 0; i < eveManager.resultEventIndexList.size(); i++)
-//                    {
-//                        pane.eventList.get(eveManager.resultEventIndexList.get(i)).statusManager.resulted = true;
-//                    }
-//                    for (int i = 0; i < eveManager.dependEventIndexList.size(); i++)
-//                    {
-//                        pane.eventList.get(eveManager.dependEventIndexList.get(i)).statusManager.depended = true;
-//                    }
-//                    //timer
-//                }
+                mouseStatus = MouseAction.RELEASE;
                 break;
             case DRAGGING:
                 inertiaSuit.enable();
@@ -171,7 +135,6 @@ public class MouseAdapter4JPane extends MouseAdapter
             case SELECT:
                 break;
         }
-
     }
 
     @Override
@@ -192,12 +155,12 @@ public class MouseAdapter4JPane extends MouseAdapter
                 inertiaSuit.disable();
                 if (e.getWheelRotation() > 0)
                 {
-                    pane.universe.zoomOut(new MousePosition(e.getPoint()), pane.paneForm);
-                    pane.repaint();
+                    mapPane.universe.zoomOut(new MousePosition(e.getPoint()), mapPane.getSize());
+                    mapPane.repaint();
                 } else if (e.getWheelRotation() < 0)
                 {
-                    pane.universe.zoomIn(new MousePosition(e.getPoint()), pane.paneForm);
-                    pane.repaint();
+                    mapPane.universe.zoomIn(new MousePosition(e.getPoint()), mapPane.getSize());
+                    mapPane.repaint();
                 }
                 break;
             case SELECT:
@@ -223,10 +186,10 @@ public class MouseAdapter4JPane extends MouseAdapter
                 break;
             case DRAGGING:
                 dragSuit.endPos = new MousePosition(e.getPoint());
-                if (pane != null && dragSuit.startPos != null)
+                if (mapPane != null && dragSuit.startPos != null)
                 {
-                    pane.universe.moveSpace(dragSuit.getOffset(), pane.paneForm);
-                    pane.repaint();
+                    mapPane.universe.moveSpace(dragSuit.getOffset(), mapPane.getSize());
+                    mapPane.repaint();
                     dragSuit.startPos.setX(e.getX());
                     dragSuit.startPos.setY(e.getY());
                 }
@@ -374,8 +337,8 @@ public class MouseAdapter4JPane extends MouseAdapter
                     inertiaTimer.stop();
                 } else
                 {
-                    pane.universe.moveSpace(offset, pane.paneForm);
-                    pane.repaint();
+                    mapPane.universe.moveSpace(offset, mapPane.getSize());
+                    mapPane.repaint();
                 }
             }
             t1 = System.currentTimeMillis();
@@ -401,20 +364,17 @@ public class MouseAdapter4JPane extends MouseAdapter
         public int selectedEventIndex = -1;
         public int hoverEventIndex = -1;
         public ArrayList<Integer> dependEventIndexList = new ArrayList<Integer>();
-        public ArrayList<Integer> affectEventIndexList = new ArrayList<Integer>();
         public ArrayList<Integer> resultEventIndexList = new ArrayList<Integer>();
 
         public int deSelectEventIndex = -1;
         public ArrayList<Integer> offDependEventIndexList = new ArrayList<Integer>();
-        public ArrayList<Integer> offAffectEventIndexList = new ArrayList<Integer>();
         public ArrayList<Integer> offResultEventIndexList = new ArrayList<Integer>();
 
         public Timer selectEffectTimer;
-
-        public EventManager(MouseAdapter4JPane adapter)
+        public EventManager(MouseAdapter4MapPane adapter)
         {
             reset();
-            selectEffectTimer = new Timer(interval, new SelectActionListener(adapter));
+            selectEffectTimer = new Timer(interval, new SelectActionListener4Timer(adapter));
         }
 
         public void reset()
@@ -422,7 +382,7 @@ public class MouseAdapter4JPane extends MouseAdapter
             selectedEventIndex = -1;
             hoverEventIndex = -1;
             dependEventIndexList.clear();
-            affectEventIndexList.clear();
+//            affectEventIndexList.clear();
             resultEventIndexList.clear();
         }
     }

@@ -1,7 +1,6 @@
 package Cactus.Design.PaneModule.AXIS;
 
 import Cactus.Design.PaneModule.AXIS.POSITION.CorePosition;
-import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
 import Cactus.Design.PaneModule.AXIS.TYPE.Space;
 import Cactus.Design.PaneModule.PANE.FORM.SpaceForm;
 import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;

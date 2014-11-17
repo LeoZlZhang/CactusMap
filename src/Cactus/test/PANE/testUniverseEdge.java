@@ -25,25 +25,25 @@ public class testUniverseEdge
         frame.setVisible(true);
         Thread.sleep(2000);
 
-        pane.universe.moveSpace(new Offset(-3000, 0),pane.paneForm);
+        pane.universe.moveSpace(new Offset(-3000, 0),pane.getSize());
         pane.repaint();
         Thread.sleep(2000);
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getX(), (double) pane.getWidth());
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getY(), (double) 2000);
 
-        pane.universe.moveSpace(new Offset(0, -3000), pane.paneForm);
+        pane.universe.moveSpace(new Offset(0, -3000), pane.getSize());
         pane.repaint();
         Thread.sleep(2000);
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getX(), (double) pane.getWidth());
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getY(), (double) pane.getHeight());
 
-        pane.universe.moveSpace(new Offset(3000, 0), pane.paneForm);
+        pane.universe.moveSpace(new Offset(3000, 0), pane.getSize());
         pane.repaint();
         Thread.sleep(2000);
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getX(), (double) 2000);
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getY(), (double) pane.getHeight());
 
-        pane.universe.moveSpace(new Offset(0, 3000), pane.paneForm);
+        pane.universe.moveSpace(new Offset(0, 3000), pane.getSize());
         pane.repaint();
         Thread.sleep(2000);
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getX(), (double) 2000);
@@ -67,7 +67,7 @@ public class testUniverseEdge
         for (int i = 0; i < N; i++)
         {
             Thread.sleep(1000 / 35);
-            pane.universe.zoomIn(pane.paneForm);
+            pane.universe.zoomIn(pane.getSize());
             pane.repaint();
         }
         Thread.sleep(2000);
@@ -76,7 +76,7 @@ public class testUniverseEdge
         for (int i = 0; i < N; i++)
         {
             Thread.sleep(1000 / 35);
-            pane.universe.zoomOut(pane.paneForm);
+            pane.universe.zoomOut(pane.getSize());
             pane.repaint();
             System.out.print(pane.universe.getAmplifierValue());
         }
@@ -90,7 +90,7 @@ public class testUniverseEdge
         for (int i = 0; i < N; i++)
         {
             Thread.sleep(1000 / 35);
-            pane.universe.zoomIn(new MousePosition(pane.getWidth() / 2, pane.getHeight() / 2), pane.paneForm);
+            pane.universe.zoomIn(new MousePosition(pane.getWidth() / 2, pane.getHeight() / 2), pane.getSize());
             pane.repaint();
         }
         Thread.sleep(2000);
@@ -99,7 +99,7 @@ public class testUniverseEdge
         for (int i = 0; i < N; i++)
         {
             Thread.sleep(1000 / 35);
-            pane.universe.zoomOut(new MousePosition(pane.getWidth(), pane.getHeight()), pane.paneForm);
+            pane.universe.zoomOut(new MousePosition(pane.getWidth(), pane.getHeight()), pane.getSize());
             pane.repaint();
         }
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getX(), (double) pane.getWidth());
@@ -127,29 +127,29 @@ public class testUniverseEdge
         for (int i = 0; i < N; i++)
         {
             Thread.sleep(1000 / 35);
-            pane.universe.zoomIn(pane.paneForm);
+            pane.universe.zoomIn(pane.getSize());
             pane.repaint();
         }
         Thread.sleep(2000);
-        pane.universe.moveSpace(new Offset(-30000, 0),pane.paneForm);
+        pane.universe.moveSpace(new Offset(-30000, 0),pane.getSize());
         pane.repaint();
         Thread.sleep(2000);
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getX(), (double) pane.getWidth());
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getY(), (double) 2000 * pane.universe.getAmplifierValue());
 
-        pane.universe.moveSpace(new Offset(0, -30000),pane.paneForm);
+        pane.universe.moveSpace(new Offset(0, -30000),pane.getSize());
         pane.repaint();
         Thread.sleep(2000);
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getX(), (double) pane.getWidth());
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getY(), (double) pane.getHeight());
 
-        pane.universe.moveSpace(new Offset(30000, 0),pane.paneForm);
+        pane.universe.moveSpace(new Offset(30000, 0),pane.getSize());
         pane.repaint();
         Thread.sleep(2000);
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getX(), (double) 2000 * pane.universe.getAmplifierValue());
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getY(), (double) pane.getHeight());
 
-        pane.universe.moveSpace(new Offset(0, 30000),pane.paneForm);
+        pane.universe.moveSpace(new Offset(0, 30000),pane.getSize());
         pane.repaint();
         Thread.sleep(2000);
         assertEquals(pane.universe.getSpaceProfile().getPosition(SpaceProfile.Direction.EAST_SOUTH).getX(), (double) 2000 * pane.universe.getAmplifierValue());

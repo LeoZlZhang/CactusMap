@@ -10,6 +10,7 @@ import Cactus.Design.PaneModule.PANE.PROFILE.*;
 import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
 import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
 
+import java.awt.*;
 import java.math.BigDecimal;
 
 /**
@@ -33,7 +34,7 @@ public class Universe extends LogicSpace
     }
 
     @Override
-    public void zoomIn(Position mousePos, Form earthForm)
+    public void zoomIn(Position mousePos, Dimension earthForm)
     {
         Position corePos = spaceProfile.getPosition(SpaceProfile.Direction.COR);
         Double distance2CorX = (mousePos.getX() - corePos.getX()) / amplifier.get();
@@ -46,7 +47,7 @@ public class Universe extends LogicSpace
     }
 
     @Override
-    public void zoomIn(Form earthForm)
+    public void zoomIn(Dimension earthForm)
     {
         amplifier.zoomIn();
         spaceProfile.setSpaceForm(new SpaceForm(spaceForm.getWidth() * amplifier.get(), spaceForm.getHeight() * amplifier.get()));
@@ -54,7 +55,7 @@ public class Universe extends LogicSpace
     }
 
     @Override
-    public void zoomOut(Position mousePos, Form earthForm)
+    public void zoomOut(Position mousePos, Dimension earthForm)
     {
         Position corePos = spaceProfile.getPosition(SpaceProfile.Direction.COR);
         Double distance2CorX = (mousePos.getX() - corePos.getX()) / amplifier.get();
@@ -68,7 +69,7 @@ public class Universe extends LogicSpace
     }
 
     @Override
-    public void zoomOut(Form earthForm)
+    public void zoomOut(Dimension earthForm)
     {
         amplifier.zoomOut();
         validateUniverseSize(earthForm);
@@ -78,7 +79,7 @@ public class Universe extends LogicSpace
     }
 
     @Override
-    public void moveSpace(Position offset, Form earthForm)
+    public void moveSpace(Position offset, Dimension earthForm)
     {
         Position corePos = spaceProfile.getPosition(SpaceProfile.Direction.COR);
         corePos.setX(corePos.getX() + offset.getX());
@@ -113,7 +114,7 @@ public class Universe extends LogicSpace
     }
 
 
-    public void validatePosition(Form earthForm)
+    public void validatePosition(Dimension earthForm)
     {
         Boolean reCalFlag = false;
         Position corePos = spaceProfile.getPosition(SpaceProfile.Direction.COR);
@@ -142,7 +143,7 @@ public class Universe extends LogicSpace
             spaceProfile.setCorPosition(corePos);
     }
 
-    private void validateUniverseSize(Form earthForm)
+    private void validateUniverseSize(Dimension earthForm)
     {
         if ((spaceForm.getWidth() * amplifier.get() < earthForm.getWidth()) || (spaceForm.getHeight() * amplifier.get() < earthForm.getHeight()))
             amplifier.zoomIn();
