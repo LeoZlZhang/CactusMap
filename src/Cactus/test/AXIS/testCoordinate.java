@@ -1,6 +1,5 @@
 package Cactus.test.AXIS;
 
-import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
 import Cactus.Design.PaneModule.PANE.PROFILE.SpaceProfile;
 import Cactus.Design.PaneModule.AXIS.POSITION.CorePosition;
 import Cactus.Design.PaneModule.AXIS.POSITION.MousePosition;
@@ -9,7 +8,6 @@ import Cactus.Design.PaneModule.AXIS.POSITION.ShapePosition;
 import Cactus.Design.PaneModule.AXIS.Universe;
 import Cactus.Design.PaneModule.AXIS.LogicSpace;
 import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
-import Cactus.Design.PaneModule.PANE.FORM.EarthForm;
 import Cactus.Design.PaneModule.PANE.FORM.SpaceForm;
 import org.testng.annotations.Test;
 

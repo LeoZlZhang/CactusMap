@@ -3,11 +3,13 @@ package Cactus.Design.PaneModule.PANE.MouseEvent;
 import Cactus.Design.PaneModule.AXIS.POSITION.MousePosition;
 import Cactus.Design.PaneModule.AXIS.POSITION.Offset;
 import Cactus.Design.PaneModule.AXIS.POSITION.Type.Position;
+import Cactus.Design.PaneModule.PANE.MapPane;
 import Cactus.Design.PaneModule.PANE.Pane;
 import Cactus.Design.PaneModule.PANE.TopFrame;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.awt.geom.RoundRectangle2D;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
@@ -24,7 +26,7 @@ public class MouseAdapter4MapPane extends MouseAdapter
         PRESS, DRAGGING, RELEASE, SELECT
     }
 
-    public Pane mapPane;
+    public MapPane mapPane;
     public Pane contentPane;
     public JFrame topFrame;
     private DragSuit dragSuit;
@@ -34,7 +36,7 @@ public class MouseAdapter4MapPane extends MouseAdapter
     public EventManager eveManager;
 
 
-    public MouseAdapter4MapPane(Pane mapPane, Pane contentPane, JFrame topFrame)
+    public MouseAdapter4MapPane(MapPane mapPane, Pane contentPane, JFrame topFrame)
     {
         this.mapPane = mapPane;
         this.contentPane = contentPane;

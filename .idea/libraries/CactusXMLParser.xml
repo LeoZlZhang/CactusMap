@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CactusXMLParser">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../jar-repository/xmlparser/CactusXMLParser.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

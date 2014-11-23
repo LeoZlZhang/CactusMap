@@ -71,7 +71,6 @@ public class ContentPane extends Pane
                 {
                     V = Math.pow((maxWidth - getWidth()),damping4ShowOutAnimation) - 1;
                     width = Math.max(1, V * animationInterval4ShowOut) + getWidth();
-                    System.out.println(V + " " + width + " "+ getWidth());
                     if (width >= maxWidth)
                     {
                         width = maxWidth;

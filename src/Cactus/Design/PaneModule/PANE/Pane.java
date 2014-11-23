@@ -19,19 +19,10 @@ public abstract class Pane extends JPanel
 {
     public final Universe universe;
     protected final Form universeForm;
-    public final ArrayList<CactusEvent> eventList = new ArrayList<CactusEvent>();
 
     protected Pane(Form universeForm)
     {
         this.universeForm = new SpaceForm(universeForm);
         universe = new Universe(universeForm);
-    }
-
-    protected Pane(Form universeForm, ArrayList<CactusEvent> list)
-    {
-        eventList.addAll(list);
-        this.universeForm = new SpaceForm(universeForm);
-        this.universe = new Universe(universeForm);
-
     }
 }

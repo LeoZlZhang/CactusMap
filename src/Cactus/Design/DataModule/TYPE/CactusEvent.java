@@ -14,15 +14,15 @@ public abstract class CactusEvent extends Shape
 {
     public EventProfile eventProfile;
 
-    protected CactusEvent(Profile profile)
+    protected CactusEvent(Profile shapeProfile)
     {
-        super(profile);
+        super(shapeProfile);
         eventProfile = new EventProfile();
     }
 
     public enum EventType
     {
-        NORMAL, CONFIG, TIMER
+        NORMAL, CONFIG, TIMER, DYNAMIC
     }
 
     public class EventProfile
@@ -33,6 +33,4 @@ public abstract class CactusEvent extends Shape
         public EventType eventType = EventType.NORMAL;
         public ArrayList<Consequent> consequentList = new ArrayList<Consequent>();
     }
-
-
 }

@@ -16,6 +16,8 @@ import java.util.ArrayList;
  */
 public class MapPane extends Pane
 {
+    public final ArrayList<CactusEvent> eventList = new ArrayList<CactusEvent>();
+
     protected MapPane(Form universeForm)
     {
         super(universeForm);
@@ -24,7 +26,8 @@ public class MapPane extends Pane
 
     protected MapPane(Form universeForm, ArrayList<CactusEvent> list)
     {
-        super(universeForm, list);
+        super(universeForm);
+        eventList.addAll(list);
         initial();
     }
 

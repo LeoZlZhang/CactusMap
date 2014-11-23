@@ -8,7 +8,6 @@ import Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile;
  * User: ezilizh
  * Date: 11/8/14
  * Time: 9:31 PM
- * To change this template use File | Settings | File Templates.
  */
 public class DynamicEvent extends CactusEvent
 {

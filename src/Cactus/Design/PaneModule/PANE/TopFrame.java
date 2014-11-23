@@ -6,8 +6,7 @@ import Cactus.Design.PaneModule.PANE.MouseEvent.MouseAdapter4MapPane;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,8 +16,8 @@ import java.awt.event.ActionListener;
  */
 public class TopFrame extends JFrame
 {
-    public Pane mapPane;
-    public Pane contentPane;
+    public MapPane mapPane;
+    public ContentPane contentPane;
 
 
     public TopFrame() throws HeadlessException
@@ -44,11 +43,11 @@ public class TopFrame extends JFrame
         this.getContentPane().setLayout(new BorderLayout());
         this.getContentPane().add(mapPane, BorderLayout.CENTER);
         this.getContentPane().add(contentPane, BorderLayout.EAST);
-        ((ContentPane)contentPane).setTopPane((JPanel) this.getContentPane());
+        contentPane.setTopPane((JPanel) this.getContentPane());
         /**
          * Set Frame style
           */
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new Dimension(700, 600));
         addComponentListener(new Listener4JFrame(mapPane));
         pack();
@@ -57,10 +56,10 @@ public class TopFrame extends JFrame
 
     public void turnOnContentPane()
     {
-        ((ContentPane)contentPane).turnOn();
+        contentPane.turnOn();
     }
     public void turnOffContentPane()
     {
-        ((ContentPane)contentPane).turnOff();
+        contentPane.turnOff();
     }
 }
