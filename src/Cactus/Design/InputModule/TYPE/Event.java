@@ -12,9 +12,9 @@ public class Event
 {
     public String name;
     public String type;
-    public ArrayList<String> affect = new ArrayList<String>();
-    public ArrayList<String> depend = new ArrayList<String>();
-    public ArrayList<Consequence> consequence = new ArrayList<Consequence>();
+    public ArrayList<String> affectList = new ArrayList<String>();
+    public ArrayList<String> dependList = new ArrayList<String>();
+    public ArrayList<Consequence> consequenceList = new ArrayList<Consequence>();
 
     public class Consequence
     {

@@ -5,6 +5,7 @@ import Cactus.Design.InputModule.TYPE.Event;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 /**
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 public class OriginDataFactory
 {
     public ArrayList<Event> eventList = new ArrayList<Event>();
+    private ArrayList<ArrayList<Event>> geoEvent2DList = new ArrayList<ArrayList<Event>>();
 
     public OriginDataFactory(String path)
     {
@@ -23,8 +25,14 @@ public class OriginDataFactory
         mapDependent();
     }
 
-    public static OriginDataFactory getInstanceFromXML(String path)
+    public OriginDataFactory()
     {
+
+    }
+
+    private OriginDataFactory getInstanceFromXML(String path)
+    {
+        System.out.println("DEBUG <OriginDataFactory> path=" + path);
         OriginDataFactory odf = null;
         Logger logger = Logger.getLogger("forERROR");
         try
@@ -32,7 +40,7 @@ public class OriginDataFactory
             odf = (OriginDataFactory) CactusXMLParser.parse(path, OriginDataFactory.class);
         } catch (Exception e)
         {
-            logger.error(e.getMessage());
+            logger.error(e);
             System.exit(0);
         }
         return odf;
@@ -40,40 +48,42 @@ public class OriginDataFactory
 
     private void mapDependent()
     {
-        for (Event iEvent : eventList)
+        for (Event eve2CheckConsequence : eventList)
         {
-            for (Event.Consequence jConsequence : iEvent.consequence)
+            for (Event.Consequence consequenceOfCheckingEve : eve2CheckConsequence.consequenceList)
             {
-                for (Event kEvent : eventList)
+                for (Event eve2SetDepend : eventList)
                 {
-                    if (jConsequence.ledTo.equalsIgnoreCase(kEvent.name))
+                    if (consequenceOfCheckingEve.ledTo.equalsIgnoreCase(eve2SetDepend.name))
                     {
-                        kEvent.depend.add(iEvent.name);
+                        eve2SetDepend.dependList.add(eve2CheckConsequence.name);
                     }
                 }
             }
         }
     }
 
-    @Test
-    public void test()
+    private void getEventMap()
     {
-        OriginDataFactory odf = OriginDataFactory.getInstanceFromXML("C:\\Users\\ezilizh\\Leo\\code\\mygit\\CactusMap\\conf\\cfg.xml");
-        odf.mapDependent();
-        for (Event eve : odf.eventList)
+        for (Event eve2Insert : eventList)
         {
-            System.out.println("Event name=" + eve.name);
-            System.out.println("Event type=" + eve.type);
-            for (String str : eve.affect)
-                System.out.println("Event affect=" + str);
-            for (String str : eve.depend)
-                System.out.println("Event depend =" + str);
-            for (Event.Consequence conse : eve.consequence)
+            boolean foundDependEve = false;
+            for (String dependEve : eve2Insert.dependList)
             {
-                System.out.println("Event consequence name=" + conse.name);
-                System.out.println("Event consequence ledTo=" + conse.ledTo);
+
+                for (ArrayList<Event> column : geoEvent2DList)
+                {
+                    for (Event eveInPosition : column)
+                    {
+                        int rowIndex = geoEvent2DList.indexOf(column);
+                        int columnIndex = column.indexOf(eveInPosition);
+                        if(dependEve.equalsIgnoreCase(eveInPosition.name))
+                        {
+                            foundDependEve = true;
+                        }
+                    }
+                }
             }
-            System.out.println();
         }
     }
 }

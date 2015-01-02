@@ -89,6 +89,7 @@ public class MouseAdapter4MapPane extends MouseAdapter
     {
         switch (mouseStatus)
         {
+
             case PRESS:
                 if (eveManager.hoverEventIndex >= 0)
                 {

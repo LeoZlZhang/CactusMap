@@ -1,7 +1,6 @@
 package Cactus.Design.PaneModule.PANE.FORM;
 
 import Cactus.Design.PaneModule.PANE.FORM.TYPE.Form;
-import org.apache.log4j.Logger;
 
 import java.awt.*;
 
