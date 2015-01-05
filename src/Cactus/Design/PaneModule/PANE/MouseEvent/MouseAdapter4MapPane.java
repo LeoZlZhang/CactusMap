@@ -9,7 +9,6 @@ import Cactus.Design.PaneModule.PANE.TopFrame;
 
 import javax.swing.*;
 import java.awt.event.*;
-import java.awt.geom.RoundRectangle2D;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
@@ -33,7 +32,7 @@ public class MouseAdapter4MapPane extends MouseAdapter
     private MouseAction mouseStatus;
     private InertiaSuit inertiaSuit;
     private Timer inertiaTimer;
-    public EventManager eveManager;
+    public EventShowingManager eveShowManager;
 
 
     public MouseAdapter4MapPane(MapPane mapPane, Pane contentPane, JFrame topFrame)
@@ -41,7 +40,7 @@ public class MouseAdapter4MapPane extends MouseAdapter
         this.mapPane = mapPane;
         this.contentPane = contentPane;
         this.topFrame = topFrame;
-        eveManager = new EventManager(this);
+        eveShowManager = new EventShowingManager(this);
         mouseStatus = MouseAction.RELEASE;
         inertiaSuit = new InertiaSuit(15, 130, 0.005);
         dragSuit = new DragSuit();
@@ -67,11 +66,11 @@ public class MouseAdapter4MapPane extends MouseAdapter
                 {
                     if (mapPane.eventList.get(i).hover(new MousePosition(e.getPoint()), mapPane.universe))
                     {
-                        eveManager.hoverEventIndex = i;
+                        eveShowManager.hoverEventIndex = i;
                         break;
                     } else
                     {
-                        eveManager.hoverEventIndex = -1;
+                        eveShowManager.hoverEventIndex = -1;
                     }
                 }
                 /**
@@ -89,41 +88,40 @@ public class MouseAdapter4MapPane extends MouseAdapter
     {
         switch (mouseStatus)
         {
-
             case PRESS:
-                if (eveManager.hoverEventIndex >= 0)
+                if (eveShowManager.hoverEventIndex >= 0)
                 {
-                    if (eveManager.selectedEventIndex < 0)
+                    if (eveShowManager.selectedEventIndex < 0)
                     {
                         //select
-                        eveManager.selectedEventIndex = eveManager.hoverEventIndex;
-                        eveManager.dependEventIndexList.addAll(mapPane.eventList.get(eveManager.selectedEventIndex).eventProfile.dependentEventList);
-                        eveManager.resultEventIndexList.addAll(mapPane.eventList.get(eveManager.selectedEventIndex).eventProfile.resultEventList);
-                        eveManager.selectEffectTimer.start();
+                        eveShowManager.selectedEventIndex = eveShowManager.hoverEventIndex;
+                        eveShowManager.dependEventIndexList.addAll(mapPane.eventList.get(eveShowManager.selectedEventIndex).eventProfile.dependentEventList);
+                        eveShowManager.resultEventIndexList.addAll(mapPane.eventList.get(eveShowManager.selectedEventIndex).eventProfile.resultEventList);
+                        eveShowManager.selectEffectTimer.start();
                         ((TopFrame)topFrame).turnOnContentPane();
-                    } else if (eveManager.hoverEventIndex == eveManager.selectedEventIndex)
+                    } else if (eveShowManager.hoverEventIndex == eveShowManager.selectedEventIndex)
                     {
                         //de-select
-                        eveManager.deSelectEventIndex = eveManager.selectedEventIndex;
-                        eveManager.selectedEventIndex = -1;
-                        eveManager.offDependEventIndexList.addAll(eveManager.dependEventIndexList);
-                        eveManager.dependEventIndexList.clear();
-                        eveManager.offResultEventIndexList.addAll(eveManager.resultEventIndexList);
-                        eveManager.resultEventIndexList.clear();
-                        eveManager.selectEffectTimer.start();
+                        eveShowManager.deSelectEventIndex = eveShowManager.selectedEventIndex;
+                        eveShowManager.selectedEventIndex = -1;
+                        eveShowManager.offDependEventIndexList.addAll(eveShowManager.dependEventIndexList);
+                        eveShowManager.dependEventIndexList.clear();
+                        eveShowManager.offResultEventIndexList.addAll(eveShowManager.resultEventIndexList);
+                        eveShowManager.resultEventIndexList.clear();
+                        eveShowManager.selectEffectTimer.start();
                         ((TopFrame)topFrame).turnOffContentPane();
                     } else
                     {
                         //deselect one and select another
-                        eveManager.deSelectEventIndex = eveManager.selectedEventIndex;
-                        eveManager.selectedEventIndex = eveManager.hoverEventIndex;
-                        eveManager.offDependEventIndexList.addAll(eveManager.dependEventIndexList);
-                        eveManager.dependEventIndexList.clear();
-                        eveManager.dependEventIndexList.addAll(mapPane.eventList.get(eveManager.selectedEventIndex).eventProfile.dependentEventList);
-                        eveManager.offResultEventIndexList.addAll(eveManager.resultEventIndexList);
-                        eveManager.resultEventIndexList.clear();
-                        eveManager.resultEventIndexList.addAll(mapPane.eventList.get(eveManager.selectedEventIndex).eventProfile.resultEventList);
-                        eveManager.selectEffectTimer.start();
+                        eveShowManager.deSelectEventIndex = eveShowManager.selectedEventIndex;
+                        eveShowManager.selectedEventIndex = eveShowManager.hoverEventIndex;
+                        eveShowManager.offDependEventIndexList.addAll(eveShowManager.dependEventIndexList);
+                        eveShowManager.dependEventIndexList.clear();
+                        eveShowManager.dependEventIndexList.addAll(mapPane.eventList.get(eveShowManager.selectedEventIndex).eventProfile.dependentEventList);
+                        eveShowManager.offResultEventIndexList.addAll(eveShowManager.resultEventIndexList);
+                        eveShowManager.resultEventIndexList.clear();
+                        eveShowManager.resultEventIndexList.addAll(mapPane.eventList.get(eveShowManager.selectedEventIndex).eventProfile.resultEventList);
+                        eveShowManager.selectEffectTimer.start();
                         ((TopFrame)topFrame).turnOnContentPane();
                     }
                 }
@@ -361,7 +359,7 @@ public class MouseAdapter4MapPane extends MouseAdapter
     }
 
 
-    public class EventManager
+    public class EventShowingManager
     {
         private static final int interval = 60;
         public int selectedEventIndex = -1;
@@ -374,7 +372,7 @@ public class MouseAdapter4MapPane extends MouseAdapter
         public ArrayList<Integer> offResultEventIndexList = new ArrayList<Integer>();
 
         public Timer selectEffectTimer;
-        public EventManager(MouseAdapter4MapPane adapter)
+        public EventShowingManager(MouseAdapter4MapPane adapter)
         {
             reset();
             selectEffectTimer = new Timer(interval, new SelectActionListener4Timer(adapter));

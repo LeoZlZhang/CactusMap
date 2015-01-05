@@ -27,10 +27,11 @@ public abstract class CactusEvent extends Shape
 
     public class EventProfile
     {
-        public ArrayList<Integer> dependentEventList = new ArrayList<Integer>();
-        public ArrayList<Integer> resultEventList = new ArrayList<Integer>();
-        public String flow = "";
+        public String name = "";
         public EventType eventType = EventType.NORMAL;
+        public ArrayList<Integer> dependentEventList = new ArrayList<Integer>();
+        public ArrayList<Integer> resultEventList = new ArrayList<Integer>();//to replace by consequentlist, change code in MouseAdapter and SelectActionListener
         public ArrayList<Consequent> consequentList = new ArrayList<Consequent>();
+        public ArrayList<Consequent> exceptionList = new ArrayList<Consequent>();
     }
 }

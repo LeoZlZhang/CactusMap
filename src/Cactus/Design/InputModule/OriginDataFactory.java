@@ -1,11 +1,13 @@
 package Cactus.Design.InputModule;
 
 import Cactus.CactusXMLParser;
+import Cactus.Design.DataModule.FlowEvent;
+import Cactus.Design.DataModule.TYPE.CactusEvent;
+import Cactus.Design.DataModule.TYPE.Consequent;
 import Cactus.Design.InputModule.TYPE.Event;
+import Cactus.Design.PaneModule.PANE.PROFILE.RectangleProfile;
 import org.apache.log4j.Logger;
-import org.testng.annotations.Test;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 
 /**
@@ -17,12 +19,14 @@ import java.util.ArrayList;
 public class OriginDataFactory
 {
     public ArrayList<Event> eventList = new ArrayList<Event>();
-    private ArrayList<ArrayList<Event>> geoEvent2DList = new ArrayList<ArrayList<Event>>();
+    public ArrayList<CactusEvent> cactusEventList = new ArrayList<CactusEvent>();
 
     public OriginDataFactory(String path)
     {
         this.eventList.addAll(getInstanceFromXML(path).eventList);
-        mapDependent();
+        eventDependence();
+        cactusEventList.addAll(cactusEventList());
+
     }
 
     public OriginDataFactory()
@@ -46,44 +50,114 @@ public class OriginDataFactory
         return odf;
     }
 
-    private void mapDependent()
+    private void eventDependence()
     {
-        for (Event eve2CheckConsequence : eventList)
+        for (Event event : eventList)
         {
-            for (Event.Consequence consequenceOfCheckingEve : eve2CheckConsequence.consequenceList)
+            for (Event.Consequence event_consequence : event.consequenceList)
             {
-                for (Event eve2SetDepend : eventList)
+                for (String event_consequence_ledTo : event_consequence.ledToList)
                 {
-                    if (consequenceOfCheckingEve.ledTo.equalsIgnoreCase(eve2SetDepend.name))
+                    for (Event event2AddDependence : eventList)
                     {
-                        eve2SetDepend.dependList.add(eve2CheckConsequence.name);
-                    }
-                }
-            }
-        }
-    }
-
-    private void getEventMap()
-    {
-        for (Event eve2Insert : eventList)
-        {
-            boolean foundDependEve = false;
-            for (String dependEve : eve2Insert.dependList)
-            {
-
-                for (ArrayList<Event> column : geoEvent2DList)
-                {
-                    for (Event eveInPosition : column)
-                    {
-                        int rowIndex = geoEvent2DList.indexOf(column);
-                        int columnIndex = column.indexOf(eveInPosition);
-                        if(dependEve.equalsIgnoreCase(eveInPosition.name))
+                        if (event2AddDependence.name.equalsIgnoreCase(event_consequence_ledTo))
                         {
-                            foundDependEve = true;
+                            event2AddDependence.dependList.add(event.name);
                         }
                     }
                 }
             }
         }
     }
+
+    public ArrayList<CactusEvent> cactusEventList()
+    {
+        ArrayList<CactusEvent> cactusEventList = new ArrayList<CactusEvent>();
+        for (Event event : eventList)
+        {
+            CactusEvent cactusEvent = new FlowEvent(new RectangleProfile());
+            cactusEvent.eventProfile.name = event.name;
+            for (String event_dependName : event.dependList)
+            {
+                for (Event eventInSearchLoop : eventList)
+                {
+                    if (eventInSearchLoop.name.equalsIgnoreCase(event_dependName))
+                    {
+                        cactusEvent.eventProfile.dependentEventList.add(eventList.indexOf(eventInSearchLoop));
+                        break;
+                    }
+                }
+            }
+
+            for (Event.Consequence consequence : event.consequenceList)
+            {
+                Consequent tempCon = new Consequent();
+                tempCon.consequentName = consequence.name;
+                for (String event_consequence_affectBy : consequence.affectByList)
+                {
+                    for (Event eventInSearchLoop : eventList)
+                    {
+                        if (eventInSearchLoop.name.equalsIgnoreCase(event_consequence_affectBy))
+                        {
+                            tempCon.affectByList.add(eventList.indexOf(eventInSearchLoop));
+                            break;
+                        }
+                    }
+                }
+                for (String event_consequence_ledTo : consequence.ledToList)
+                {
+                    for (Event eventInSearchLoop : eventList)
+                    {
+                        if (eventInSearchLoop.name.equalsIgnoreCase(event_consequence_ledTo))
+                        {
+                            tempCon.ledToList.add(eventList.indexOf(eventInSearchLoop));
+                            break;
+                        }
+                    }
+                }
+                cactusEvent.eventProfile.consequentList.add(tempCon);
+            }
+
+            for (Event.Consequence exception : event.exceptionList)
+            {
+                Consequent tempCon = new Consequent();
+                tempCon.consequentName = exception.name;
+                for (String event_exception_affectBy : exception.affectByList)
+                {
+                    for (Event eventInSearchLoop : eventList)
+                    {
+                        if (eventInSearchLoop.name.equalsIgnoreCase(event_exception_affectBy))
+                        {
+                            tempCon.affectByList.add(eventList.indexOf(eventInSearchLoop));
+                            break;
+                        }
+                    }
+                }
+                for (String event_exception_ledTo : exception.ledToList)
+                {
+                    for (Event eventInSearchLoop : eventList)
+                    {
+                        if (eventInSearchLoop.name.equalsIgnoreCase(event_exception_ledTo))
+                        {
+                            tempCon.ledToList.add(eventList.indexOf(eventInSearchLoop));
+                            break;
+                        }
+                    }
+                }
+                cactusEvent.eventProfile.exceptionList.add(tempCon);
+            }
+            cactusEventList.add(cactusEvent);
+        }
+        return cactusEventList;
+    }
+
+//    public void cactusEventWeight()
+//    {
+//        boolean searchDone = false;
+//        while (!searchDone)
+//        {
+//              for()
+//        }
+//    }
+
 }

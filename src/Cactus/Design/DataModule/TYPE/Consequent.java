@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class Consequent
 {
     public String consequentName = "";
-    ArrayList<Integer> triggerList = new ArrayList<Integer>();
-    ArrayList<Integer> affectList = new ArrayList<Integer>();
-    ArrayList<Integer> beAffectedList = new ArrayList<Integer>();
+    public ArrayList<Integer> affectByList = new ArrayList<Integer>();
+    public ArrayList<Integer> ledToList = new ArrayList<Integer>();
 }

@@ -12,13 +12,15 @@ public class Event
 {
     public String name;
     public String type;
-    public ArrayList<String> affectList = new ArrayList<String>();
     public ArrayList<String> dependList = new ArrayList<String>();
     public ArrayList<Consequence> consequenceList = new ArrayList<Consequence>();
+    public ArrayList<Consequence> exceptionList = new ArrayList<Consequence>();
+    public int weight = 0;
 
     public class Consequence
     {
         public String name;
-        public String ledTo;
+        public ArrayList<String> ledToList = new ArrayList<String>();
+        public ArrayList<String> affectByList = new ArrayList<String>();
     }
 }
