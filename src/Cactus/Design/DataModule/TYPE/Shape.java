@@ -42,7 +42,7 @@ public abstract class Shape
 
     public Profile getShapeProfile()
     {
-        return profile.getCopy();
+        return profile;
     }
 
     public class ShapeManager
