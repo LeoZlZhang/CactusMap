@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/CactusEvent.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/CactusEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/InputModule/OriginDataFactory.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/InputModule/OriginDataFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/Shape.java" afterPath="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/Shape.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Cactus/test/InputModule/TestDataInput.java" afterPath="$PROJECT_DIR$/src/Cactus/test/InputModule/TestDataInput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_16.xml" afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_16.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/testng_6_8_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/testng_6_8_5.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CactusMap.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1420686143501" ignored="false" />
+    <file path="/Dummy.txt" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1420956808171" ignored="false" />
     <file path="/MouseAdapter4Universe.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1414929818582" ignored="false" />
     <file path="/Position.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415276681986" ignored="false" />
     <file path="/Pane4Test.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1415185808877" ignored="false" />
@@ -70,8 +68,8 @@
     <file path="$PROJECT_DIR$/../CactusXMLParser/src/Cactus/Parse/NodeParser.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1417171697667" ignored="false" />
     <file path="/LogicEventMap.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1417406242348" ignored="false" />
     <file path="/LogicEventMap2D.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1417405558703" ignored="false" />
-    <file path="/a.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1420351524110" ignored="false" />
-    <file path="/sample.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1420351519430" ignored="false" />
+    <file path="/a.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1420956984984" ignored="false" />
+    <file path="/sample.java" changelist="dbf034a2-7a38-44bb-ac1e-2ee553a12f82" time="1420957006515" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,57 +89,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/ShapeProfile.java" line="14" class="Cactus.Design.PaneModule.PANE.PROFILE.ShapeProfile" package="Cactus.Design.PaneModule.PANE.PROFILE">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="&#13;&#13;JAVA" />
-        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
-      </breakpoint>
-    </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/TYPE/Profile.java" line="15" class="Cactus.Design.PaneModule.PANE.PROFILE.TYPE.Profile" package="Cactus.Design.PaneModule.PANE.PROFILE.TYPE">
         <option name="WATCH_ENTRY" value="true" />
@@ -176,6 +123,57 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </method_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+    </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/ShapeProfile.java" line="14" class="Cactus.Design.PaneModule.PANE.PROFILE.ShapeProfile" package="Cactus.Design.PaneModule.PANE.PROFILE">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -188,7 +186,7 @@
       <file leaf-file-name="OriginDataFactory.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Cactus/Design/InputModule/OriginDataFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="234" column="35" selection-start="9422" selection-end="9422" vertical-scroll-proportion="0.02881356">
+            <state line="115" column="21" selection-start="3966" selection-end="3966" vertical-scroll-proportion="-4.2582026">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#557#564#0" expanded="true" />
@@ -204,7 +202,7 @@
       <file leaf-file-name="TestDataInput.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cactus/test/InputModule/TestDataInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="44" selection-start="4930" selection-end="4930" vertical-scroll-proportion="0.0">
+            <state line="114" column="0" selection-start="5040" selection-end="5040" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -243,16 +241,16 @@
         <option value="$PROJECT_DIR$/src/Cactus/Design/PaneModule/PANE/PROFILE/ShapeProfile.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/Shape.java" />
         <option value="$PROJECT_DIR$/src/Cactus/Design/DataModule/TYPE/CactusEvent.java" />
-        <option value="$PROJECT_DIR$/src/Cactus/Design/InputModule/OriginDataFactory.java" />
         <option value="$PROJECT_DIR$/src/Cactus/test/InputModule/TestDataInput.java" />
+        <option value="$PROJECT_DIR$/src/Cactus/Design/InputModule/OriginDataFactory.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="-8" />
-    <option name="width" value="1320" />
-    <option name="height" value="784" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1448" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -299,6 +297,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -766,26 +765,25 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="preferences.sourceCode.Java" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="D:/ERICSSON/Leo/Code/Selenium/selenium-java-2.43.1/selenium-2.43.1/libs/testng-6.8.5.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -958,19 +956,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -996,6 +981,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1175,11 +1173,15 @@
       <created>1420425193998</created>
       <updated>1420425193998</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Put weight on cactus event, and locate them into map(int[][])">
+      <created>1420686218858</created>
+      <updated>1420686218858</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <frame x="-4" y="-4" width="1448" height="878" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1189,12 +1191,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39872408" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23926868" sideWeight="0.877193" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23888092" sideWeight="0.6712517" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12269939" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1243,7 +1245,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Transfer Event list to CactusEvent List, put weight into each event in next step" />
+    <option name="LAST_COMMIT_MESSAGE" value="Put weight on cactus event, and locate them into map(int[][])" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1273,6 +1275,7 @@
     <MESSAGE value="Update frame structure, add map pane and content pane&#10;Add show out animation for content pane&#10;Add TopFrame to include map pane and content pane, update test case" />
     <MESSAGE value="Data input part done" />
     <MESSAGE value="Transfer Event list to CactusEvent List, put weight into each event in next step" />
+    <MESSAGE value="Put weight on cactus event, and locate them into map(int[][])" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1390,14 +1393,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cactus/test/InputModule/TestDataInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="44" selection-start="4930" selection-end="4930" vertical-scroll-proportion="0.0">
+        <state line="114" column="0" selection-start="5040" selection-end="5040" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Cactus/Design/InputModule/OriginDataFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="35" selection-start="9422" selection-end="9422" vertical-scroll-proportion="0.02881356">
+        <state line="115" column="21" selection-start="3966" selection-end="3966" vertical-scroll-proportion="-4.2582026">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#557#564#0" expanded="true" />
